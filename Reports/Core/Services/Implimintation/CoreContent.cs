@@ -28,5 +28,9 @@ namespace Core.Services.Implimintation
         {
             get { return Service<IParseCorparationToReports>.GetInstance(); }
         }
+        public static IMakerRequest MakerRequest
+        {
+            get { return Service<IMakerRequest>.GetInstance(); }
+        }
     }
 }

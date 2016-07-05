@@ -59,11 +59,13 @@
     <Compile Include="Services\IBizApiClient.cs" />
     <Compile Include="Services\IBuildTable.cs" />
     <Compile Include="Services\IInitService.cs" />
+    <Compile Include="Services\IMakerRequest.cs" />
     <Compile Include="Services\Implimintation\BuildTable.cs" />
     <Compile Include="Services\Implimintation\CoreContent.cs" />
     <Compile Include="Services\Implimintation\IikoBizApiClient.cs" />
     <Compile Include="Services\Implimintation\IikoBizToken.cs" />
     <Compile Include="Services\Implimintation\InitService.cs" />
+    <Compile Include="Services\Implimintation\MakerRequest.cs" />
     <Compile Include="Services\Implimintation\ParseCorparationToReports.cs" />
     <Compile Include="Services\IParseCorparationToReports.cs" />
   </ItemGroup>

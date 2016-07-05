@@ -17,8 +17,8 @@ namespace Reports
         public Form1()
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}",this.Name));
-            idOrg = CoreContext.BizApiClient.GetOrganizationInfo().Result.First().Id;
-            ListOrg = CoreContext.BizApiClient.GetOrganizationInfo().Result;
+            idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
+            ListOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
             InitializeComponent();
         }
         
@@ -37,7 +37,7 @@ namespace Reports
         private void listBox1_Layout(object sender, LayoutEventArgs e)
         {
             idOrg = ListOrg.First().Id;
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             //var thisresult = list.Where(t => t.Name == "АвтоСтройСервис (Ахат)").First();
             var thisresult = list.First();
             //var resylt = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, thisresult.Id);
@@ -49,14 +49,14 @@ namespace Reports
 
             //var corp = comboBox2.Text;
            
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             //var idCor = list.Where(r => r.Name == comboBox2.Text).First().Id;
             var idCor = list.First().Id;
             //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
             //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
             //listBox1.Items.Clear();
             //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
-            var result = CoreContext.BizApiClient.GetReportses(new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date, dateTimeTo.Value.AddDays(1).Date));
+            var result = CoreContext.MakerRequest.GetReportses(new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date, dateTimeTo.Value.AddDays(1).Date));
            
             var dt = CoreContext.BuildTable.BuiltTable(result);
             dt = CoreContext.BuildTable.BuiltTable(result);
@@ -69,7 +69,7 @@ namespace Reports
         {
 
             idOrg = ListOrg.Where(r => r.Name == comboBox1.Text).First().Id;
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             foreach (var item in list)
             {
                 comboBox2.Items.Add(item.Name);
@@ -80,7 +80,7 @@ namespace Reports
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             foreach (var item in ListOrg)
             {
                 comboBox1.Items.Add(item.Name);
@@ -90,7 +90,7 @@ namespace Reports
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             idOrg = ListOrg.Where(r => r.Name == comboBox1.Text).First().Id;
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             var cor = list.Where(r => r.Name == comboBox2.Text).First();
             textBox2.Text = string.Format("Name: {0} Id {1}", cor.Name, cor.Id);
         }

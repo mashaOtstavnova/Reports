@@ -23,6 +23,7 @@ namespace Core.Module
             registrator.RegistrServiceFactory<IInitService>(() => new InitService());
             registrator.RegistrServiceFactory<IBuildTable>(() => new BuildTable());
             registrator.RegistrServiceFactory<IParseCorparationToReports>(() => new ParseCorparationToReports());
+            registrator.RegistrServiceFactory<IMakerRequest>(() => new MakerRequest());
             //registrator.RegistrServiceFactory<IBetsService>(() => new BetsService());
         }
     }

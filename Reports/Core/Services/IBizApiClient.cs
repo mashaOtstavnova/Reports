@@ -14,9 +14,6 @@ namespace Core.Services
     {
        void Init(Settings settings, HttpClient client = null);
        Task<T> GetAsync<T>(string path, object additionalQueryValues = null, bool needsAccessToken = true);
-       Task<OrganizationInfo[]> GetOrganizationInfo();
-       Task<CorporateNutritionInfo[]> GetCorporateNutritionInfo(string organizationId);
-       //Task<CorporateNutritionReportItem[]> GetCorporateNutritionReportItem(string organizationId, string corporateNutritionInfoId, string fromDate, string toDate);
-       Domain.Reports[] GetReportses(ReportParameters param);
+      
     }
 }
