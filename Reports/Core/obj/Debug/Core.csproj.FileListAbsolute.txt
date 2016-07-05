@@ -1,0 +1,12 @@
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Core.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Core.pdb
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Flurl.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Framework.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Newtonsoft.Json.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Framework.pdb
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Flurl.pdb
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Flurl.xml
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\bin\Debug\Newtonsoft.Json.xml
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\obj\Debug\Core.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Core\obj\Debug\Core.pdb

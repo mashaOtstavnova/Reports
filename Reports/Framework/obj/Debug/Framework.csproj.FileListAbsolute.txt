@@ -1,0 +1,6 @@
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Framework\bin\Debug\Framework.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Framework\bin\Debug\Framework.pdb
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Framework\obj\Debug\Framework.dll
+c:\users\maria\documents\visual studio 2015\Projects\Reports\Framework\obj\Debug\Framework.pdb
+C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Framework\bin\Debug\Framework.dll.CodeAnalysisLog.xml
+C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Framework\bin\Debug\Framework.dll.lastcodeanalysissucceeded
