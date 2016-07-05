@@ -5,7 +5,7 @@ namespace Core.Services.Implimintation
 {
     public class BuildTable : IBuildTable
     {
-        private  DataTable _dateTable;
+        private readonly DataTable _dateTable;
 
         public BuildTable()
         {
@@ -14,7 +14,6 @@ namespace Core.Services.Implimintation
 
         public DataTable BuiltTable(object[] obj)
         {
-            _dateTable = new DataTable();
             _dateTable.TableName = obj.GetType().GetElementType().Name;
            
             for (var i = 0; i < obj.GetType().GetElementType().GetProperties().Count(); i++)

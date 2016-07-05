@@ -16,19 +16,37 @@ namespace Reports
         private OrganizationInfo[] ListOrg;
         public Form1()
         {
-            var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000);
+            var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000, new DateTime().Date, new DateTime().Date);
             CoreContext.InitService.Init(settings);
             idOrg = CoreContext.BizApiClient.GetOrganizationInfo().Result.First().Id;
             ListOrg = CoreContext.BizApiClient.GetOrganizationInfo().Result;
             InitializeComponent();
         }
+
         
+        //private void textBox1_Layout(object sender, LayoutEventArgs e)
+        //{
+        //    //var thisresult = list.Where(t => t.Name == "Столовая Ванкор").First();
+        //   
+        //    var thisresult = ListOrg[0];
+        //    var c = string.Format("Name {0} Id {1}", thisresult.Name, idOrg);
+        //    textBox1.Text = c.ToString();
+        //}
+
+        //private void textBox2_Layout(object sender, LayoutEventArgs e)
+        //{
+        //  
+        //    var thisresult = list[0];
+        //    var c = string.Format("Name {0} Id {1}", thisresult.Name, thisresult.Id);
+        //    textBox2.Text = c.ToString();
+        //}
+
         private void textBox3_Layout(object sender, LayoutEventArgs e)
         {
             //restoCamp
             //9U6cZjDCG3zm9jj
 
-            var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000);
+            var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000,new DateTime().Date, new DateTime().Date);
             _apiAccessToken = new IikoBizToken(
                $"{settings.BaseAddress}auth/access_token?user_id={settings.Login}&user_secret={settings.Password}",
               new HttpClient());
@@ -79,19 +97,50 @@ namespace Reports
         }
         private void button1_Click(object sender, System.EventArgs e)
         {
-
+            
             //var corp = comboBox2.Text;
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
+            //var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
             //var idCor = list.Where(r => r.Name == comboBox2.Text).First().Id;
-            var idCor = list.First().Id;
             //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
             //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
             //listBox1.Items.Clear();
             //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
-            var result = CoreContext.BizApiClient.GetReportses(idOrg, idCor, dateTimeFrom.Value.Date, dateTimeTo.Value.AddDays(1).Date);
-           
+            var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000, new DateTime().Date, new DateTime().Date);
+            CoreContext.InitService.Init(settings);
+            var result = new CorporateNutritionReportItem[2]
+            {
+                new CorporateNutritionReportItem()
+                {
+                    BalanceOnPeriodEnd = (decimal)10.1,
+                    BalanceOnPeriodStart = (decimal)60.1,
+                    BalanceRefillSum = (decimal)5.5,
+                    BalanceResetSum = (decimal)5.4,
+                    EmployeeNumber = "10",
+                    GuestCardTrack = "11",
+                    GuestCategoryNames = "GuestCategoryNames",
+                    GuestId = "GuestId",
+                    GuestName = "GuestName",
+                    GuestPhone = "GuestPhone",
+                    PaidOrdersCount = (decimal)4.4,
+                    PayFromWalletSum = (decimal)1.4
+                },
+                new CorporateNutritionReportItem()
+                {
+                    BalanceOnPeriodEnd = (decimal)10.1,
+                    BalanceOnPeriodStart = (decimal)60.1,
+                    BalanceRefillSum = (decimal)5.5,
+                    BalanceResetSum = (decimal)5.4,
+                    EmployeeNumber = "10",
+                    GuestCardTrack = "11",
+                    GuestCategoryNames = "GuestCategoryNames1",
+                    GuestId = "GuestId1",
+                    GuestName = "GuestName1",
+                    GuestPhone = "GuestPhone1",
+                    PaidOrdersCount = (decimal)4.4,
+                    PayFromWalletSum = (decimal)1.4
+                }
+            };
             var dt = CoreContext.BuildTable.BuiltTable(result);
-            dt = CoreContext.BuildTable.BuiltTable(result);
             Reports re = new Reports(dt);
             re.ShowDialog();
         }
@@ -120,14 +169,6 @@ namespace Reports
             {
                 comboBox1.Items.Add(item.Name);
             }
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            idOrg = ListOrg.Where(r => r.Name == comboBox1.Text).First().Id;
-            var list = CoreContext.BizApiClient.GetCorporateNutritionInfo(idOrg).Result;
-            var cor = list.Where(r => r.Name == comboBox2.Text).First(); ;
-            textBox2.Text = string.Format("Name: {0} Id {1}", cor.Name, cor.Id);
         }
     }
 }

@@ -16,7 +16,6 @@ namespace Core.Services
        Task<T> GetAsync<T>(string path, object additionalQueryValues = null, bool needsAccessToken = true);
        Task<OrganizationInfo[]> GetOrganizationInfo();
        Task<CorporateNutritionInfo[]> GetCorporateNutritionInfo(string organizationId);
-       //Task<CorporateNutritionReportItem[]> GetCorporateNutritionReportItem(string organizationId, string corporateNutritionInfoId, string fromDate, string toDate);
-       Reports[] GetReportses(string organizationId, string corporateNutritionInfoId, DateTime from, DateTime to);
+       Task<CorporateNutritionReportItem[]> GetCorporateNutritionReportItem(string organizationId, string corporateNutritionInfoId);
     }
 }

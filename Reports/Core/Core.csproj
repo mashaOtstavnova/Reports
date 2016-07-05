@@ -52,7 +52,6 @@
     <Compile Include="Domain\CorporateNutritionReportItem.cs" />
     <Compile Include="Domain\OrganizationInfo.cs" />
     <Compile Include="Domain\ReportParameters.cs" />
-    <Compile Include="Domain\Reports.cs" />
     <Compile Include="Domain\Settings.cs" />
     <Compile Include="Module\CoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,12 +60,9 @@
     <Compile Include="Services\IInitService.cs" />
     <Compile Include="Services\Implimintation\BuildTable.cs" />
     <Compile Include="Services\Implimintation\CoreContent.cs" />
-    <Compile Include="Services\Implimintation\CustomDateTimeSerializer.cs" />
     <Compile Include="Services\Implimintation\IikoBizApiClient.cs" />
     <Compile Include="Services\Implimintation\IikoBizToken.cs" />
     <Compile Include="Services\Implimintation\InitService.cs" />
-    <Compile Include="Services\Implimintation\ParseCorparationToReports.cs" />
-    <Compile Include="Services\IParseCorparationToReports.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
