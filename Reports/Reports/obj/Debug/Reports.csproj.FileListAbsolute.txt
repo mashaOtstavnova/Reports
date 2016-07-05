@@ -98,3 +98,5 @@ C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Reports\bin\Debug\j
 C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Reports\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
 C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Reports\obj\Debug\Reports.exe.licenses
 C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Reports\obj\Debug\Reports.Reports.resources
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.exe
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.pdb
