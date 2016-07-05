@@ -22,6 +22,7 @@ namespace Core.Module
             registrator.RegistrServiceFactory<IBizApiClient>(() => new IikoBizApiClient());
             registrator.RegistrServiceFactory<IInitService>(() => new InitService());
             registrator.RegistrServiceFactory<IBuildTable>(() => new BuildTable());
+            registrator.RegistrServiceFactory<IParseCorparationToReports>(() => new ParseCorparationToReports());
             //registrator.RegistrServiceFactory<IBetsService>(() => new BetsService());
         }
     }
