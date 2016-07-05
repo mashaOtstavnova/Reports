@@ -1,5 +1,8 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
+using System.IO;
 using System.Linq;
+using ExcelLibrary.SpreadSheet;
 using Reports;
 
 namespace Core.Services.Implimintation
@@ -39,6 +42,26 @@ namespace Core.Services.Implimintation
             }
             Log.Inst.WriteToLogDEBUG(string.Format("End buil table for {0}", obj.GetType().FullName));
             return _dateTable;
+        }
+
+        public void SaveExel(DataTable dt)
+        {
+            Workbook workbook = new Workbook();
+          
+            Worksheet worksheet = new Worksheet(dt.TableName);
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                // Add column header
+                worksheet.Cells[0, i] = new Cell(dt.Columns[i].ColumnName);
+
+                // Populate row data
+                for (int j = 0; j < dt.Rows.Count; j++)
+                    //Если нулевые значения, заменяем на пустые строки
+                    worksheet.Cells[j + 1, i] = new Cell(dt.Rows[j][i] == DBNull.Value ? "" : dt.Rows[j][i]);
+            }
+            workbook.Worksheets.Add(worksheet);
+            var p = Path.Combine(Environment.CurrentDirectory, @"exels");
+            workbook.Save(p);
         }
     }
 }

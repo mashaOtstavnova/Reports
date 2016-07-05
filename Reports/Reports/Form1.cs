@@ -60,6 +60,7 @@ namespace Reports
            
             var dt = CoreContext.BuildTable.BuiltTable(result);
             dt = CoreContext.BuildTable.BuiltTable(result);
+            CoreContext.BuildTable.SaveExel(dt);
             Reports re = new Reports(dt);
             Log.Inst.WriteToLogDEBUG(string.Format("Show gridView"));
             re.ShowDialog();

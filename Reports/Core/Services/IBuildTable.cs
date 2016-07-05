@@ -11,5 +11,6 @@ namespace Core.Services
     public interface IBuildTable
     {
         DataTable BuiltTable(object[] obj);
+        void SaveExel(DataTable dt);
     }
 }
