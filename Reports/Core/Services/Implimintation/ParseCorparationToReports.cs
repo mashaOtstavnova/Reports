@@ -9,14 +9,17 @@ using Core.Services;
 
 namespace Core.Services.Implimintation
 {
+    /// <summary>
+    /// парсинг ответа в сущность для отображения на экран
+    /// </summary>
     public class ParseCorparationToReports:IParseCorparationToReports
     {
-        public Reports[] Parse(CorporateNutritionReportItem[] CNRI, DateTime to, DateTime from)
+        public Domain.Reports[] Parse(CorporateNutritionReportItem[] CNRI, DateTime to, DateTime from)
         {
-            List<Reports> listReportses = new List<Reports>();
+            List<Domain.Reports> listReportses = new List<Domain.Reports>();
             foreach (var item in CNRI)
             {
-                listReportses.Add(new Reports()
+                listReportses.Add(new Domain.Reports()
                 {
                     BalanceOnPeriodEnd = item.BalanceOnPeriodEnd,
                     BalanceOnPeriodStart = item.BalanceOnPeriodStart,

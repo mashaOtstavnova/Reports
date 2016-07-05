@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
+    /// <summary>
+    /// сущность для отображения нужных параметров в dateGrid
+    /// </summary>
     public class Reports
     {
         public string GuestId { get; set; }                  //Идентификатор гостя.

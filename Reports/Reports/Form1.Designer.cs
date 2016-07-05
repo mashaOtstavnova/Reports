@@ -51,6 +51,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(149, 58);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(550, 21);
             this.textBox1.TabIndex = 0;
             // 
@@ -58,6 +59,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(149, 85);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(550, 21);
             this.textBox2.TabIndex = 1;
             // 
@@ -83,6 +85,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(149, 112);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(550, 21);
             this.textBox3.TabIndex = 4;
             this.textBox3.Layout += new System.Windows.Forms.LayoutEventHandler(this.textBox3_Layout);
@@ -116,6 +119,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(149, 148);
             this.comboBox1.Name = "comboBox1";
@@ -125,6 +129,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(149, 184);
             this.comboBox2.Name = "comboBox2";
@@ -161,16 +166,21 @@
             // dateTimeFrom
             // 
             this.dateTimeFrom.Location = new System.Drawing.Point(82, 14);
+            this.dateTimeFrom.MaxDate = new System.DateTime(2016, 7, 5, 0, 0, 0, 0);
+            this.dateTimeFrom.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dateTimeFrom.Name = "dateTimeFrom";
             this.dateTimeFrom.Size = new System.Drawing.Size(200, 21);
             this.dateTimeFrom.TabIndex = 14;
+            this.dateTimeFrom.Value = new System.DateTime(2016, 7, 5, 0, 0, 0, 0);
             // 
             // dateTimeTo
             // 
             this.dateTimeTo.Location = new System.Drawing.Point(395, 14);
+            this.dateTimeTo.MaxDate = new System.DateTime(2016, 7, 5, 0, 0, 0, 0);
             this.dateTimeTo.Name = "dateTimeTo";
             this.dateTimeTo.Size = new System.Drawing.Size(200, 21);
             this.dateTimeTo.TabIndex = 15;
+            this.dateTimeTo.Value = new System.DateTime(2016, 7, 5, 0, 0, 0, 0);
             // 
             // label7
             // 

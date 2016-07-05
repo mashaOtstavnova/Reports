@@ -20,6 +20,8 @@ namespace Reports
         [STAThread]
         static void Main()
         {
+
+            Log.Inst.WriteToLogDEBUG(string.Format("Start program"));
             Bootstrapper.Start(new CoreModule());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -27,8 +29,10 @@ namespace Reports
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
+            Log.Inst.WriteToLogDEBUG(string.Format("Initialization program"));
             var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000);
             CoreContext.InitService.Init(settings);
+            Log.Inst.WriteToLogDEBUG(string.Format("Run application"));
             Application.Run(new Form1());
         }
     }

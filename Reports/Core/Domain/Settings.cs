@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
+    /// <summary>
+    /// настройки соединения
+    /// </summary>
     public class Settings
     {
         public readonly string Login;

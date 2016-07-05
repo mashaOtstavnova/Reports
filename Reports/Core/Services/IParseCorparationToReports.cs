@@ -9,6 +9,6 @@ namespace Core.Services
 {
     public interface IParseCorparationToReports
     {
-        Reports[] Parse(CorporateNutritionReportItem[] CNRI, DateTime to, DateTime from);
+        Domain.Reports[] Parse(CorporateNutritionReportItem[] CNRI, DateTime to, DateTime from);
     }
 }

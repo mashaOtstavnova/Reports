@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
+    /// <summary>
+    /// сущночть отчета по заказам программы корпоративного питания за период
+    /// </summary>
     public class CorporateNutritionReportItem
     {
 

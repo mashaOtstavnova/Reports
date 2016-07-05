@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
+    /// <summary>
+    /// Описание организации (Ресторан, AЗС, Гостиница, ...)
+    /// </summary>
     public class OrganizationInfo
     {
         public object Address { get; set; }

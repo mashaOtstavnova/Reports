@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
+    /// <summary>
+    /// параметры для запроса CorporateNutritionReportItem
+    /// </summary>
     public class ReportParameters
     {
-        public readonly string AccessToken;
         public readonly string OrganizationInfoId;
         public readonly string CorporateNutritionProgramId;
         public readonly DateTime DateFrom;
         public readonly DateTime DateTo;
 
-        public ReportParameters(string accessToken, string organizationInfoId, string corporateNutritionProgramId,
+        public ReportParameters(string organizationInfoId, string corporateNutritionProgramId,
             DateTime dateFrom, DateTime dateTo)
         {
-            AccessToken = accessToken;
             OrganizationInfoId = organizationInfoId;
             CorporateNutritionProgramId = corporateNutritionProgramId;
             DateFrom = dateFrom;

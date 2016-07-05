@@ -7,6 +7,9 @@ using Core.Domain;
 
 namespace Core.Services.Implimintation
 {
+    /// <summary>
+    /// инициализация проекта
+    /// </summary>
     public class InitService : IInitService
     {
         public void Init( Settings settings)

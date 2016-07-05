@@ -3,6 +3,9 @@ using System.Net.Http;
 
 namespace IikoBizApi
 {
+    /// <summary>
+    /// один запрос
+    /// </summary>
     public class IikoBizToken
     {
         private readonly HttpClient _client;

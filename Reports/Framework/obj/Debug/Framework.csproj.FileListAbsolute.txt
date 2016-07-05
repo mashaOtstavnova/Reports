@@ -4,3 +4,8 @@ c:\users\maria\documents\visual studio 2015\Projects\Reports\Framework\obj\Debug
 c:\users\maria\documents\visual studio 2015\Projects\Reports\Framework\obj\Debug\Framework.pdb
 C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Framework\bin\Debug\Framework.dll.CodeAnalysisLog.xml
 C:\Users\maria\Documents\Visual Studio 2015\Projects\Reports\Framework\bin\Debug\Framework.dll.lastcodeanalysissucceeded
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\bin\Debug\Framework.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\bin\Debug\Framework.pdb
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\obj\Debug\Framework.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\obj\Debug\Framework.pdb

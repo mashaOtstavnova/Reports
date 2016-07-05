@@ -2,6 +2,10 @@
 
 namespace Core.Domain
 {
+    /// <summary>
+    /// Информация о программе корпоративного питания
+    /// </summary>
+
     public class CorporateNutritionInfo
     {
         public object Description { get; set; }

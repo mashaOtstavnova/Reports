@@ -10,9 +10,14 @@ using Core.Services.Implimintation;
 using Flurl;
 using Framework.MyExtention;
 using Newtonsoft.Json;
+using Core.Domain;
+using Reports;
 
 namespace IikoBizApi
 {
+    /// <summary>
+    /// функции на запросы
+    /// </summary>
     public class IikoBizApiClient : IBizApiClient
     {
         private IikoBizToken _apiAccessToken;
@@ -38,6 +43,7 @@ namespace IikoBizApi
 
         public async Task<OrganizationInfo[]> GetOrganizationInfo()
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Get OrganizationInfo"));
             /// api / 0 / organization / list ? access_token ={ accessToken}&request_timeout ={ requestTimeout}
             return await GetAsync<OrganizationInfo[]>("/organization/list", new
             {
@@ -47,6 +53,7 @@ namespace IikoBizApi
 
         public async Task<CorporateNutritionInfo[]> GetCorporateNutritionInfo(string organizationId)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Get CorporateNutritionInfo"));
             ////api/0/organization/{organizationId}/corporate_nutritions?access_token={accessToken}
             var idOrg = CoreContext.BizApiClient.GetOrganizationInfo().Result[0].Id;
             return
@@ -65,13 +72,14 @@ namespace IikoBizApi
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        public Reports[] GetReportses(string organizationId, string corporateNutritionInfoId, DateTime from, DateTime to)
+        public Core.Domain.Reports[] GetReportses(ReportParameters param)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Get Reportses"));
             //var fromDate = from.Date.ToString();//число с которого нужно считать
             //var toDate = to.Date.ToString();// по какое
             var corporateNutritionReportItemsList = new List<CorporateNutritionReportItem>();//список отчетов
-            var reportsList = new List<Reports>();
-            var fromThis = from;
+            var reportsList = new List<Core.Domain.Reports>();
+            var fromThis = param.DateFrom;
             var arrayRespons = new CorporateNutritionReportItem[2]
                 {
                     new CorporateNutritionReportItem
@@ -107,7 +115,7 @@ namespace IikoBizApi
                 };
             var toThis = fromThis.AddDays(1);
             
-            while (fromThis != to)
+            while (fromThis != param.DateTo)
             {
                 corporateNutritionReportItemsList.Clear();
                 //var formatFrom = fromThis.ToString(Format);
@@ -125,7 +133,7 @@ namespace IikoBizApi
                 toThis = fromThis.AddDays(1);
             }
             var arrayRespons1 =
-                GetCorporateNutritionReportItem(organizationId, corporateNutritionInfoId, fromThis.ToString(Format),
+                GetCorporateNutritionReportItem(param.OrganizationInfoId, param.CorporateNutritionProgramId, fromThis.ToString(Format),
                     fromThis.AddDays(1).ToString(Format))
                     .Result;
             corporateNutritionReportItemsList.AddRange(arrayRespons1);
@@ -138,6 +146,7 @@ namespace IikoBizApi
         private async Task<CorporateNutritionReportItem[]> GetCorporateNutritionReportItem(string organizationId,
             string corporateNutritionInfoId, string fromDate, string toDate)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Get CorporateNutritionReportItem"));
             /////api/0/organization/{organizationId}/corporate_nutrition_report?corporate_nutrition_id={corporateNutritionProgramId}
             /// &date_from={dateFrom}&date_to={dateTo}&access_token={accessToken}
             var idOrg = CoreContext.BizApiClient.GetOrganizationInfo().Result[0].Id;
@@ -154,18 +163,22 @@ namespace IikoBizApi
 
         public async Task<T> GetAsync<T>(string path, object additionalQueryValues = null, bool needsAccessToken = true)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format(" --->Start get async answer"));
             var response = await GetAsync(path, additionalQueryValues, needsAccessToken).ConfigureAwait(false);
 
             try
             {
                 var result = JsonConvert.DeserializeObject<T>(response);
+                Log.Inst.WriteToLogDEBUG(string.Format("<----End get async answer"));
                 return result;
             }
             catch (Exception ex)
             {
                 // here can be response with an error
+                Log.Inst.WriteToLogDEBUG(string.Format("ERROR JsonConvert for get: {0}", ex.Message));
                 throw new ApiException(response, ex: ex);
             }
+            
         }
 
         public async Task<string> OlapsOlap(string organizationId, string olapRequest)
@@ -180,18 +193,20 @@ namespace IikoBizApi
         private async Task<T> PostAsync<T>(string path, object requestBody, object additionalQueryValues = null,
             bool needsAccessToken = true)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Start post async answer"));
             var response =
                 await PostAsync(path, requestBody, additionalQueryValues, needsAccessToken).ConfigureAwait(false);
 
             try
             {
                 var result = JsonConvert.DeserializeObject<T>(response);
-
+                Log.Inst.WriteToLogDEBUG(string.Format("End post async answer"));
                 return result;
             }
             catch (Exception ex)
             {
                 // here can be response with an error
+                Log.Inst.WriteToLogDEBUG(string.Format("ERROR JsonConvert for post: {0}", ex.Message));
                 throw new ApiException(response, ex: ex);
             }
         }
@@ -199,10 +214,12 @@ namespace IikoBizApi
         public async Task<string> GetAsync(string path, object additionalQueryValues = null,
             bool needsAccessToken = true)
         {
+
             var url = _settings.BaseAddress.AppendPathSegment(path);
             if (needsAccessToken)
             {
                 url = url.SetQueryParam("access_token", _apiAccessToken.Value);
+                Log.Inst.WriteToLogDEBUG(string.Format("This access token for get request: {0}", _apiAccessToken.Value));
             }
 
             if (additionalQueryValues != null)
@@ -221,6 +238,7 @@ namespace IikoBizApi
             if (needsAccessToken)
             {
                 url = url.SetQueryParam("access_token", _apiAccessToken.Value);
+                Log.Inst.WriteToLogDEBUG(string.Format("This access token for post request: {0}", _apiAccessToken.Value));
             }
 
             if (additionalQueryValues != null)

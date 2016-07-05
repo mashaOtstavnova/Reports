@@ -1,8 +1,12 @@
 ﻿using System.Data;
 using System.Linq;
+using Reports;
 
 namespace Core.Services.Implimintation
 {
+    /// <summary>
+    /// конструирования dateTable по object
+    /// </summary>
     public class BuildTable : IBuildTable
     {
         private  DataTable _dateTable;
@@ -14,6 +18,7 @@ namespace Core.Services.Implimintation
 
         public DataTable BuiltTable(object[] obj)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Start buil table for {0}", obj.GetType().FullName));
             _dateTable = new DataTable();
             _dateTable.TableName = obj.GetType().GetElementType().Name;
            
@@ -32,7 +37,7 @@ namespace Core.Services.Implimintation
                 }
                 _dateTable.Rows.Add(r);
             }
-            
+            Log.Inst.WriteToLogDEBUG(string.Format("End buil table for {0}", obj.GetType().FullName));
             return _dateTable;
         }
     }

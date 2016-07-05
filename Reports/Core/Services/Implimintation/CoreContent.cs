@@ -7,6 +7,9 @@ using Framework;
 
 namespace Core.Services.Implimintation
 {
+    /// <summary>
+    /// хранилище сервисов
+    /// </summary>
     public static class CoreContext
     {
         public static IBizApiClient BizApiClient

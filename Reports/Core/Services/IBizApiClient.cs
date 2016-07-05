@@ -17,6 +17,6 @@ namespace Core.Services
        Task<OrganizationInfo[]> GetOrganizationInfo();
        Task<CorporateNutritionInfo[]> GetCorporateNutritionInfo(string organizationId);
        //Task<CorporateNutritionReportItem[]> GetCorporateNutritionReportItem(string organizationId, string corporateNutritionInfoId, string fromDate, string toDate);
-       Reports[] GetReportses(string organizationId, string corporateNutritionInfoId, DateTime from, DateTime to);
+       Domain.Reports[] GetReportses(ReportParameters param);
     }
 }
