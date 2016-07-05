@@ -21,5 +21,9 @@ namespace Core.Services.Implimintation
         {
             get { return Service<IBuildTable>.GetInstance(); }
         }
+        public static IParseCorparationToReports ParseCorparationToReports
+        {
+            get { return Service<IParseCorparationToReports>.GetInstance(); }
+        }
     }
 }
