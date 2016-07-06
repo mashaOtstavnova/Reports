@@ -198,3 +198,4 @@ C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Proper
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Reports.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.csproj.GenerateResource.Cache
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.exe.licenses
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ExcelLibrary.dll

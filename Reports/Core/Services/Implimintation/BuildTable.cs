@@ -44,7 +44,7 @@ namespace Core.Services.Implimintation
             return _dateTable;
         }
 
-        public void SaveExel(DataTable dt)
+        public void SaveExel(DataTable dt, string path)
         {
             Workbook workbook = new Workbook();
           
@@ -55,13 +55,19 @@ namespace Core.Services.Implimintation
                 worksheet.Cells[0, i] = new Cell(dt.Columns[i].ColumnName);
 
                 // Populate row data
-                for (int j = 0; j < dt.Rows.Count; j++)
+                for (int j = 0; j < dt.Rows.Count; j++) { 
                     //Если нулевые значения, заменяем на пустые строки
-                    worksheet.Cells[j + 1, i] = new Cell(dt.Rows[j][i] == DBNull.Value ? "" : dt.Rows[j][i]);
+                    var valueRow = dt.Rows[j][i];
+                    if (valueRow.GetType() == typeof (DateTime))
+                    {
+                        valueRow = valueRow.ToString();
+                    }
+                    worksheet.Cells[j + 1, i] = new Cell(valueRow == DBNull.Value ? "" : valueRow);
+                }
             }
             workbook.Worksheets.Add(worksheet);
             var p = Path.Combine(Environment.CurrentDirectory, @"exels");
-            workbook.Save(p);
+            workbook.Save(path);
         }
     }
 }

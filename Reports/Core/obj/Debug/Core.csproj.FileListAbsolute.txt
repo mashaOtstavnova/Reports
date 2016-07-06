@@ -22,3 +22,4 @@ C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Debug\Newtonsoft.Json.x
 C:\Users\maria\Documents\GitHub\Reports\Reports\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 C:\Users\maria\Documents\GitHub\Reports\Reports\Core\obj\Debug\Core.dll
 C:\Users\maria\Documents\GitHub\Reports\Reports\Core\obj\Debug\Core.pdb
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Debug\ExcelLibrary.dll
