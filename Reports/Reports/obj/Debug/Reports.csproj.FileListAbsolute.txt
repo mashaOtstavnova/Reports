@@ -207,4 +207,3 @@ C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ru\DevExpress.
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.GridDataTable.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.MainView.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.ProgressPanel.resources
-C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.SplashScreen1.resources

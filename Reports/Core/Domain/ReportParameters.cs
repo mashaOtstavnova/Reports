@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Core.Domain
 {
@@ -11,11 +13,12 @@ namespace Core.Domain
     /// </summary>
     public class ReportParameters
     {
-        public readonly string OrganizationInfoId;
-        public readonly string CorporateNutritionProgramId;
-        public readonly DateTime DateFrom;
-        public readonly DateTime DateTo;
-
+        public string OrganizationInfoId;
+        public string CorporateNutritionProgramId;
+        public DateTime DateFrom;
+        public DateTime DateTo;
+        public ReportParameters()
+        { }
         public ReportParameters(string organizationInfoId, string corporateNutritionProgramId,
             DateTime dateFrom, DateTime dateTo)
         {
@@ -25,5 +28,32 @@ namespace Core.Domain
             DateTo= dateTo;
         }
 
+        public void WriteToFile()
+        {
+
+            var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            @"iikoReports\ReportParameters.json");
+            var tmp = Directory.Exists("iikoReports");
+            if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                @"iikoReports")))
+            {
+                Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                @"iikoReports"));
+            }
+            if (!File.Exists(fileName))
+            {
+                File.Create(fileName);
+            }
+            
+            var json = JsonConvert.SerializeObject(new ReportParameters()
+            {
+                CorporateNutritionProgramId = this.CorporateNutritionProgramId,
+                OrganizationInfoId = this.OrganizationInfoId,
+                DateFrom = this.DateFrom,
+                DateTo = this.DateTo
+            }, Formatting.Indented);
+
+            File.WriteAllText(fileName, json);
+        }
     }
 }

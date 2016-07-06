@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,13 +10,14 @@ using Core.Services.Implimintation;
 using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
 using IikoBizApi;
+using Newtonsoft.Json;
 using Reports.Controls;
 
 namespace Reports
 {
     public partial class Form1 : XtraForm
     {
-        private readonly ProgressPanel c = new ProgressPanel();
+        private readonly ProgressPanel _progressPanel = new ProgressPanel();
         private readonly OrganizationInfo[] ListOrg;
         private IikoBizToken _apiAccessToken;
         private string idOrg;
@@ -54,17 +56,18 @@ namespace Reports
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            c.Visible = true;
+            _progressPanel.Visible = true;
             Application.DoEvents();
-            //c.Show();
-
+            //_progressPanel.Show();
             //var corp = comboBox2.Text;
-           
+            var p = Path.Combine(Environment.CurrentDirectory, @"logs\\start.log"
+               + string.Format("-{0:yyyy}-{0:MM}-{0:dd}", DateTime.Now));
+            
             var dt1 = await newThread();
             var re = new MainView(dt1);
             Log.Inst.WriteToLogDEBUG("Show gridView");
             
-            c.Visible = false;
+            _progressPanel.Visible = false;
             re.ShowDialog();
         }
 
@@ -72,16 +75,19 @@ namespace Reports
         {
             return await Task.Run(() =>
             {
+
                 var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
                 //var idCor = list.Where(r => r.Name == comboBox2.Text).First().Id;
                 var idCor = list.First().Id;
+                var reportParametrs = new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date,
+                    dateTimeTo.Value.AddDays(1).Date);
+                reportParametrs.WriteToFile();
                 //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
                 //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
                 //listBox1.Items.Clear();
                 //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
                 var result =
-                    CoreContext.MakerRequest.GetReportses(new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date,
-                        dateTimeTo.Value.AddDays(1).Date));
+                    CoreContext.MakerRequest.GetReportses(reportParametrs);
                 var dt = CoreContext.BuildTable.BuiltTable(result);
                 dt = CoreContext.BuildTable.BuiltTable(result);
                 return dt;
