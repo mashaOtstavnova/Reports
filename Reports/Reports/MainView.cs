@@ -8,24 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core.Services.Implimintation;
-using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using Reports.Controls;
 
 namespace Reports
 {
-    public partial class Reports : Form
+    public partial class MainView : Form
     {
         private DataTable _dataTable;
-        public Reports(DataTable dt)
+        public MainView(DataTable dt)
         {
             _dataTable = dt;
             InitializeComponent();
         }
 
-        private void gridControl1_Load(object sender, EventArgs e)
+        private void MainView_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = _dataTable;
+            var grid = new GridDataTable(_dataTable);
+            splitContainerControl1.Panel2.Controls.Add(grid);
         }
-        
 
         private void createExel_Click(object sender, EventArgs e)
         {

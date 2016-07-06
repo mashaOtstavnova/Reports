@@ -8,7 +8,7 @@ using Reports;
 namespace Core.Services.Implimintation
 {
     /// <summary>
-    /// конструирования dateTable по object
+    /// конструирование dateTable по object
     /// </summary>
     public class BuildTable : IBuildTable
     {

@@ -195,7 +195,14 @@ C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ru\DevExpress.
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.csprojResolveAssemblyReference.cache
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Form1.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Properties.Resources.resources
-C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Reports.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.csproj.GenerateResource.Cache
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.exe.licenses
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ExcelLibrary.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\DevExpress.XtraVerticalGrid.v16.1.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\DevExpress.XtraVerticalGrid.v16.1.xml
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.GridDataTable.resources
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.MainView.resources
