@@ -16,6 +16,7 @@ namespace Reports.Controls
         public GridDataTable(DataTable dt)
         {
             InitializeComponent();
+            this.gridControl1.DataSource = null;
             this.gridControl1.DataSource = dt;
         }
     }

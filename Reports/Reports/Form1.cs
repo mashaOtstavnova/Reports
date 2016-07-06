@@ -1,27 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using Core.Services.Implimintation;
-using System.Windows.Forms;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using Core.Domain;
+using Core.Services.Implimintation;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraEditors;
 using IikoBizApi;
+using Reports.Controls;
 
 namespace Reports
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class Form1 : XtraForm
     {
+        private readonly ProgressPanel c = new ProgressPanel();
+        private readonly OrganizationInfo[] ListOrg;
         private IikoBizToken _apiAccessToken;
         private string idOrg;
-        private OrganizationInfo[] ListOrg;
+
         public Form1()
         {
-            Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}",this.Name));
+            UserLookAndFeel.Default.SetSkinStyle("Dark Side");
+            Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}", Name));
             idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
             ListOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
             InitializeComponent();
         }
-        
+
         private void textBox3_Layout(object sender, LayoutEventArgs e)
         {
             //restoCamp
@@ -29,8 +36,8 @@ namespace Reports
 
             var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000);
             _apiAccessToken = new IikoBizToken(
-               $"{settings.BaseAddress}auth/access_token?user_id={settings.Login}&user_secret={settings.Password}",
-              new HttpClient());
+                $"{settings.BaseAddress}auth/access_token?user_id={settings.Login}&user_secret={settings.Password}",
+                new HttpClient());
             textBox3.Text = _apiAccessToken.Value;
         }
 
@@ -41,34 +48,48 @@ namespace Reports
             //var thisresult = list.Where(t => t.Name == "АвтоСтройСервис (Ахат)").First();
             var thisresult = list.First();
             //var resylt = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, thisresult.Id);
-           
+
             //listBox1.Items.Add(result);
         }
-        private void button1_Click(object sender, System.EventArgs e)
+
+        private async void button1_Click(object sender, EventArgs e)
         {
+            c.Visible = true;
+            Application.DoEvents();
+            //c.Show();
 
             //var corp = comboBox2.Text;
            
-            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
-            //var idCor = list.Where(r => r.Name == comboBox2.Text).First().Id;
-            var idCor = list.First().Id;
-            //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
-            //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
-            //listBox1.Items.Clear();
-            //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
-            var result = CoreContext.MakerRequest.GetReportses(new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date, dateTimeTo.Value.AddDays(1).Date));
-           
-            var dt = CoreContext.BuildTable.BuiltTable(result);
-            dt = CoreContext.BuildTable.BuiltTable(result);
-            //CoreContext.BuildTable.SaveExel(dt);
-            MainView re = new MainView(dt);
-            Log.Inst.WriteToLogDEBUG(string.Format("Show gridView"));
+            var dt1 = await newThread();
+            var re = new MainView(dt1);
+            Log.Inst.WriteToLogDEBUG("Show gridView");
+            
+            c.Visible = false;
             re.ShowDialog();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        public async Task<DataTable> newThread()
         {
+            return await Task.Run(() =>
+            {
+                var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
+                //var idCor = list.Where(r => r.Name == comboBox2.Text).First().Id;
+                var idCor = list.First().Id;
+                //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
+                //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
+                //listBox1.Items.Clear();
+                //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
+                var result =
+                    CoreContext.MakerRequest.GetReportses(new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date,
+                        dateTimeTo.Value.AddDays(1).Date));
+                var dt = CoreContext.BuildTable.BuiltTable(result);
+                dt = CoreContext.BuildTable.BuiltTable(result);
+                return dt;
+            });
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
             idOrg = ListOrg.Where(r => r.Name == comboBox1.Text).First().Id;
             var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             foreach (var item in list)
@@ -79,7 +100,7 @@ namespace Reports
             textBox1.Text = string.Format("Name: {0} Id {1}", org, idOrg);
         }
 
-        private void Form1_Load(object sender, System.EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             foreach (var item in ListOrg)

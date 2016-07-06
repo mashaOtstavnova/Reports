@@ -90,7 +90,6 @@ namespace Core.Services.Implimintation
                 //var arrayRespons =
                 //    this.GetCorporateNutritionReportItem(organizationId, corporateNutritionInfoId, formatFrom, formatTo)
                 //        .Result;
-
                 corporateNutritionReportItemsList.AddRange(arrayRespons);
 
                 var resultArray1 = corporateNutritionReportItemsList.ToArray();
