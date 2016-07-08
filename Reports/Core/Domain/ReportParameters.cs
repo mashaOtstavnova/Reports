@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Reports;
 
 namespace Core.Domain
 {
@@ -30,7 +31,7 @@ namespace Core.Domain
 
         public void WriteToFile()
         {
-
+            Log.Inst.WriteToLogDEBUG(string.Format("Start write Json"));
             var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
             @"iikoReports\ReportParameters.json");
             var tmp = Directory.Exists("iikoReports");

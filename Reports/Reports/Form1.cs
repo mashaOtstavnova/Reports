@@ -77,9 +77,8 @@ namespace Reports
             {
 
                 var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
-                //var idCor = list.Where(r => r.Name == comboBox2.Text).First().Id;
-                var idCor = list.First().Id;
-                var reportParametrs = new ReportParameters(idOrg, idCor, dateTimeFrom.Value.Date,
+                //var idCor = list.Where(t => t.Name==comboBox2.Text).FirstOrDefault().Id;
+                var reportParametrs = new ReportParameters(idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
                     dateTimeTo.Value.AddDays(1).Date);
                 reportParametrs.WriteToFile();
                 //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);

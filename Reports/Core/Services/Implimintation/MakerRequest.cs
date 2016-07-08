@@ -28,6 +28,7 @@ namespace Core.Services.Implimintation
             Log.Inst.WriteToLogDEBUG(string.Format("Get CorporateNutritionInfo"));
             ////api/0/organization/{organizationId}/corporate_nutritions?access_token={accessToken}
             var idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result[0].Id;
+            
             return
                 await
                     CoreContext.BizApiClient.GetAsync<CorporateNutritionInfo[]>(
@@ -47,39 +48,40 @@ namespace Core.Services.Implimintation
             var corporateNutritionReportItemsList = new List<CorporateNutritionReportItem>();//список отчетов
             var reportsList = new List<Core.Domain.Reports>();
             var fromThis = param.DateFrom;
-            var arrayRespons = new CorporateNutritionReportItem[2]
-                {
-                    new CorporateNutritionReportItem
-                    {
-                        BalanceOnPeriodEnd = (decimal) 10.1,
-                        BalanceOnPeriodStart = (decimal) 60.1,
-                        BalanceRefillSum = (decimal) 5.5,
-                        BalanceResetSum = (decimal) 5.4,
-                        EmployeeNumber = "10",
-                        GuestCardTrack = "11",
-                        GuestCategoryNames = "GuestCategoryNames",
-                        GuestId = "GuestId",
-                        GuestName = "GuestName",
-                        GuestPhone = "GuestPhone",
-                        PaidOrdersCount = (decimal) 4.4,
-                        PayFromWalletSum = (decimal) 1.4
-                    },
-                    new CorporateNutritionReportItem
-                    {
-                        BalanceOnPeriodEnd = (decimal) 10.1,
-                        BalanceOnPeriodStart = (decimal) 60.1,
-                        BalanceRefillSum = (decimal) 5.5,
-                        BalanceResetSum = (decimal) 5.4,
-                        EmployeeNumber = "10",
-                        GuestCardTrack = "11",
-                        GuestCategoryNames = "GuestCategoryNames1",
-                        GuestId = "GuestId1",
-                        GuestName = "GuestName1",
-                        GuestPhone = "GuestPhone1",
-                        PaidOrdersCount = (decimal) 4.4,
-                        PayFromWalletSum = (decimal) 1.4
-                    }
-                };
+            
+            //var arrayRespons = new CorporateNutritionReportItem[2]
+            //    {
+            //        new CorporateNutritionReportItem
+            //        {
+            //            BalanceOnPeriodEnd = (decimal) 10.1,
+            //            BalanceOnPeriodStart = (decimal) 60.1,
+            //            BalanceRefillSum = (decimal) 5.5,
+            //            BalanceResetSum = (decimal) 5.4,
+            //            EmployeeNumber = "10",
+            //            GuestCardTrack = "11",
+            //            GuestCategoryNames = "GuestCategoryNames",
+            //            GuestId = "GuestId",
+            //            GuestName = "GuestName",
+            //            GuestPhone = "GuestPhone",
+            //            PaidOrdersCount = (decimal) 4.4,
+            //            PayFromWalletSum = (decimal) 1.4
+            //        },
+            //        new CorporateNutritionReportItem
+            //        {
+            //            BalanceOnPeriodEnd = (decimal) 10.1,
+            //            BalanceOnPeriodStart = (decimal) 60.1,
+            //            BalanceRefillSum = (decimal) 5.5,
+            //            BalanceResetSum = (decimal) 5.4,
+            //            EmployeeNumber = "10",
+            //            GuestCardTrack = "11",
+            //            GuestCategoryNames = "GuestCategoryNames1",
+            //            GuestId = "GuestId1",
+            //            GuestName = "GuestName1",
+            //            GuestPhone = "GuestPhone1",
+            //            PaidOrdersCount = (decimal) 4.4,
+            //            PayFromWalletSum = (decimal) 1.4
+            //        }
+            //    };
             var toThis = fromThis.AddDays(1);
 
             while (fromThis != param.DateTo)
@@ -87,9 +89,10 @@ namespace Core.Services.Implimintation
                 corporateNutritionReportItemsList.Clear();
                 //var formatFrom = fromThis.ToString(Format);
                 //var formatTo = toThis.ToString(Format);
-                //var arrayRespons =
-                //    this.GetCorporateNutritionReportItem(organizationId, corporateNutritionInfoId, formatFrom, formatTo)
-                //        .Result;
+                var arrayRespons =
+                    this.GetCorporateNutritionReportItem(param.OrganizationInfoId, param.CorporateNutritionProgramId, fromThis.ToString(Format),
+                    fromThis.AddDays(1).ToString(Format))
+                        .Result;
                 corporateNutritionReportItemsList.AddRange(arrayRespons);
 
                 var resultArray1 = corporateNutritionReportItemsList.ToArray();

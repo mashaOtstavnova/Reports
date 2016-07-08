@@ -17,16 +17,18 @@ namespace Reports
     public partial class MainView : Form
     {
         private DataTable _dataTable;
+        private GridDataTable _grid;
         public MainView(DataTable dt)
         {
             _dataTable = dt;
+            _grid = new GridDataTable(_dataTable);
             InitializeComponent();
         }
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            var grid = new GridDataTable(_dataTable);
-            splitContainerControl1.Panel2.Controls.Add(grid);
+            _grid.Size = splitContainerControl1.Panel2.Size;
+            splitContainerControl1.Panel2.Controls.Add(_grid);
         }
 
         private void createExel_Click(object sender, EventArgs e)
@@ -38,6 +40,11 @@ namespace Reports
                 //Собсвенно вот тут и передаем DataSet в наш метод который формирует Excel-документ
                 CoreContext.BuildTable.SaveExel(_dataTable, save.FileName);
             }
+        }
+
+        private void MainView_SizeChanged(object sender, EventArgs e)
+        {
+            _grid.Size = splitContainerControl1.Panel2.Size;
         }
     }
 }
