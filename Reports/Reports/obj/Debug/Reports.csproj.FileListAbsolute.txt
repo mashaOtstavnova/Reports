@@ -207,3 +207,9 @@ C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ru\DevExpress.
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.GridDataTable.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.MainView.resources
 C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.ProgressPanel.resources
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\DevExpress.XtraNavBar.v16.1.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\DevExpress.XtraNavBar.v16.1.xml
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\de\DevExpress.XtraNavBar.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\es\DevExpress.XtraNavBar.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ja\DevExpress.XtraNavBar.v16.1.resources.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\bin\Debug\ru\DevExpress.XtraNavBar.v16.1.resources.dll

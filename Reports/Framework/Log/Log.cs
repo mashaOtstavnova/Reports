@@ -49,12 +49,20 @@ namespace Reports
 
         public  void WriteToLogDEBUG(string m)
         {
+            try
+            {
 #if DEBUG
-            System.IO.StreamWriter file = new System.IO.StreamWriter(p,true);
-            file.WriteLine(string.Format("{0}:{1}", DateTime.Now, m));
+                System.IO.StreamWriter file = new System.IO.StreamWriter(p, true);
+                file.WriteLine(string.Format("{0}:{1}", DateTime.Now, m));
 
-            file.Close();
+                file.Close();
 #endif
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+
         }
 
         public  void WriteToLog(string m)

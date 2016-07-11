@@ -1235,3 +1235,530 @@
 08.07.2016 13:43:12:Start buil table for Core.Domain.Reports[]
 08.07.2016 13:43:12:End buil table for Core.Domain.Reports[]
 08.07.2016 13:43:12:Show gridView
+08.07.2016 13:53:09:Start program
+08.07.2016 13:53:09:Initialization program
+08.07.2016 13:53:09:Run application
+08.07.2016 13:53:09:Initialize Component 
+08.07.2016 13:53:09:Get OrganizationInfo
+08.07.2016 13:53:09: --->Start get async answer
+08.07.2016 13:53:10:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLHttK5F2nUb8euHKxYYJlmcx-Gi1kKUqsuQtsHNHP2vMJq6BSPCAv9PWIMk4lkTrA2
+08.07.2016 13:53:12:<----End get async answer
+08.07.2016 13:53:12:Get OrganizationInfo
+08.07.2016 13:53:12: --->Start get async answer
+08.07.2016 13:53:12:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLHttK5F2nUb8euHKxYYJlmcx-Gi1kKUqsuQtsHNHP2vMJq6BSPCAv9PWIMk4lkTrA2
+08.07.2016 13:53:16:<----End get async answer
+08.07.2016 13:53:18:Get CorporateNutritionInfo
+08.07.2016 13:53:18:Get OrganizationInfo
+08.07.2016 13:53:18: --->Start get async answer
+08.07.2016 13:53:18:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLHttK5F2nUb8euHKxYYJlmcx-Gi1kKUqsuQtsHNHP2vMJq6BSPCAv9PWIMk4lkTrA2
+08.07.2016 13:53:18:<----End get async answer
+08.07.2016 13:53:18: --->Start get async answer
+08.07.2016 13:53:19:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLHttK5F2nUb8euHKxYYJlmcx-Gi1kKUqsuQtsHNHP2vMJq6BSPCAv9PWIMk4lkTrA2
+08.07.2016 14:19:40:Start program
+08.07.2016 14:19:40:Initialization program
+08.07.2016 14:19:40:Run application
+08.07.2016 14:19:40:Initialize Component 
+08.07.2016 14:19:40:Get OrganizationInfo
+08.07.2016 14:19:40: --->Start get async answer
+08.07.2016 14:19:41:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:41:<----End get async answer
+08.07.2016 14:19:41:Get OrganizationInfo
+08.07.2016 14:19:41: --->Start get async answer
+08.07.2016 14:19:41:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:41:<----End get async answer
+08.07.2016 14:19:42:Get CorporateNutritionInfo
+08.07.2016 14:19:42:Get OrganizationInfo
+08.07.2016 14:19:42: --->Start get async answer
+08.07.2016 14:19:42:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:44:<----End get async answer
+08.07.2016 14:19:44: --->Start get async answer
+08.07.2016 14:19:44:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:44:<----End get async answer
+08.07.2016 14:19:47:Get CorporateNutritionInfo
+08.07.2016 14:19:47:Get OrganizationInfo
+08.07.2016 14:19:47: --->Start get async answer
+08.07.2016 14:19:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:47:<----End get async answer
+08.07.2016 14:19:47: --->Start get async answer
+08.07.2016 14:19:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:47:<----End get async answer
+08.07.2016 14:19:47:Start write Json
+08.07.2016 14:19:47:Get Reportses
+08.07.2016 14:19:47:Get CorporateNutritionReportItem
+08.07.2016 14:19:47:Get OrganizationInfo
+08.07.2016 14:19:47: --->Start get async answer
+08.07.2016 14:19:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:47:<----End get async answer
+08.07.2016 14:19:47: --->Start get async answer
+08.07.2016 14:19:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:48:<----End get async answer
+08.07.2016 14:19:48:Get CorporateNutritionReportItem
+08.07.2016 14:19:48:Get OrganizationInfo
+08.07.2016 14:19:48: --->Start get async answer
+08.07.2016 14:19:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:48:<----End get async answer
+08.07.2016 14:19:48: --->Start get async answer
+08.07.2016 14:19:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGKMqKHQNXdiPvXVQEr8v61enNvPYyK6etQVL6_CcuOAUL7lIfhoGakEQQoGAmKBgA2
+08.07.2016 14:19:50:<----End get async answer
+08.07.2016 14:19:50:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:19:50:End buil table for Core.Domain.Reports[]
+08.07.2016 14:19:50:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:19:50:End buil table for Core.Domain.Reports[]
+08.07.2016 14:19:50:Show gridView
+08.07.2016 14:23:28:Start program
+08.07.2016 14:23:28:Initialization program
+08.07.2016 14:23:28:Run application
+08.07.2016 14:23:28:Initialize Component 
+08.07.2016 14:23:28:Get OrganizationInfo
+08.07.2016 14:23:28: --->Start get async answer
+08.07.2016 14:23:29:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:29:<----End get async answer
+08.07.2016 14:23:29:Get OrganizationInfo
+08.07.2016 14:23:29: --->Start get async answer
+08.07.2016 14:23:29:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:29:<----End get async answer
+08.07.2016 14:23:30:Get CorporateNutritionInfo
+08.07.2016 14:23:30:Get OrganizationInfo
+08.07.2016 14:23:30: --->Start get async answer
+08.07.2016 14:23:30:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:30:<----End get async answer
+08.07.2016 14:23:30: --->Start get async answer
+08.07.2016 14:23:30:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:30:<----End get async answer
+08.07.2016 14:23:32:Get CorporateNutritionInfo
+08.07.2016 14:23:32:Get OrganizationInfo
+08.07.2016 14:23:32: --->Start get async answer
+08.07.2016 14:23:32:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:32:<----End get async answer
+08.07.2016 14:23:32: --->Start get async answer
+08.07.2016 14:23:32:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:33:<----End get async answer
+08.07.2016 14:23:33:Start write Json
+08.07.2016 14:23:33:Get Reportses
+08.07.2016 14:23:33:Get CorporateNutritionReportItem
+08.07.2016 14:23:33:Get OrganizationInfo
+08.07.2016 14:23:33: --->Start get async answer
+08.07.2016 14:23:33:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:33:<----End get async answer
+08.07.2016 14:23:33: --->Start get async answer
+08.07.2016 14:23:33:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:34:<----End get async answer
+08.07.2016 14:23:34:Get CorporateNutritionReportItem
+08.07.2016 14:23:34:Get OrganizationInfo
+08.07.2016 14:23:34: --->Start get async answer
+08.07.2016 14:23:34:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:23:34:<----End get async answer
+08.07.2016 14:23:34: --->Start get async answer
+08.07.2016 14:23:34:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SFBZz9BXFGr3IFLlzYt4wVSgtQP0VcHOpE_ewO2S-03sqWjeDKWYhM6S0o2-SFOeSQ2
+08.07.2016 14:24:45:Start program
+08.07.2016 14:24:45:Initialization program
+08.07.2016 14:24:45:Run application
+08.07.2016 14:24:46:Initialize Component 
+08.07.2016 14:24:46:Get OrganizationInfo
+08.07.2016 14:24:46: --->Start get async answer
+08.07.2016 14:24:46:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:46:<----End get async answer
+08.07.2016 14:24:46:Get OrganizationInfo
+08.07.2016 14:24:46: --->Start get async answer
+08.07.2016 14:24:46:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:46:<----End get async answer
+08.07.2016 14:24:47:Get CorporateNutritionInfo
+08.07.2016 14:24:47:Get OrganizationInfo
+08.07.2016 14:24:47: --->Start get async answer
+08.07.2016 14:24:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:47:<----End get async answer
+08.07.2016 14:24:47: --->Start get async answer
+08.07.2016 14:24:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:47:<----End get async answer
+08.07.2016 14:24:49:Get CorporateNutritionInfo
+08.07.2016 14:24:49:Get OrganizationInfo
+08.07.2016 14:24:49: --->Start get async answer
+08.07.2016 14:24:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:49:<----End get async answer
+08.07.2016 14:24:49: --->Start get async answer
+08.07.2016 14:24:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:49:<----End get async answer
+08.07.2016 14:24:49:Start write Json
+08.07.2016 14:24:49:Get Reportses
+08.07.2016 14:24:49:Get CorporateNutritionReportItem
+08.07.2016 14:24:49:Get OrganizationInfo
+08.07.2016 14:24:49: --->Start get async answer
+08.07.2016 14:24:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:50:<----End get async answer
+08.07.2016 14:24:50: --->Start get async answer
+08.07.2016 14:24:50:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:50:<----End get async answer
+08.07.2016 14:24:50:Get CorporateNutritionReportItem
+08.07.2016 14:24:50:Get OrganizationInfo
+08.07.2016 14:24:50: --->Start get async answer
+08.07.2016 14:24:50:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:51:<----End get async answer
+08.07.2016 14:24:51: --->Start get async answer
+08.07.2016 14:24:51:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGUId0QYdM4tL2XO4x2Yg_kA6AbJUaDF3MekIALNh6HpTM_owKIVW7dMZVoaJRGcKQ2
+08.07.2016 14:24:52:<----End get async answer
+08.07.2016 14:24:52:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:24:52:End buil table for Core.Domain.Reports[]
+08.07.2016 14:24:52:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:24:52:End buil table for Core.Domain.Reports[]
+08.07.2016 14:24:52:Show gridView
+08.07.2016 14:25:08:Start program
+08.07.2016 14:25:08:Initialization program
+08.07.2016 14:25:09:Run application
+08.07.2016 14:25:09:Initialize Component 
+08.07.2016 14:25:09:Get OrganizationInfo
+08.07.2016 14:25:09: --->Start get async answer
+08.07.2016 14:25:13:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:14:<----End get async answer
+08.07.2016 14:25:14:Get OrganizationInfo
+08.07.2016 14:25:14: --->Start get async answer
+08.07.2016 14:25:14:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:15:<----End get async answer
+08.07.2016 14:25:16:Get CorporateNutritionInfo
+08.07.2016 14:25:16:Get OrganizationInfo
+08.07.2016 14:25:16: --->Start get async answer
+08.07.2016 14:25:16:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:17:<----End get async answer
+08.07.2016 14:25:17: --->Start get async answer
+08.07.2016 14:25:17:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:18:<----End get async answer
+08.07.2016 14:25:20:Get CorporateNutritionInfo
+08.07.2016 14:25:20:Get OrganizationInfo
+08.07.2016 14:25:20: --->Start get async answer
+08.07.2016 14:25:20:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:20:<----End get async answer
+08.07.2016 14:25:20: --->Start get async answer
+08.07.2016 14:25:20:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:20:<----End get async answer
+08.07.2016 14:25:20:Start write Json
+08.07.2016 14:25:20:Get Reportses
+08.07.2016 14:25:20:Get CorporateNutritionReportItem
+08.07.2016 14:25:20:Get OrganizationInfo
+08.07.2016 14:25:20: --->Start get async answer
+08.07.2016 14:25:20:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:20:<----End get async answer
+08.07.2016 14:25:20: --->Start get async answer
+08.07.2016 14:25:20:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:22:<----End get async answer
+08.07.2016 14:25:22:Get CorporateNutritionReportItem
+08.07.2016 14:25:22:Get OrganizationInfo
+08.07.2016 14:25:22: --->Start get async answer
+08.07.2016 14:25:22:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:22:<----End get async answer
+08.07.2016 14:25:22: --->Start get async answer
+08.07.2016 14:25:22:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCVXJl_Ta1DagOpvHaQdDodhMwM9iUKh_CaFFt2qjzD3JJ_M62yntTfK9gtgNhbVVA2
+08.07.2016 14:25:24:<----End get async answer
+08.07.2016 14:25:24:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:25:24:End buil table for Core.Domain.Reports[]
+08.07.2016 14:25:24:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:25:24:End buil table for Core.Domain.Reports[]
+08.07.2016 14:25:24:Show gridView
+08.07.2016 14:35:25:Start program
+08.07.2016 14:35:25:Initialization program
+08.07.2016 14:35:25:Run application
+08.07.2016 14:35:25:Initialize Component 
+08.07.2016 14:35:25:Get OrganizationInfo
+08.07.2016 14:35:25: --->Start get async answer
+08.07.2016 14:35:25:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:26:<----End get async answer
+08.07.2016 14:35:26:Get OrganizationInfo
+08.07.2016 14:35:26: --->Start get async answer
+08.07.2016 14:35:26:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:26:<----End get async answer
+08.07.2016 14:35:26:Get CorporateNutritionInfo
+08.07.2016 14:35:26:Get OrganizationInfo
+08.07.2016 14:35:26: --->Start get async answer
+08.07.2016 14:35:26:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:27:<----End get async answer
+08.07.2016 14:35:27: --->Start get async answer
+08.07.2016 14:35:27:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:27:<----End get async answer
+08.07.2016 14:35:39:Get CorporateNutritionInfo
+08.07.2016 14:35:39:Get OrganizationInfo
+08.07.2016 14:35:39: --->Start get async answer
+08.07.2016 14:35:39:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:39:<----End get async answer
+08.07.2016 14:35:39: --->Start get async answer
+08.07.2016 14:35:39:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:39:<----End get async answer
+08.07.2016 14:35:39:Start write Json
+08.07.2016 14:35:39:Get Reportses
+08.07.2016 14:35:39:Get CorporateNutritionReportItem
+08.07.2016 14:35:39:Get OrganizationInfo
+08.07.2016 14:35:39: --->Start get async answer
+08.07.2016 14:35:39:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:39:<----End get async answer
+08.07.2016 14:35:39: --->Start get async answer
+08.07.2016 14:35:39:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:40:<----End get async answer
+08.07.2016 14:35:40:Get CorporateNutritionReportItem
+08.07.2016 14:35:40:Get OrganizationInfo
+08.07.2016 14:35:40: --->Start get async answer
+08.07.2016 14:35:40:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:41:<----End get async answer
+08.07.2016 14:35:41: --->Start get async answer
+08.07.2016 14:35:41:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SP1ujt3aCPe5qE3gvoQfNmD8rKdiQZTuIjqWYrRJv6llWElpBjBlCo7aAsO9a0H5aQ2
+08.07.2016 14:35:42:<----End get async answer
+08.07.2016 14:35:42:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:35:42:End buil table for Core.Domain.Reports[]
+08.07.2016 14:35:42:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:35:42:End buil table for Core.Domain.Reports[]
+08.07.2016 14:35:42:Show gridView
+08.07.2016 14:42:15:Start program
+08.07.2016 14:42:15:Initialization program
+08.07.2016 14:42:15:Run application
+08.07.2016 14:42:15:Initialize Component 
+08.07.2016 14:42:15:Get OrganizationInfo
+08.07.2016 14:42:15: --->Start get async answer
+08.07.2016 14:42:56:Start program
+08.07.2016 14:42:56:Initialization program
+08.07.2016 14:42:56:Run application
+08.07.2016 14:43:14:Start program
+08.07.2016 14:43:14:Initialization program
+08.07.2016 14:43:14:Run application
+08.07.2016 14:43:14:Initialize Component 
+08.07.2016 14:43:14:Get OrganizationInfo
+08.07.2016 14:43:14: --->Start get async answer
+08.07.2016 14:43:15:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SH40Cr5XtTxfRR6rLJObObz4MpzDx7vD1gUSk2B6iwbT3XvdDSJBDvQzil0xO2cJog2
+08.07.2016 14:43:15:<----End get async answer
+08.07.2016 14:43:15:Get OrganizationInfo
+08.07.2016 14:43:15: --->Start get async answer
+08.07.2016 14:43:15:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SH40Cr5XtTxfRR6rLJObObz4MpzDx7vD1gUSk2B6iwbT3XvdDSJBDvQzil0xO2cJog2
+08.07.2016 14:43:16:<----End get async answer
+08.07.2016 14:43:16:Get CorporateNutritionInfo
+08.07.2016 14:43:16:Get OrganizationInfo
+08.07.2016 14:43:16: --->Start get async answer
+08.07.2016 14:43:16:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SH40Cr5XtTxfRR6rLJObObz4MpzDx7vD1gUSk2B6iwbT3XvdDSJBDvQzil0xO2cJog2
+08.07.2016 14:43:17:<----End get async answer
+08.07.2016 14:43:17: --->Start get async answer
+08.07.2016 14:43:17:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SH40Cr5XtTxfRR6rLJObObz4MpzDx7vD1gUSk2B6iwbT3XvdDSJBDvQzil0xO2cJog2
+08.07.2016 14:43:17:<----End get async answer
+08.07.2016 14:47:34:Start program
+08.07.2016 14:47:34:Initialization program
+08.07.2016 14:47:34:Run application
+08.07.2016 14:47:34:Initialize Component 
+08.07.2016 14:47:34:Get OrganizationInfo
+08.07.2016 14:47:34: --->Start get async answer
+08.07.2016 14:47:35:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLjnxKba0Ecxx5nHcsk6ITQhcNt6CYiPRZmSwUAbbnoSaGjoMS-KsVHqcONjbzc5DA2
+08.07.2016 14:47:35:<----End get async answer
+08.07.2016 14:47:35:Get OrganizationInfo
+08.07.2016 14:47:35: --->Start get async answer
+08.07.2016 14:47:35:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLjnxKba0Ecxx5nHcsk6ITQhcNt6CYiPRZmSwUAbbnoSaGjoMS-KsVHqcONjbzc5DA2
+08.07.2016 14:47:35:<----End get async answer
+08.07.2016 14:47:36:Get CorporateNutritionInfo
+08.07.2016 14:47:36:Get OrganizationInfo
+08.07.2016 14:47:36: --->Start get async answer
+08.07.2016 14:47:36:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLjnxKba0Ecxx5nHcsk6ITQhcNt6CYiPRZmSwUAbbnoSaGjoMS-KsVHqcONjbzc5DA2
+08.07.2016 14:47:36:<----End get async answer
+08.07.2016 14:47:36: --->Start get async answer
+08.07.2016 14:47:36:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SLjnxKba0Ecxx5nHcsk6ITQhcNt6CYiPRZmSwUAbbnoSaGjoMS-KsVHqcONjbzc5DA2
+08.07.2016 14:47:36:<----End get async answer
+08.07.2016 14:48:03:Start program
+08.07.2016 14:48:03:Initialization program
+08.07.2016 14:48:03:Run application
+08.07.2016 14:48:03:Initialize Component 
+08.07.2016 14:48:03:Get OrganizationInfo
+08.07.2016 14:48:03: --->Start get async answer
+08.07.2016 14:48:05:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:05:<----End get async answer
+08.07.2016 14:48:05:Get OrganizationInfo
+08.07.2016 14:48:05: --->Start get async answer
+08.07.2016 14:48:05:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:06:<----End get async answer
+08.07.2016 14:48:06:Get CorporateNutritionInfo
+08.07.2016 14:48:06:Get OrganizationInfo
+08.07.2016 14:48:06: --->Start get async answer
+08.07.2016 14:48:06:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:06:<----End get async answer
+08.07.2016 14:48:06: --->Start get async answer
+08.07.2016 14:48:06:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:07:<----End get async answer
+08.07.2016 14:48:25:Get CorporateNutritionInfo
+08.07.2016 14:48:25:Get OrganizationInfo
+08.07.2016 14:48:25: --->Start get async answer
+08.07.2016 14:48:25:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:25:<----End get async answer
+08.07.2016 14:48:25: --->Start get async answer
+08.07.2016 14:48:25:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:25:<----End get async answer
+08.07.2016 14:48:26:Start write Json
+08.07.2016 14:48:26:Get Reportses
+08.07.2016 14:48:26:Get CorporateNutritionReportItem
+08.07.2016 14:48:26:Get OrganizationInfo
+08.07.2016 14:48:26: --->Start get async answer
+08.07.2016 14:48:26:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:26:<----End get async answer
+08.07.2016 14:48:26: --->Start get async answer
+08.07.2016 14:48:26:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:27:<----End get async answer
+08.07.2016 14:48:27:Get CorporateNutritionReportItem
+08.07.2016 14:48:27:Get OrganizationInfo
+08.07.2016 14:48:27: --->Start get async answer
+08.07.2016 14:48:27:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:28:<----End get async answer
+08.07.2016 14:48:28: --->Start get async answer
+08.07.2016 14:48:28:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:28:<----End get async answer
+08.07.2016 14:48:28:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:48:28:End buil table for Core.Domain.Reports[]
+08.07.2016 14:48:28:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:48:28:End buil table for Core.Domain.Reports[]
+08.07.2016 14:48:28:Show gridView
+08.07.2016 14:48:47:Get CorporateNutritionInfo
+08.07.2016 14:48:47:Get OrganizationInfo
+08.07.2016 14:48:47: --->Start get async answer
+08.07.2016 14:48:47:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:48:<----End get async answer
+08.07.2016 14:48:48: --->Start get async answer
+08.07.2016 14:48:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:48:<----End get async answer
+08.07.2016 14:48:48:Start write Json
+08.07.2016 14:48:48:Get Reportses
+08.07.2016 14:48:48:Get CorporateNutritionReportItem
+08.07.2016 14:48:48:Get OrganizationInfo
+08.07.2016 14:48:48: --->Start get async answer
+08.07.2016 14:48:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:48:<----End get async answer
+08.07.2016 14:48:48: --->Start get async answer
+08.07.2016 14:48:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:50:<----End get async answer
+08.07.2016 14:48:50:Get CorporateNutritionReportItem
+08.07.2016 14:48:50:Get OrganizationInfo
+08.07.2016 14:48:50: --->Start get async answer
+08.07.2016 14:48:50:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:50:<----End get async answer
+08.07.2016 14:48:50: --->Start get async answer
+08.07.2016 14:48:50:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:51:<----End get async answer
+08.07.2016 14:48:51:Get CorporateNutritionReportItem
+08.07.2016 14:48:51:Get OrganizationInfo
+08.07.2016 14:48:51: --->Start get async answer
+08.07.2016 14:48:51:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:52:<----End get async answer
+08.07.2016 14:48:52: --->Start get async answer
+08.07.2016 14:48:52:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:53:<----End get async answer
+08.07.2016 14:48:53:Get CorporateNutritionReportItem
+08.07.2016 14:48:53:Get OrganizationInfo
+08.07.2016 14:48:53: --->Start get async answer
+08.07.2016 14:48:53:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:54:<----End get async answer
+08.07.2016 14:48:54: --->Start get async answer
+08.07.2016 14:48:54:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:55:<----End get async answer
+08.07.2016 14:48:55:Get CorporateNutritionReportItem
+08.07.2016 14:48:55:Get OrganizationInfo
+08.07.2016 14:48:55: --->Start get async answer
+08.07.2016 14:48:55:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:55:<----End get async answer
+08.07.2016 14:48:55: --->Start get async answer
+08.07.2016 14:48:55:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:56:<----End get async answer
+08.07.2016 14:48:56:Get CorporateNutritionReportItem
+08.07.2016 14:48:56:Get OrganizationInfo
+08.07.2016 14:48:56: --->Start get async answer
+08.07.2016 14:48:56:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:56:<----End get async answer
+08.07.2016 14:48:56: --->Start get async answer
+08.07.2016 14:48:56:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:57:<----End get async answer
+08.07.2016 14:48:57:Get CorporateNutritionReportItem
+08.07.2016 14:48:57:Get OrganizationInfo
+08.07.2016 14:48:57: --->Start get async answer
+08.07.2016 14:48:57:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:57:<----End get async answer
+08.07.2016 14:48:57: --->Start get async answer
+08.07.2016 14:48:57:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:58:<----End get async answer
+08.07.2016 14:48:58:Get CorporateNutritionReportItem
+08.07.2016 14:48:58:Get OrganizationInfo
+08.07.2016 14:48:58: --->Start get async answer
+08.07.2016 14:48:58:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:58:<----End get async answer
+08.07.2016 14:48:58: --->Start get async answer
+08.07.2016 14:48:58:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SCQiJUrAVgt6dof46sHVxGg5cKhL6q88Q3QBMIQK9NywasAGEAeYFfGGzG-SgHEQ0w2
+08.07.2016 14:48:59:<----End get async answer
+08.07.2016 14:48:59:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:48:59:End buil table for Core.Domain.Reports[]
+08.07.2016 14:48:59:Start buil table for Core.Domain.Reports[]
+08.07.2016 14:48:59:End buil table for Core.Domain.Reports[]
+08.07.2016 14:48:59:Show gridView
+08.07.2016 15:25:10:Start program
+08.07.2016 15:25:10:Initialization program
+08.07.2016 15:25:10:Run application
+08.07.2016 15:25:10:Initialize Component 
+08.07.2016 15:25:10:Get OrganizationInfo
+08.07.2016 15:25:10: --->Start get async answer
+08.07.2016 15:25:10:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SPgse39a247Hc7fU_naXwoY8oWKyHGO32N_fNrYRps8LIuh3wI4F4QPj-rWjcs5yFg2
+08.07.2016 15:25:10:<----End get async answer
+08.07.2016 15:25:10:Get OrganizationInfo
+08.07.2016 15:25:10: --->Start get async answer
+08.07.2016 15:25:10:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SPgse39a247Hc7fU_naXwoY8oWKyHGO32N_fNrYRps8LIuh3wI4F4QPj-rWjcs5yFg2
+08.07.2016 15:25:11:<----End get async answer
+08.07.2016 15:25:12:Get CorporateNutritionInfo
+08.07.2016 15:25:12:Get OrganizationInfo
+08.07.2016 15:25:12: --->Start get async answer
+08.07.2016 15:25:12:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SPgse39a247Hc7fU_naXwoY8oWKyHGO32N_fNrYRps8LIuh3wI4F4QPj-rWjcs5yFg2
+08.07.2016 15:25:13:<----End get async answer
+08.07.2016 15:25:13: --->Start get async answer
+08.07.2016 15:25:13:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SPgse39a247Hc7fU_naXwoY8oWKyHGO32N_fNrYRps8LIuh3wI4F4QPj-rWjcs5yFg2
+08.07.2016 15:25:15:<----End get async answer
+08.07.2016 15:25:47:Start program
+08.07.2016 15:25:47:Initialization program
+08.07.2016 15:25:47:Run application
+08.07.2016 15:25:48:Initialize Component 
+08.07.2016 15:25:48:Get OrganizationInfo
+08.07.2016 15:25:48: --->Start get async answer
+08.07.2016 15:25:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SKYyDobWxKZRSsQb1rsnu5tt3q9mqy7o9tY6YKpCbcGm4XituLEk0WB5pdkQOTPiXw2
+08.07.2016 15:25:48:<----End get async answer
+08.07.2016 15:25:48:Get OrganizationInfo
+08.07.2016 15:25:48: --->Start get async answer
+08.07.2016 15:25:48:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SKYyDobWxKZRSsQb1rsnu5tt3q9mqy7o9tY6YKpCbcGm4XituLEk0WB5pdkQOTPiXw2
+08.07.2016 15:25:48:<----End get async answer
+08.07.2016 15:25:49:Get CorporateNutritionInfo
+08.07.2016 15:25:49:Get OrganizationInfo
+08.07.2016 15:25:49: --->Start get async answer
+08.07.2016 15:25:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SKYyDobWxKZRSsQb1rsnu5tt3q9mqy7o9tY6YKpCbcGm4XituLEk0WB5pdkQOTPiXw2
+08.07.2016 15:25:49:<----End get async answer
+08.07.2016 15:25:49: --->Start get async answer
+08.07.2016 15:25:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SKYyDobWxKZRSsQb1rsnu5tt3q9mqy7o9tY6YKpCbcGm4XituLEk0WB5pdkQOTPiXw2
+08.07.2016 15:25:49:<----End get async answer
+08.07.2016 15:26:48:Start program
+08.07.2016 15:26:48:Initialization program
+08.07.2016 15:26:48:Run application
+08.07.2016 15:26:49:Initialize Component 
+08.07.2016 15:26:49:Get OrganizationInfo
+08.07.2016 15:26:49: --->Start get async answer
+08.07.2016 15:26:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGQXCKrGpOFdYx310XCGHlQNq08pL3UlnedWxbe-Nx5A4MxY4_O8htPfdFdDBdFl_w2
+08.07.2016 15:26:49:<----End get async answer
+08.07.2016 15:26:49:Get OrganizationInfo
+08.07.2016 15:26:49: --->Start get async answer
+08.07.2016 15:26:49:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGQXCKrGpOFdYx310XCGHlQNq08pL3UlnedWxbe-Nx5A4MxY4_O8htPfdFdDBdFl_w2
+08.07.2016 15:26:49:<----End get async answer
+08.07.2016 15:26:50:Get CorporateNutritionInfo
+08.07.2016 15:26:50:Get OrganizationInfo
+08.07.2016 15:26:50: --->Start get async answer
+08.07.2016 15:26:50:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGQXCKrGpOFdYx310XCGHlQNq08pL3UlnedWxbe-Nx5A4MxY4_O8htPfdFdDBdFl_w2
+08.07.2016 15:26:50:<----End get async answer
+08.07.2016 15:26:50: --->Start get async answer
+08.07.2016 15:26:50:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SGQXCKrGpOFdYx310XCGHlQNq08pL3UlnedWxbe-Nx5A4MxY4_O8htPfdFdDBdFl_w2
+08.07.2016 15:26:50:<----End get async answer
+08.07.2016 15:30:13:Start program
+08.07.2016 15:30:13:Initialization program
+08.07.2016 15:30:13:Run application
+08.07.2016 15:30:13:Initialize Component 
+08.07.2016 15:30:13:Get OrganizationInfo
+08.07.2016 15:30:13: --->Start get async answer
+08.07.2016 15:30:14:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SENc7D91alQSCDz-ZlTj4MIisHguyfRzf5Vb46cxTAtTFAMM9BoT_O8rxuBU4Sc6fg2
+08.07.2016 15:30:14:<----End get async answer
+08.07.2016 15:30:14:Get OrganizationInfo
+08.07.2016 15:30:14: --->Start get async answer
+08.07.2016 15:30:14:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SENc7D91alQSCDz-ZlTj4MIisHguyfRzf5Vb46cxTAtTFAMM9BoT_O8rxuBU4Sc6fg2
+08.07.2016 15:30:15:<----End get async answer
+08.07.2016 15:30:16:Get CorporateNutritionInfo
+08.07.2016 15:30:16:Get OrganizationInfo
+08.07.2016 15:30:16: --->Start get async answer
+08.07.2016 15:30:16:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SENc7D91alQSCDz-ZlTj4MIisHguyfRzf5Vb46cxTAtTFAMM9BoT_O8rxuBU4Sc6fg2
+08.07.2016 15:30:16:<----End get async answer
+08.07.2016 15:30:16: --->Start get async answer
+08.07.2016 15:30:16:This access token for get request: XTd0MkUNcBUQ7h7wL8_9SENc7D91alQSCDz-ZlTj4MIisHguyfRzf5Vb46cxTAtTFAMM9BoT_O8rxuBU4Sc6fg2
+08.07.2016 15:30:16:<----End get async answer

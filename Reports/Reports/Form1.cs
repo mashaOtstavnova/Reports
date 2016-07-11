@@ -21,14 +21,17 @@ namespace Reports
         private readonly OrganizationInfo[] ListOrg;
         private IikoBizToken _apiAccessToken;
         private string idOrg;
+        private FirstView _firstView;
 
         public Form1()
         {
-            UserLookAndFeel.Default.SetSkinStyle("Dark Side");
+            _firstView = new FirstView();
             Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}", Name));
             idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
             ListOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
             InitializeComponent();
+            dateTimeFrom.MaxDate = DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0));//Вычитаем день
+            dateTimeTo.MaxDate = DateTime.Today;
         }
 
         private void textBox3_Layout(object sender, LayoutEventArgs e)
@@ -43,34 +46,7 @@ namespace Reports
             textBox3.Text = _apiAccessToken.Value;
         }
 
-        private void listBox1_Layout(object sender, LayoutEventArgs e)
-        {
-            idOrg = ListOrg.First().Id;
-            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
-            //var thisresult = list.Where(t => t.Name == "АвтоСтройСервис (Ахат)").First();
-            var thisresult = list.First();
-            //var resylt = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, thisresult.Id);
-
-            //listBox1.Items.Add(result);
-        }
-
-        private async void button1_Click(object sender, EventArgs e)
-        {
-            _progressPanel.Visible = true;
-            Application.DoEvents();
-            //_progressPanel.Show();
-            //var corp = comboBox2.Text;
-            var p = Path.Combine(Environment.CurrentDirectory, @"logs\\start.log"
-               + string.Format("-{0:yyyy}-{0:MM}-{0:dd}", DateTime.Now));
-            
-            var dt1 = await newThread();
-            var re = new MainView(dt1);
-            Log.Inst.WriteToLogDEBUG("Show gridView");
-            
-            _progressPanel.Visible = false;
-            re.ShowDialog();
-        }
-
+     
         public async Task<DataTable> newThread()
         {
             return await Task.Run(() =>
@@ -79,8 +55,7 @@ namespace Reports
                 var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
                 //var idCor = list.Where(t => t.Name==comboBox2.Text).FirstOrDefault().Id;
                 var reportParametrs = new ReportParameters(idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
-                    dateTimeTo.Value.AddDays(1).Date);
-                reportParametrs.WriteToFile();
+                    dateTimeTo.Value.Date);
                 //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
                 //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
                 //listBox1.Items.Clear();
@@ -120,6 +95,29 @@ namespace Reports
             var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
             var cor = list.Where(r => r.Name == comboBox2.Text).First();
             textBox2.Text = string.Format("Name: {0} Id {1}", cor.Name, cor.Id);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _firstView.Style = comboBox3.Text;
+           
+        }
+
+        private async void button1_Click_1(object sender, EventArgs e)
+        {
+            _progressPanel.Visible = true;
+            Application.DoEvents();
+            //_progressPanel.Show();
+            //var corp = comboBox2.Text;
+            var p = Path.Combine(Environment.CurrentDirectory, @"logs\\start.log"
+               + string.Format("-{0:yyyy}-{0:MM}-{0:dd}", DateTime.Now));
+
+            var dt1 = await newThread();
+            var re = new MainView(dt1);
+            Log.Inst.WriteToLogDEBUG("Show gridView");
+
+            _progressPanel.Visible = false;
+            re.ShowDialog();
         }
     }
 }

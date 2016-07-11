@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
+using DevExpress.LookAndFeel.Design;
 using DevExpress.XtraWaitForm;
 
 namespace Reports.Controls
@@ -15,6 +16,7 @@ namespace Reports.Controls
         public ProgressPanel()
         {
             InitializeComponent();
+            this.progressPanel1.LookAndFeel.Style = LookAndFeelStyle.UltraFlat;
             this.progressPanel1.AutoHeight = true;
             ;
         }

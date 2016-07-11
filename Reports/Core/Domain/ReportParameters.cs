@@ -27,9 +27,10 @@ namespace Core.Domain
             CorporateNutritionProgramId = corporateNutritionProgramId;
             DateFrom = dateFrom;
             DateTo= dateTo;
+            WriteToFile();
         }
 
-        public void WriteToFile()
+        private void WriteToFile()
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Start write Json"));
             var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
