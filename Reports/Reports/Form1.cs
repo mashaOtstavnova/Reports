@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core.Domain;
 using Core.Services.Implimintation;
+using Core.Views.FirstView;
+using Core.Views.MainView;
 using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
 using IikoBizApi;
@@ -15,23 +17,22 @@ using Reports.Controls;
 
 namespace Reports
 {
-    public partial class Form1 : XtraForm
+    public partial class Form1 : XtraForm, IFirstView
     {
         private readonly ProgressPanel _progressPanel = new ProgressPanel();
-        private readonly OrganizationInfo[] ListOrg;
+        private OrganizationInfo[] ListOrg;
         private IikoBizToken _apiAccessToken;
         private string idOrg;
         private FirstView _firstView;
 
         public Form1()
         {
+
+            CoreContext.ViewService.Init(this);
             _firstView = new FirstView();
-            Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}", Name));
-            idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
-            ListOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
             InitializeComponent();
-            dateTimeFrom.MaxDate = DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0));//Вычитаем день
-            dateTimeTo.MaxDate = DateTime.Today;
+            CoreContext.ViewService.FirstView.Init();
+           
         }
 
         private void textBox3_Layout(object sender, LayoutEventArgs e)
@@ -47,7 +48,7 @@ namespace Reports
         }
 
      
-        public async Task<DataTable> newThread()
+        private async Task<DataTable> newThread()
         {
             return await Task.Run(() =>
             {
@@ -105,19 +106,50 @@ namespace Reports
 
         private async void button1_Click_1(object sender, EventArgs e)
         {
+            
+            CoreContext.ViewService.FirstView.GetReports();
+        }
+
+        public async void GetReports()
+        {;
             _progressPanel.Visible = true;
             Application.DoEvents();
-            //_progressPanel.Show();
-            //var corp = comboBox2.Text;
-            var p = Path.Combine(Environment.CurrentDirectory, @"logs\\start.log"
-               + string.Format("-{0:yyyy}-{0:MM}-{0:dd}", DateTime.Now));
-
+            
             var dt1 = await newThread();
             var re = new MainView(dt1);
             Log.Inst.WriteToLogDEBUG("Show gridView");
 
             _progressPanel.Visible = false;
             re.ShowDialog();
+        }
+
+        public void ShowMessag(string msg)
+        {
+            MessageBox.Show(msg);
+        }
+
+        public void Init()
+        {
+            Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}", Name));
+            CoreContext.ViewService.FirstView.ShowMessag("При первом запуске в качестве организации берется первая из списка.");
+            idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
+            ListOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
+            var today = DateTime.Today.Date;
+            var yesterday = DateTime.Today.Date.Subtract(new TimeSpan(1, 0, 0, 0));
+            dateTimeFrom.MaxDate = yesterday;//Вычитаем день
+            dateTimeTo.MaxDate = today;
+            dateTimeFrom.Value = yesterday;
+            dateTimeTo.Value = today;
+           
+        }
+
+        private void dateTimeTo_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimeTo.Value <= dateTimeFrom.Value)
+            {
+                CoreContext.ViewService.FirstView.ShowMessag("Не верная дата!");
+                dateTimeTo.Value = dateTimeFrom.Value.AddDays(1);
+            }
         }
     }
 }

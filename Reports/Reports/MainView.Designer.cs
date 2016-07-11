@@ -103,8 +103,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainView";
             this.Text = "Отчетность по корпоративному питанию";
-            this.Load += new System.EventHandler(this.MainView_Load);
-            this.SizeChanged += new System.EventHandler(this.MainView_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();

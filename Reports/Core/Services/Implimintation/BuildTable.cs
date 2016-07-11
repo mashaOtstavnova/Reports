@@ -68,6 +68,7 @@ namespace Core.Services.Implimintation
             workbook.Worksheets.Add(worksheet);
             var p = Path.Combine(Environment.CurrentDirectory, @"exels");
             workbook.Save(path);
+            CoreContext.ViewService.FirstView.ShowMessag(string.Format("Файл {0} успешно сохранен.", path));
         }
     }
 }

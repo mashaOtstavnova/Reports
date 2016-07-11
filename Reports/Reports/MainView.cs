@@ -2,29 +2,31 @@
 using System.Data;
 using System.Windows.Forms;
 using Core.Services.Implimintation;
+using Core.Views.MainView;
 using DevExpress.XtraEditors;
 using Reports.Controls;
 
 namespace Reports
 {
-    public partial class MainView : XtraForm
+    public partial class MainView : XtraForm, IMainView
     {
         private DataTable _dataTable;
-        private GridDataTable _grid;
         private SecondView _secondView;
         public MainView(DataTable dt)
         {
             _dataTable = dt;
+            CoreContext.ViewService.Init(this);
             InitializeComponent();
+            
             Init();
-           
+            
         }
 
         private void Init()
         {
             _secondView = new SecondView();
-           
-            _grid = new GridDataTable(_dataTable);
+
+            CoreContext.ViewService.MainView.PaintTable(_dataTable);
             //инит NavBar
             foreach (var item in _secondView.ListReports)
             {
@@ -34,18 +36,18 @@ namespace Reports
                 navBarGroup1.ItemLinks.Add(ni);
             }
         }
-        private void MainView_Load(object sender, EventArgs e)
-        {
-            _grid.Size = splitContainerControl1.Panel2.Size;
-            splitContainerControl1.Panel2.Controls.Add(_grid);
-        }
-
-        private void MainView_SizeChanged(object sender, EventArgs e)
-        {
-            _grid.Size = splitContainerControl1.Panel2.Size;
-        }
 
         private void createExcel_Click(object sender, EventArgs e)
+        {
+            CoreContext.ViewService.MainView.SaveExcel();
+        }
+
+        public void PaintTable(DataTable dt)
+        {
+            splitContainerControl1.Panel2.Controls.Add(new GridDataTable(dt));
+        }
+
+        public void SaveExcel()
         {
             var save = new SaveFileDialog();
             save.Filter = "xls files (*.xls)|*.xls|All files|*.*";

@@ -169,6 +169,7 @@
             this.dateTimeTo.Size = new System.Drawing.Size(200, 21);
             this.dateTimeTo.TabIndex = 15;
             this.dateTimeTo.Value = new System.DateTime(2016, 7, 5, 0, 0, 0, 0);
+            this.dateTimeTo.ValueChanged += new System.EventHandler(this.dateTimeTo_ValueChanged);
             // 
             // label7
             // 

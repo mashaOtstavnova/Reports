@@ -32,5 +32,9 @@ namespace Core.Services.Implimintation
         {
             get { return Service<IMakerRequest>.GetInstance(); }
         }
+        public static IViewService ViewService
+        {
+            get { return Service<IViewService>.GetInstance(); }
+        }
     }
 }

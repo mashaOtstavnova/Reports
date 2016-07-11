@@ -71,7 +71,11 @@
     <Compile Include="Services\Implimintation\InitService.cs" />
     <Compile Include="Services\Implimintation\MakerRequest.cs" />
     <Compile Include="Services\Implimintation\ParseCorparationToReports.cs" />
+    <Compile Include="Services\Implimintation\ViewService.cs" />
     <Compile Include="Services\IParseCorparationToReports.cs" />
+    <Compile Include="Services\IViewService.cs" />
+    <Compile Include="Views\FirstView\IFirstView.cs" />
+    <Compile Include="Views\MainView\IMainView.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
