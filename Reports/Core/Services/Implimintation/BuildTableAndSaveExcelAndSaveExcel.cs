@@ -10,11 +10,11 @@ namespace Core.Services.Implimintation
     /// <summary>
     /// конструирование dateTable по object
     /// </summary>
-    public class BuildTable : IBuildTable
+    public class BuildTableAndSaveExcelAndSaveExcel : IBuildTableAndSaveExcel
     {
         private  DataTable _dateTable;
 
-        public BuildTable()
+        public BuildTableAndSaveExcelAndSaveExcel()
         {
             _dateTable = new DataTable();
         }
@@ -46,18 +46,19 @@ namespace Core.Services.Implimintation
 
         public void SaveExel(DataTable dt, string path)
         {
+            Log.Inst.WriteToLogDEBUG(string.Format("Start save in excel file in path {0}", path));
             Workbook workbook = new Workbook();
-          
-            Worksheet worksheet = new Worksheet(dt.TableName);
-            for (int i = 0; i < dt.Columns.Count; i++)
+            _dateTable = dt;
+            Worksheet worksheet = new Worksheet(_dateTable.TableName);
+            for (int i = 0; i < _dateTable.Columns.Count; i++)
             {
                 // Add column header
-                worksheet.Cells[0, i] = new Cell(dt.Columns[i].ColumnName);
+                worksheet.Cells[0, i] = new Cell(_dateTable.Columns[i].ColumnName);
 
                 // Populate row data
-                for (int j = 0; j < dt.Rows.Count; j++) { 
+                for (int j = 0; j < _dateTable.Rows.Count; j++) { 
                     //Если нулевые значения, заменяем на пустые строки
-                    var valueRow = dt.Rows[j][i];
+                    var valueRow = _dateTable.Rows[j][i];
                     if (valueRow.GetType() == typeof (DateTime))
                     {
                         valueRow = valueRow.ToString();
@@ -68,6 +69,7 @@ namespace Core.Services.Implimintation
             workbook.Worksheets.Add(worksheet);
             var p = Path.Combine(Environment.CurrentDirectory, @"exels");
             workbook.Save(path);
+            Log.Inst.WriteToLogDEBUG(string.Format("End save in excel file in path {0}", path));
             CoreContext.ViewService.FirstView.ShowMessag(string.Format("Файл {0} успешно сохранен.", path));
         }
     }

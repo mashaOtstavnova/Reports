@@ -61,10 +61,10 @@
     <Compile Include="Module\CoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IBizApiClient.cs" />
-    <Compile Include="Services\IBuildTable.cs" />
+    <Compile Include="Services\IBuildTableAndSaveExcel.cs" />
     <Compile Include="Services\IInitService.cs" />
     <Compile Include="Services\IMakerRequest.cs" />
-    <Compile Include="Services\Implimintation\BuildTable.cs" />
+    <Compile Include="Services\Implimintation\BuildTableAndSaveExcelAndSaveExcel.cs" />
     <Compile Include="Services\Implimintation\CoreContent.cs" />
     <Compile Include="Services\Implimintation\IikoBizApiClient.cs" />
     <Compile Include="Services\Implimintation\IikoBizToken.cs" />

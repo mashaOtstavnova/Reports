@@ -20,10 +20,10 @@ namespace Reports
     public partial class Form1 : XtraForm, IFirstView
     {
         private readonly ProgressPanel _progressPanel = new ProgressPanel();
-        private OrganizationInfo[] ListOrg;
+        private OrganizationInfo[] _listOrg;
         private IikoBizToken _apiAccessToken;
-        private string idOrg;
-        private FirstView _firstView;
+        private string _idOrg;
+        private readonly FirstView _firstView;
 
         public Form1()
         {
@@ -53,9 +53,9 @@ namespace Reports
             return await Task.Run(() =>
             {
 
-                var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
+                var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
                 //var idCor = list.Where(t => t.Name==comboBox2.Text).FirstOrDefault().Id;
-                var reportParametrs = new ReportParameters(idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
+                var reportParametrs = new ReportParameters(_idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
                     dateTimeTo.Value.Date);
                 //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
                 //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
@@ -63,28 +63,28 @@ namespace Reports
                 //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
                 var result =
                     CoreContext.MakerRequest.GetReportses(reportParametrs);
-                var dt = CoreContext.BuildTable.BuiltTable(result);
-                dt = CoreContext.BuildTable.BuiltTable(result);
+                var dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result);
+                dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result);
                 return dt;
             });
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            idOrg = ListOrg.Where(r => r.Name == comboBox1.Text).First().Id;
-            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
+            _idOrg = _listOrg.Where(r => r.Name == comboBox1.Text).First().Id;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
             foreach (var item in list)
             {
                 comboBox2.Items.Add(item.Name);
             }
             var org = comboBox1.Text;
-            textBox1.Text = string.Format("Name: {0} Id {1}", org, idOrg);
+            textBox1.Text = string.Format("Name: {0} Id {1}", org, _idOrg);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
-            foreach (var item in ListOrg)
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
+            foreach (var item in _listOrg)
             {
                 comboBox1.Items.Add(item.Name);
             }
@@ -92,8 +92,8 @@ namespace Reports
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            idOrg = ListOrg.Where(r => r.Name == comboBox1.Text).First().Id;
-            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(idOrg).Result;
+            _idOrg = _listOrg.Where(r => r.Name == comboBox1.Text).First().Id;
+            var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
             var cor = list.Where(r => r.Name == comboBox2.Text).First();
             textBox2.Text = string.Format("Name: {0} Id {1}", cor.Name, cor.Id);
         }
@@ -132,8 +132,8 @@ namespace Reports
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}", Name));
             CoreContext.ViewService.FirstView.ShowMessag("При первом запуске в качестве организации берется первая из списка.");
-            idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
-            ListOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
+            _idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
+            _listOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
             var today = DateTime.Today.Date;
             var yesterday = DateTime.Today.Date.Subtract(new TimeSpan(1, 0, 0, 0));
             dateTimeFrom.MaxDate = yesterday;//Вычитаем день

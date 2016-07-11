@@ -20,9 +20,9 @@ namespace Core.Services.Implimintation
         {
             get { return Service<IInitService>.GetInstance(); }
         }
-        public static IBuildTable BuildTable
+        public static IBuildTableAndSaveExcel BuildTableAndSaveExcel
         {
-            get { return Service<IBuildTable>.GetInstance(); }
+            get { return Service<IBuildTableAndSaveExcel>.GetInstance(); }
         }
         public static IParseCorparationToReports ParseCorparationToReports
         {

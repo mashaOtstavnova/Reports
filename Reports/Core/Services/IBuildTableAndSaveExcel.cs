@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.Services
 {
-    public interface IBuildTable
+    public interface IBuildTableAndSaveExcel
     {
         DataTable BuiltTable(object[] obj);
         void SaveExel(DataTable dt, string path);

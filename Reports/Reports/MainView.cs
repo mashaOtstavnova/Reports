@@ -12,16 +12,15 @@ namespace Reports
     {
         private DataTable _dataTable;
         private SecondView _secondView;
+        private GridDataTable _grid;
         public MainView(DataTable dt)
         {
             _dataTable = dt;
             CoreContext.ViewService.Init(this);
             InitializeComponent();
-            
             Init();
-            
         }
-
+      
         private void Init()
         {
             _secondView = new SecondView();
@@ -44,7 +43,9 @@ namespace Reports
 
         public void PaintTable(DataTable dt)
         {
-            splitContainerControl1.Panel2.Controls.Add(new GridDataTable(dt));
+            _grid = new GridDataTable(dt);
+            _grid.Size = splitContainerControl1.Panel2.Size;
+            splitContainerControl1.Panel2.Controls.Add(_grid);
         }
 
         public void SaveExcel()
@@ -54,8 +55,13 @@ namespace Reports
             if (save.ShowDialog() == DialogResult.OK)
             {
                 //Собсвенно вот тут и передаем DataSet в наш метод который формирует Excel-документ
-                CoreContext.BuildTable.SaveExel(_dataTable, save.FileName);
+                CoreContext.BuildTableAndSaveExcel.SaveExel(_dataTable, save.FileName);
             }
+        }
+
+        private void MainView_SizeChanged_1(object sender, EventArgs e)
+        {
+            _grid.Size = splitContainerControl1.Panel2.Size;
         }
     }
 }
