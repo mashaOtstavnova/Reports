@@ -13,6 +13,7 @@ namespace IikoBizApi
         private DateTime _expiresAt;
         private string _value;
 
+       
         public IikoBizToken(string refreshUrl, HttpClient client)
         {
             _refreshUrl = refreshUrl;

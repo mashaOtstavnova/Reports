@@ -64,7 +64,7 @@
     <Compile Include="Services\IBuildTableAndSaveExcel.cs" />
     <Compile Include="Services\IInitService.cs" />
     <Compile Include="Services\IMakerRequest.cs" />
-    <Compile Include="Services\Implimintation\BuildTableAndSaveExcelAndSaveExcel.cs" />
+    <Compile Include="Services\Implimintation\BuildTableAndSaveExcel.cs" />
     <Compile Include="Services\Implimintation\CoreContent.cs" />
     <Compile Include="Services\Implimintation\IikoBizApiClient.cs" />
     <Compile Include="Services\Implimintation\IikoBizToken.cs" />

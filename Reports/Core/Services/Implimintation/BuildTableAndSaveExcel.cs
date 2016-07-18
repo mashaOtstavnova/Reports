@@ -10,11 +10,11 @@ namespace Core.Services.Implimintation
     /// <summary>
     /// конструирование dateTable по object
     /// </summary>
-    public class BuildTableAndSaveExcelAndSaveExcel : IBuildTableAndSaveExcel
+    public class BuildTableAndSaveExcel : IBuildTableAndSaveExcel
     {
         private  DataTable _dateTable;
 
-        public BuildTableAndSaveExcelAndSaveExcel()
+        public BuildTableAndSaveExcel()
         {
             _dateTable = new DataTable();
         }

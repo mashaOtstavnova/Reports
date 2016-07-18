@@ -18,15 +18,26 @@ namespace Core.Domain
         public string CorporateNutritionProgramId;
         public DateTime DateFrom;
         public DateTime DateTo;
+
         public ReportParameters()
-        { }
+        {
+            
+        }
         public ReportParameters(string organizationInfoId, string corporateNutritionProgramId,
             DateTime dateFrom, DateTime dateTo)
         {
             OrganizationInfoId = organizationInfoId;
             CorporateNutritionProgramId = corporateNutritionProgramId;
-            DateFrom = dateFrom;
-            DateTo= dateTo;
+            if (dateFrom < dateTo)
+            {
+                 DateFrom = dateFrom;
+                 DateTo= dateTo;
+            }
+            else
+            {
+                throw new Exception("Error date in request parameters");
+            }
+           
             WriteToFile();
         }
 

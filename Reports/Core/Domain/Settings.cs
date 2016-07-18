@@ -16,6 +16,15 @@ namespace Core.Domain
         public readonly string BaseAddress;
         public readonly int TIMEOUT;
 
+        public Settings()
+        {
+            //new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000);
+            Login = "vankorAPI";
+            BaseAddress = "https://iiko.biz:9900/api/0/";
+            Password = "JUe5J4cuWu";
+            TIMEOUT = 60000;
+        }
+
         public Settings(string login, string pasword, string baseAddress, int timout)
         {
             Login = login;

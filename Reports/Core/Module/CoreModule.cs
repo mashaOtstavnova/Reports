@@ -21,7 +21,7 @@ namespace Core.Module
         {
             registrator.RegistrServiceFactory<IBizApiClient>(() => new IikoBizApiClient());
             registrator.RegistrServiceFactory<IInitService>(() => new InitService());
-            registrator.RegistrServiceFactory<IBuildTableAndSaveExcel>(() => new BuildTableAndSaveExcelAndSaveExcel());
+            registrator.RegistrServiceFactory<IBuildTableAndSaveExcel>(() => new BuildTableAndSaveExcel());
             registrator.RegistrServiceFactory<IParseCorparationToReports>(() => new ParseCorparationToReports());
             registrator.RegistrServiceFactory<IMakerRequest>(() => new MakerRequest());
             registrator.RegistrServiceFactory<IViewService>(() => new ViewService());

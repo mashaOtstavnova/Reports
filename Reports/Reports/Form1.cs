@@ -131,12 +131,12 @@ namespace Reports
         public void Init()
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Initialize Component {0}", Name));
-            CoreContext.ViewService.FirstView.ShowMessag("При первом запуске в качестве организации берется первая из списка.");
+            //CoreContext.ViewService.FirstView.ShowMessag("При первом запуске в качестве организации берется первая из списка.");
             _idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result.First().Id;
             _listOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result;
             var today = DateTime.Today.Date;
-            var yesterday = DateTime.Today.Date.Subtract(new TimeSpan(1, 0, 0, 0));
-            dateTimeFrom.MaxDate = yesterday;//Вычитаем день
+            var yesterday = DateTime.Today.Date.Subtract(new TimeSpan(1, 0, 0, 0));//Вычитаем день
+            dateTimeFrom.MaxDate = yesterday;
             dateTimeTo.MaxDate = today;
             dateTimeFrom.Value = yesterday;
             dateTimeTo.Value = today;
@@ -147,7 +147,7 @@ namespace Reports
         {
             if (dateTimeTo.Value <= dateTimeFrom.Value)
             {
-                CoreContext.ViewService.FirstView.ShowMessag("Не верная дата!");
+                CoreContext.ViewService.FirstView.ShowMessag("Ошибка даты!");
                 dateTimeTo.Value = dateTimeFrom.Value.AddDays(1);
             }
         }
