@@ -1,0 +1,775 @@
+27.07.2016 13:03:30:Initialize Component Form1
+27.07.2016 13:03:30:Get OrganizationInfo
+27.07.2016 13:03:30: --->Start get async answer
+27.07.2016 13:03:30:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:03:30:<----End get async answer
+27.07.2016 13:03:30:Get OrganizationInfo
+27.07.2016 13:03:30: --->Start get async answer
+27.07.2016 13:03:30:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:03:31:<----End get async answer
+27.07.2016 13:03:31:Get CorporateNutritionInfo
+27.07.2016 13:03:31:Get OrganizationInfo
+27.07.2016 13:03:31: --->Start get async answer
+27.07.2016 13:03:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:03:31:<----End get async answer
+27.07.2016 13:03:31: --->Start get async answer
+27.07.2016 13:03:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:03:31:<----End get async answer
+27.07.2016 13:05:35:Start thread for get data
+27.07.2016 13:05:35:Get CorporateNutritionInfo
+27.07.2016 13:05:35:Get OrganizationInfo
+27.07.2016 13:05:35: --->Start get async answer
+27.07.2016 13:05:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:07:13:<----End get async answer
+27.07.2016 13:07:13: --->Start get async answer
+27.07.2016 13:07:13:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:07:22:<----End get async answer
+27.07.2016 13:07:22:Start write Json
+27.07.2016 13:07:22:Get Reportses
+27.07.2016 13:07:22:Get OrganizationInfo
+27.07.2016 13:07:22: --->Start get async answer
+27.07.2016 13:07:22:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:07:26:<----End get async answer
+27.07.2016 13:07:26: --->Start get async answer
+27.07.2016 13:07:26:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb7Q1fvc50CkG5mIPSnCaill1BPV6AIR_dOeEOuLb0mWDkm04j_YEyEmxURH71_ICg2
+27.07.2016 13:16:10:Start program
+27.07.2016 13:16:10:Initialization program
+27.07.2016 13:16:10:Run application
+27.07.2016 13:16:11:Initialize Component Form1
+27.07.2016 13:16:11:Get OrganizationInfo
+27.07.2016 13:16:11: --->Start get async answer
+27.07.2016 13:16:11:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:11:<----End get async answer
+27.07.2016 13:16:11:Get OrganizationInfo
+27.07.2016 13:16:11: --->Start get async answer
+27.07.2016 13:16:11:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:11:<----End get async answer
+27.07.2016 13:16:11:Get CorporateNutritionInfo
+27.07.2016 13:16:11:Get OrganizationInfo
+27.07.2016 13:16:11: --->Start get async answer
+27.07.2016 13:16:11:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:11:<----End get async answer
+27.07.2016 13:16:11: --->Start get async answer
+27.07.2016 13:16:11:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:11:<----End get async answer
+27.07.2016 13:16:16:Get CorporateNutritionInfo
+27.07.2016 13:16:16:Get OrganizationInfo
+27.07.2016 13:16:16: --->Start get async answer
+27.07.2016 13:16:16:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:16:<----End get async answer
+27.07.2016 13:16:16: --->Start get async answer
+27.07.2016 13:16:16:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:17:<----End get async answer
+27.07.2016 13:16:21:Get CorporateNutritionInfo
+27.07.2016 13:16:21:Get OrganizationInfo
+27.07.2016 13:16:21: --->Start get async answer
+27.07.2016 13:16:21:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:21:<----End get async answer
+27.07.2016 13:16:21: --->Start get async answer
+27.07.2016 13:16:21:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZ8MVyV-zSJZ8FfXZrHHPDqZRoKwMNxkbDwzz8aHWU6Z8IgOASmLpRnMyejtENfO9g2
+27.07.2016 13:16:22:<----End get async answer
+27.07.2016 13:20:26:Start program
+27.07.2016 13:20:26:Initialization program
+27.07.2016 13:20:26:Run application
+27.07.2016 13:20:27:Initialize Component Form1
+27.07.2016 13:20:27:Get OrganizationInfo
+27.07.2016 13:20:27: --->Start get async answer
+27.07.2016 13:20:27:This access token for get request: EsM-o9S3vKfOCzOsbCdtldoCl-B_DA8rlgFj-SKLUb5XKscC355tQyoTiGW0o35TIaxaWeVI2BybMXObcYUJFw2
+27.07.2016 13:20:28:<----End get async answer
+27.07.2016 13:20:28:Get OrganizationInfo
+27.07.2016 13:20:28: --->Start get async answer
+27.07.2016 13:20:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtldoCl-B_DA8rlgFj-SKLUb5XKscC355tQyoTiGW0o35TIaxaWeVI2BybMXObcYUJFw2
+27.07.2016 13:20:28:<----End get async answer
+27.07.2016 13:20:28:Get CorporateNutritionInfo
+27.07.2016 13:20:28:Get OrganizationInfo
+27.07.2016 13:20:28: --->Start get async answer
+27.07.2016 13:20:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtldoCl-B_DA8rlgFj-SKLUb5XKscC355tQyoTiGW0o35TIaxaWeVI2BybMXObcYUJFw2
+27.07.2016 13:20:28:<----End get async answer
+27.07.2016 13:20:28: --->Start get async answer
+27.07.2016 13:20:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtldoCl-B_DA8rlgFj-SKLUb5XKscC355tQyoTiGW0o35TIaxaWeVI2BybMXObcYUJFw2
+27.07.2016 13:20:28:<----End get async answer
+27.07.2016 13:22:42:Start program
+27.07.2016 13:22:42:Initialization program
+27.07.2016 13:22:42:Run application
+27.07.2016 13:22:43:Initialize Component Form1
+27.07.2016 13:22:43:Get OrganizationInfo
+27.07.2016 13:22:43: --->Start get async answer
+27.07.2016 13:22:44:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQao0LxKMEmCDK1KdnFcdeg2BWtQNe3NAz_dDVgxw6LTFSZa9M74-58RCVRvFhEq4w2
+27.07.2016 13:22:44:<----End get async answer
+27.07.2016 13:22:44:Get OrganizationInfo
+27.07.2016 13:22:44: --->Start get async answer
+27.07.2016 13:22:44:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQao0LxKMEmCDK1KdnFcdeg2BWtQNe3NAz_dDVgxw6LTFSZa9M74-58RCVRvFhEq4w2
+27.07.2016 13:22:44:<----End get async answer
+27.07.2016 13:22:45:Get CorporateNutritionInfo
+27.07.2016 13:22:45:Get OrganizationInfo
+27.07.2016 13:22:45: --->Start get async answer
+27.07.2016 13:22:45:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQao0LxKMEmCDK1KdnFcdeg2BWtQNe3NAz_dDVgxw6LTFSZa9M74-58RCVRvFhEq4w2
+27.07.2016 13:22:45:<----End get async answer
+27.07.2016 13:22:45: --->Start get async answer
+27.07.2016 13:22:45:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQao0LxKMEmCDK1KdnFcdeg2BWtQNe3NAz_dDVgxw6LTFSZa9M74-58RCVRvFhEq4w2
+27.07.2016 13:22:45:<----End get async answer
+27.07.2016 13:55:41:Start program
+27.07.2016 13:55:41:Initialization program
+27.07.2016 13:55:41:Run application
+27.07.2016 13:55:42:Initialize Component Form1
+27.07.2016 13:55:42:Get OrganizationInfo
+27.07.2016 13:55:42: --->Start get async answer
+27.07.2016 13:55:42:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:42:<----End get async answer
+27.07.2016 13:55:42:Get OrganizationInfo
+27.07.2016 13:55:42: --->Start get async answer
+27.07.2016 13:55:42:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:42:<----End get async answer
+27.07.2016 13:55:42:Get CorporateNutritionInfo
+27.07.2016 13:55:42:Get OrganizationInfo
+27.07.2016 13:55:42: --->Start get async answer
+27.07.2016 13:55:42:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:43:<----End get async answer
+27.07.2016 13:55:43: --->Start get async answer
+27.07.2016 13:55:43:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:43:<----End get async answer
+27.07.2016 13:55:49:Get CorporateNutritionInfo
+27.07.2016 13:55:49:Get OrganizationInfo
+27.07.2016 13:55:49: --->Start get async answer
+27.07.2016 13:55:49:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:49:<----End get async answer
+27.07.2016 13:55:50: --->Start get async answer
+27.07.2016 13:55:50:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:50:<----End get async answer
+27.07.2016 13:55:53:Start thread for get data
+27.07.2016 13:55:53:Get CorporateNutritionInfo
+27.07.2016 13:55:53:Get OrganizationInfo
+27.07.2016 13:55:53: --->Start get async answer
+27.07.2016 13:55:53:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:53:<----End get async answer
+27.07.2016 13:55:53: --->Start get async answer
+27.07.2016 13:55:53:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZfzT9T6SF_1BtEKJyv1ckKBtz8lsOVQwADKYl5Lrvo0q4SnTSTROR0t9nZfLfKWPg2
+27.07.2016 13:55:53:<----End get async answer
+27.07.2016 13:55:53:Start write Json
+27.07.2016 13:55:54:Start write Json
+27.07.2016 13:56:23:Start program
+27.07.2016 13:56:23:Initialization program
+27.07.2016 13:56:23:Run application
+27.07.2016 13:56:24:Initialize Component Form1
+27.07.2016 13:56:24:Get OrganizationInfo
+27.07.2016 13:56:24: --->Start get async answer
+27.07.2016 13:56:24:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:24:<----End get async answer
+27.07.2016 13:56:24:Get OrganizationInfo
+27.07.2016 13:56:24: --->Start get async answer
+27.07.2016 13:56:24:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:24:<----End get async answer
+27.07.2016 13:56:24:Get CorporateNutritionInfo
+27.07.2016 13:56:24:Get OrganizationInfo
+27.07.2016 13:56:24: --->Start get async answer
+27.07.2016 13:56:25:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:25:<----End get async answer
+27.07.2016 13:56:25: --->Start get async answer
+27.07.2016 13:56:25:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:25:<----End get async answer
+27.07.2016 13:56:27:Get CorporateNutritionInfo
+27.07.2016 13:56:27:Get OrganizationInfo
+27.07.2016 13:56:27: --->Start get async answer
+27.07.2016 13:56:27:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:27:<----End get async answer
+27.07.2016 13:56:27: --->Start get async answer
+27.07.2016 13:56:27:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:27:<----End get async answer
+27.07.2016 13:56:28:Start thread for get data
+27.07.2016 13:56:28:Get CorporateNutritionInfo
+27.07.2016 13:56:28:Get OrganizationInfo
+27.07.2016 13:56:28: --->Start get async answer
+27.07.2016 13:56:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:28:<----End get async answer
+27.07.2016 13:56:28: --->Start get async answer
+27.07.2016 13:56:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:28:<----End get async answer
+27.07.2016 13:56:28:Start write Json
+27.07.2016 13:56:28:Get TransactionsReportItems
+27.07.2016 13:56:28: --->Start get async answer
+27.07.2016 13:56:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlb5UJdeO13otTmbOBl8SmObybRVmLPWGj6RX1f8YJtWBJDKbmXsAkDz3OmkkmMxivA2
+27.07.2016 13:56:29:ERROR JsonConvert for get: Input string '-228.00000' is not a valid integer. Path '[1].transactionSum', line 1, position 449.
+27.07.2016 13:57:09:Start program
+27.07.2016 13:57:09:Initialization program
+27.07.2016 13:57:09:Run application
+27.07.2016 13:57:10:Initialize Component Form1
+27.07.2016 13:57:10:Get OrganizationInfo
+27.07.2016 13:57:10: --->Start get async answer
+27.07.2016 13:57:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:10:<----End get async answer
+27.07.2016 13:57:10:Get OrganizationInfo
+27.07.2016 13:57:10: --->Start get async answer
+27.07.2016 13:57:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:10:<----End get async answer
+27.07.2016 13:57:10:Get CorporateNutritionInfo
+27.07.2016 13:57:10:Get OrganizationInfo
+27.07.2016 13:57:10: --->Start get async answer
+27.07.2016 13:57:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:10:<----End get async answer
+27.07.2016 13:57:10: --->Start get async answer
+27.07.2016 13:57:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:11:<----End get async answer
+27.07.2016 13:57:15:Get CorporateNutritionInfo
+27.07.2016 13:57:15:Get OrganizationInfo
+27.07.2016 13:57:15: --->Start get async answer
+27.07.2016 13:57:15:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:15:<----End get async answer
+27.07.2016 13:57:15: --->Start get async answer
+27.07.2016 13:57:15:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:15:<----End get async answer
+27.07.2016 13:57:17:Start thread for get data
+27.07.2016 13:57:17:Get CorporateNutritionInfo
+27.07.2016 13:57:17:Get OrganizationInfo
+27.07.2016 13:57:17: --->Start get async answer
+27.07.2016 13:57:17:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:17:<----End get async answer
+27.07.2016 13:57:17: --->Start get async answer
+27.07.2016 13:57:17:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 13:57:17:<----End get async answer
+27.07.2016 13:57:17:Start write Json
+27.07.2016 13:57:35:Get TransactionsReportItems
+27.07.2016 13:57:42: --->Start get async answer
+27.07.2016 13:57:56:This access token for get request: EsM-o9S3vKfOCzOsbCdtlYYUaYsjFecyctjEDTMe_dW7i1Nxum5J_a4nPA81BlU2hld_kdpdpu45RC87Oil5Tw2
+27.07.2016 14:09:09:Start program
+27.07.2016 14:09:09:Initialization program
+27.07.2016 14:09:09:Run application
+27.07.2016 14:09:10:Initialize Component Form1
+27.07.2016 14:09:10:Get OrganizationInfo
+27.07.2016 14:09:10: --->Start get async answer
+27.07.2016 14:09:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlX1UZ4cjlIIxXKVJ734ct8DE2yFTjP3nV8z5eGKzsJCAjSynrVjj35r5TCfqKApLzQ2
+27.07.2016 14:09:10:<----End get async answer
+27.07.2016 14:09:10:Get OrganizationInfo
+27.07.2016 14:09:10: --->Start get async answer
+27.07.2016 14:09:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlX1UZ4cjlIIxXKVJ734ct8DE2yFTjP3nV8z5eGKzsJCAjSynrVjj35r5TCfqKApLzQ2
+27.07.2016 14:09:10:<----End get async answer
+27.07.2016 14:09:10:Get CorporateNutritionInfo
+27.07.2016 14:09:10:Get OrganizationInfo
+27.07.2016 14:09:10: --->Start get async answer
+27.07.2016 14:09:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtlX1UZ4cjlIIxXKVJ734ct8DE2yFTjP3nV8z5eGKzsJCAjSynrVjj35r5TCfqKApLzQ2
+27.07.2016 14:09:10:<----End get async answer
+27.07.2016 14:09:10: --->Start get async answer
+27.07.2016 14:09:11:This access token for get request: EsM-o9S3vKfOCzOsbCdtlX1UZ4cjlIIxXKVJ734ct8DE2yFTjP3nV8z5eGKzsJCAjSynrVjj35r5TCfqKApLzQ2
+27.07.2016 14:09:11:<----End get async answer
+27.07.2016 14:09:28:Get CorporateNutritionInfo
+27.07.2016 14:09:28:Get OrganizationInfo
+27.07.2016 14:09:28: --->Start get async answer
+27.07.2016 14:09:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlX1UZ4cjlIIxXKVJ734ct8DE2yFTjP3nV8z5eGKzsJCAjSynrVjj35r5TCfqKApLzQ2
+27.07.2016 14:09:28:<----End get async answer
+27.07.2016 14:09:28: --->Start get async answer
+27.07.2016 14:09:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlX1UZ4cjlIIxXKVJ734ct8DE2yFTjP3nV8z5eGKzsJCAjSynrVjj35r5TCfqKApLzQ2
+27.07.2016 14:09:29:<----End get async answer
+27.07.2016 14:27:30:Start program
+27.07.2016 14:27:30:Initialization program
+27.07.2016 14:27:30:Run application
+27.07.2016 14:27:31:Initialize Component Form1
+27.07.2016 14:27:31:Get OrganizationInfo
+27.07.2016 14:27:31: --->Start get async answer
+27.07.2016 14:27:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:27:31:<----End get async answer
+27.07.2016 14:27:31:Get OrganizationInfo
+27.07.2016 14:27:31: --->Start get async answer
+27.07.2016 14:27:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:27:31:<----End get async answer
+27.07.2016 14:27:31:Get CorporateNutritionInfo
+27.07.2016 14:27:31:Get OrganizationInfo
+27.07.2016 14:27:31: --->Start get async answer
+27.07.2016 14:27:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:27:31:<----End get async answer
+27.07.2016 14:27:31: --->Start get async answer
+27.07.2016 14:27:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:27:31:<----End get async answer
+27.07.2016 14:32:35:Get CorporateNutritionInfo
+27.07.2016 14:32:35:Get OrganizationInfo
+27.07.2016 14:32:35: --->Start get async answer
+27.07.2016 14:32:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:32:35:<----End get async answer
+27.07.2016 14:32:35: --->Start get async answer
+27.07.2016 14:32:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:32:35:<----End get async answer
+27.07.2016 14:32:38:Get CorporateNutritionInfo
+27.07.2016 14:32:38:Get OrganizationInfo
+27.07.2016 14:32:38: --->Start get async answer
+27.07.2016 14:32:38:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:32:38:<----End get async answer
+27.07.2016 14:32:38: --->Start get async answer
+27.07.2016 14:32:38:This access token for get request: EsM-o9S3vKfOCzOsbCdtlapdVxKMPkq9Hgb5PCpAv0xrHJbrt4wQ9jhAFtyPx3SM8Yq6lzt19vlyT_aCcgrCXg2
+27.07.2016 14:32:38:<----End get async answer
+27.07.2016 14:44:35:Start program
+27.07.2016 14:44:35:Initialization program
+27.07.2016 14:44:35:Run application
+27.07.2016 14:44:36:Initialize Component Form1
+27.07.2016 14:44:36:Get OrganizationInfo
+27.07.2016 14:44:36: --->Start get async answer
+27.07.2016 14:44:36:This access token for get request: EsM-o9S3vKfOCzOsbCdtlUOr4-zFjJ9MAgdL_20jfZc_-CYpymAv_aRKKFGyfof4fj3IJUbPXlNlVPIQsYz0fg2
+27.07.2016 14:44:37:<----End get async answer
+27.07.2016 14:44:37:Get OrganizationInfo
+27.07.2016 14:44:37: --->Start get async answer
+27.07.2016 14:44:37:This access token for get request: EsM-o9S3vKfOCzOsbCdtlUOr4-zFjJ9MAgdL_20jfZc_-CYpymAv_aRKKFGyfof4fj3IJUbPXlNlVPIQsYz0fg2
+27.07.2016 14:44:37:<----End get async answer
+27.07.2016 14:44:37:Get CorporateNutritionInfo
+27.07.2016 14:44:37:Get OrganizationInfo
+27.07.2016 14:44:37: --->Start get async answer
+27.07.2016 14:44:37:This access token for get request: EsM-o9S3vKfOCzOsbCdtlUOr4-zFjJ9MAgdL_20jfZc_-CYpymAv_aRKKFGyfof4fj3IJUbPXlNlVPIQsYz0fg2
+27.07.2016 14:44:37:<----End get async answer
+27.07.2016 14:44:37: --->Start get async answer
+27.07.2016 14:44:37:This access token for get request: EsM-o9S3vKfOCzOsbCdtlUOr4-zFjJ9MAgdL_20jfZc_-CYpymAv_aRKKFGyfof4fj3IJUbPXlNlVPIQsYz0fg2
+27.07.2016 14:44:37:<----End get async answer
+27.07.2016 14:49:44:Start program
+27.07.2016 14:49:44:Initialization program
+27.07.2016 14:49:44:Run application
+27.07.2016 14:49:46:Initialize Component Form1
+27.07.2016 14:49:46:Get OrganizationInfo
+27.07.2016 14:49:46: --->Start get async answer
+27.07.2016 14:49:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlfkCwYI1WYDcMDh2P6Iavjv89NfSU8uTcWqpowF4XiP8JmILXFDufHVgV0GNBNBvWA2
+27.07.2016 14:49:46:<----End get async answer
+27.07.2016 14:49:46:Get OrganizationInfo
+27.07.2016 14:49:46: --->Start get async answer
+27.07.2016 14:49:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlfkCwYI1WYDcMDh2P6Iavjv89NfSU8uTcWqpowF4XiP8JmILXFDufHVgV0GNBNBvWA2
+27.07.2016 14:49:46:<----End get async answer
+27.07.2016 14:49:46:Get CorporateNutritionInfo
+27.07.2016 14:49:46:Get OrganizationInfo
+27.07.2016 14:49:46: --->Start get async answer
+27.07.2016 14:49:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlfkCwYI1WYDcMDh2P6Iavjv89NfSU8uTcWqpowF4XiP8JmILXFDufHVgV0GNBNBvWA2
+27.07.2016 14:49:46:<----End get async answer
+27.07.2016 14:49:46: --->Start get async answer
+27.07.2016 14:49:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlfkCwYI1WYDcMDh2P6Iavjv89NfSU8uTcWqpowF4XiP8JmILXFDufHVgV0GNBNBvWA2
+27.07.2016 14:49:47:<----End get async answer
+27.07.2016 15:01:59:Start program
+27.07.2016 15:01:59:Initialization program
+27.07.2016 15:01:59:Run application
+27.07.2016 15:02:00:Initialize Component Form1
+27.07.2016 15:02:00:Get OrganizationInfo
+27.07.2016 15:02:00: --->Start get async answer
+27.07.2016 15:02:00:This access token for get request: EsM-o9S3vKfOCzOsbCdtlaKFIt05nFO-yG4Wq2iw2yy-TaYnWmfOpCc5nkWaKjSiQAwWwwb3A-3A7Eb_2_cecg2
+27.07.2016 15:02:01:<----End get async answer
+27.07.2016 15:02:01:Get OrganizationInfo
+27.07.2016 15:02:01: --->Start get async answer
+27.07.2016 15:02:01:This access token for get request: EsM-o9S3vKfOCzOsbCdtlaKFIt05nFO-yG4Wq2iw2yy-TaYnWmfOpCc5nkWaKjSiQAwWwwb3A-3A7Eb_2_cecg2
+27.07.2016 15:02:01:<----End get async answer
+27.07.2016 15:02:01:Get CorporateNutritionInfo
+27.07.2016 15:02:01:Get OrganizationInfo
+27.07.2016 15:02:01: --->Start get async answer
+27.07.2016 15:02:01:This access token for get request: EsM-o9S3vKfOCzOsbCdtlaKFIt05nFO-yG4Wq2iw2yy-TaYnWmfOpCc5nkWaKjSiQAwWwwb3A-3A7Eb_2_cecg2
+27.07.2016 15:02:01:<----End get async answer
+27.07.2016 15:02:01: --->Start get async answer
+27.07.2016 15:02:01:This access token for get request: EsM-o9S3vKfOCzOsbCdtlaKFIt05nFO-yG4Wq2iw2yy-TaYnWmfOpCc5nkWaKjSiQAwWwwb3A-3A7Eb_2_cecg2
+27.07.2016 15:02:01:<----End get async answer
+27.07.2016 15:19:12:Start program
+27.07.2016 15:19:12:Initialization program
+27.07.2016 15:19:12:Run application
+27.07.2016 15:19:13:Initialize Component Form1
+27.07.2016 15:19:13:Get OrganizationInfo
+27.07.2016 15:19:13: --->Start get async answer
+27.07.2016 15:19:13:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZMP3vENTVfhD3yfP-5n3LmhEQwxgICh0Trv-vL5W8n5dOU2K7GOr-tkXxXT0iMmJQ2
+27.07.2016 15:19:13:<----End get async answer
+27.07.2016 15:19:13:Get OrganizationInfo
+27.07.2016 15:19:13: --->Start get async answer
+27.07.2016 15:19:13:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZMP3vENTVfhD3yfP-5n3LmhEQwxgICh0Trv-vL5W8n5dOU2K7GOr-tkXxXT0iMmJQ2
+27.07.2016 15:19:14:<----End get async answer
+27.07.2016 15:19:14:Get CorporateNutritionInfo
+27.07.2016 15:19:14:Get OrganizationInfo
+27.07.2016 15:19:14: --->Start get async answer
+27.07.2016 15:19:14:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZMP3vENTVfhD3yfP-5n3LmhEQwxgICh0Trv-vL5W8n5dOU2K7GOr-tkXxXT0iMmJQ2
+27.07.2016 15:19:14:<----End get async answer
+27.07.2016 15:19:14: --->Start get async answer
+27.07.2016 15:19:14:This access token for get request: EsM-o9S3vKfOCzOsbCdtlZMP3vENTVfhD3yfP-5n3LmhEQwxgICh0Trv-vL5W8n5dOU2K7GOr-tkXxXT0iMmJQ2
+27.07.2016 15:19:14:<----End get async answer
+27.07.2016 15:26:01:Start program
+27.07.2016 15:26:01:Initialization program
+27.07.2016 15:26:01:Run application
+27.07.2016 15:26:02:Initialize Component Form1
+27.07.2016 15:26:02:Get OrganizationInfo
+27.07.2016 15:26:02: --->Start get async answer
+27.07.2016 15:26:03:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQaMx6FYDZiHfUINUwyUzs0YjlO7OfRmcFg3Mdhox-xREDu70Hzi-VG9vEcYcNB_oQ2
+27.07.2016 15:26:03:<----End get async answer
+27.07.2016 15:26:03:Get OrganizationInfo
+27.07.2016 15:26:03: --->Start get async answer
+27.07.2016 15:26:03:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQaMx6FYDZiHfUINUwyUzs0YjlO7OfRmcFg3Mdhox-xREDu70Hzi-VG9vEcYcNB_oQ2
+27.07.2016 15:26:03:<----End get async answer
+27.07.2016 15:26:03:Get CorporateNutritionInfo
+27.07.2016 15:26:03:Get OrganizationInfo
+27.07.2016 15:26:03: --->Start get async answer
+27.07.2016 15:26:03:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQaMx6FYDZiHfUINUwyUzs0YjlO7OfRmcFg3Mdhox-xREDu70Hzi-VG9vEcYcNB_oQ2
+27.07.2016 15:26:03:<----End get async answer
+27.07.2016 15:26:03: --->Start get async answer
+27.07.2016 15:26:03:This access token for get request: EsM-o9S3vKfOCzOsbCdtlQaMx6FYDZiHfUINUwyUzs0YjlO7OfRmcFg3Mdhox-xREDu70Hzi-VG9vEcYcNB_oQ2
+27.07.2016 15:26:03:<----End get async answer
+27.07.2016 15:26:41:Start program
+27.07.2016 15:26:41:Initialization program
+27.07.2016 15:26:41:Run application
+27.07.2016 15:26:42:Initialize Component Form1
+27.07.2016 15:26:42:Get OrganizationInfo
+27.07.2016 15:26:42: --->Start get async answer
+27.07.2016 15:26:43:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:43:<----End get async answer
+27.07.2016 15:26:43:Get OrganizationInfo
+27.07.2016 15:26:43: --->Start get async answer
+27.07.2016 15:26:43:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:43:<----End get async answer
+27.07.2016 15:26:43:Get CorporateNutritionInfo
+27.07.2016 15:26:43:Get OrganizationInfo
+27.07.2016 15:26:43: --->Start get async answer
+27.07.2016 15:26:43:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:43:<----End get async answer
+27.07.2016 15:26:43: --->Start get async answer
+27.07.2016 15:26:43:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:43:<----End get async answer
+27.07.2016 15:26:45:Get CorporateNutritionInfo
+27.07.2016 15:26:45:Get OrganizationInfo
+27.07.2016 15:26:45: --->Start get async answer
+27.07.2016 15:26:45:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:45:<----End get async answer
+27.07.2016 15:26:45: --->Start get async answer
+27.07.2016 15:26:45:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:45:<----End get async answer
+27.07.2016 15:26:46:Start thread for get data
+27.07.2016 15:26:46:Get CorporateNutritionInfo
+27.07.2016 15:26:46:Get OrganizationInfo
+27.07.2016 15:26:46: --->Start get async answer
+27.07.2016 15:26:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:46:<----End get async answer
+27.07.2016 15:26:46: --->Start get async answer
+27.07.2016 15:26:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:46:<----End get async answer
+27.07.2016 15:26:46:Start write Json
+27.07.2016 15:26:46:Get TransactionsReportItems
+27.07.2016 15:26:46: --->Start get async answer
+27.07.2016 15:26:46:This access token for get request: EsM-o9S3vKfOCzOsbCdtlVLVd_-jBCaI8bX9qrUfrfLfUXmpIHJ9P6wzB0gmyHCKSHK-UMEnjILwTn_nbOiPAg2
+27.07.2016 15:26:48:ERROR JsonConvert for get: Input string '-228.00000' is not a valid integer. Path '[1].transactionSum', line 1, position 449.
+27.07.2016 15:27:54:Start program
+27.07.2016 15:27:55:Initialization program
+27.07.2016 15:27:55:Run application
+27.07.2016 15:27:55:Initialize Component Form1
+27.07.2016 15:27:55:Get OrganizationInfo
+27.07.2016 15:27:55: --->Start get async answer
+27.07.2016 15:27:56:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:27:56:<----End get async answer
+27.07.2016 15:27:56:Get OrganizationInfo
+27.07.2016 15:27:56: --->Start get async answer
+27.07.2016 15:27:56:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:27:56:<----End get async answer
+27.07.2016 15:27:56:Get CorporateNutritionInfo
+27.07.2016 15:27:56:Get OrganizationInfo
+27.07.2016 15:27:56: --->Start get async answer
+27.07.2016 15:27:56:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:27:56:<----End get async answer
+27.07.2016 15:27:56: --->Start get async answer
+27.07.2016 15:27:56:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:27:56:<----End get async answer
+27.07.2016 15:27:58:Get CorporateNutritionInfo
+27.07.2016 15:27:58:Get OrganizationInfo
+27.07.2016 15:27:58: --->Start get async answer
+27.07.2016 15:27:58:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:27:59:<----End get async answer
+27.07.2016 15:27:59: --->Start get async answer
+27.07.2016 15:27:59:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:27:59:<----End get async answer
+27.07.2016 15:28:04:Start thread for get data
+27.07.2016 15:28:04:Get CorporateNutritionInfo
+27.07.2016 15:28:04:Get OrganizationInfo
+27.07.2016 15:28:04: --->Start get async answer
+27.07.2016 15:28:04:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:28:04:<----End get async answer
+27.07.2016 15:28:04: --->Start get async answer
+27.07.2016 15:28:04:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:28:04:<----End get async answer
+27.07.2016 15:28:04:Start write Json
+27.07.2016 15:28:04:Get TransactionsReportItems
+27.07.2016 15:28:04: --->Start get async answer
+27.07.2016 15:28:04:This access token for get request: EsM-o9S3vKfOCzOsbCdtlc_7ip_Oq_AUuLBu7oT4Ob781dlaZdbyeyZY4dOjW9nmjtILkX4DkI24G-flOfu2Lg2
+27.07.2016 15:28:15:ERROR JsonConvert for get: Input string '-228.00000' is not a valid integer. Path '[1].transactionSum', line 1, position 449.
+27.07.2016 15:28:30:Start program
+27.07.2016 15:28:30:Initialization program
+27.07.2016 15:28:30:Run application
+27.07.2016 15:28:31:Initialize Component Form1
+27.07.2016 15:28:31:Get OrganizationInfo
+27.07.2016 15:28:31: --->Start get async answer
+27.07.2016 15:28:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:32:<----End get async answer
+27.07.2016 15:28:32:Get OrganizationInfo
+27.07.2016 15:28:32: --->Start get async answer
+27.07.2016 15:28:32:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:32:<----End get async answer
+27.07.2016 15:28:32:Get CorporateNutritionInfo
+27.07.2016 15:28:32:Get OrganizationInfo
+27.07.2016 15:28:32: --->Start get async answer
+27.07.2016 15:28:32:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:32:<----End get async answer
+27.07.2016 15:28:32: --->Start get async answer
+27.07.2016 15:28:32:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:32:<----End get async answer
+27.07.2016 15:28:35:Get CorporateNutritionInfo
+27.07.2016 15:28:35:Get OrganizationInfo
+27.07.2016 15:28:35: --->Start get async answer
+27.07.2016 15:28:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:35:<----End get async answer
+27.07.2016 15:28:35: --->Start get async answer
+27.07.2016 15:28:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:35:<----End get async answer
+27.07.2016 15:28:35:Start thread for get data
+27.07.2016 15:28:35:Get CorporateNutritionInfo
+27.07.2016 15:28:35:Get OrganizationInfo
+27.07.2016 15:28:35: --->Start get async answer
+27.07.2016 15:28:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:36:<----End get async answer
+27.07.2016 15:28:36: --->Start get async answer
+27.07.2016 15:28:36:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:36:<----End get async answer
+27.07.2016 15:28:36:Start write Json
+27.07.2016 15:28:36:Get TransactionsReportItems
+27.07.2016 15:28:36: --->Start get async answer
+27.07.2016 15:28:36:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbUyyCvSv_lvLxafxl_2yHmv0pZ5ei5_2AQS3pGuDXH3eUm2di7WvO-yJ1r-YBNJrQ2
+27.07.2016 15:28:37:ERROR JsonConvert for get: Input string '-228.00000' is not a valid integer. Path '[1].transactionSum', line 1, position 449.
+27.07.2016 15:30:46:Start program
+27.07.2016 15:30:46:Initialization program
+27.07.2016 15:30:47:Run application
+27.07.2016 15:30:48:Initialize Component Form1
+27.07.2016 15:30:48:Get OrganizationInfo
+27.07.2016 15:30:48: --->Start get async answer
+27.07.2016 15:30:48:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:48:<----End get async answer
+27.07.2016 15:30:48:Get OrganizationInfo
+27.07.2016 15:30:48: --->Start get async answer
+27.07.2016 15:30:48:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:48:<----End get async answer
+27.07.2016 15:30:48:Get CorporateNutritionInfo
+27.07.2016 15:30:48:Get OrganizationInfo
+27.07.2016 15:30:48: --->Start get async answer
+27.07.2016 15:30:48:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:49:<----End get async answer
+27.07.2016 15:30:49: --->Start get async answer
+27.07.2016 15:30:49:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:49:<----End get async answer
+27.07.2016 15:30:51:Get CorporateNutritionInfo
+27.07.2016 15:30:51:Get OrganizationInfo
+27.07.2016 15:30:51: --->Start get async answer
+27.07.2016 15:30:51:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:51:<----End get async answer
+27.07.2016 15:30:51: --->Start get async answer
+27.07.2016 15:30:51:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:51:<----End get async answer
+27.07.2016 15:30:52:Start thread for get data
+27.07.2016 15:30:52:Get CorporateNutritionInfo
+27.07.2016 15:30:52:Get OrganizationInfo
+27.07.2016 15:30:52: --->Start get async answer
+27.07.2016 15:30:52:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:52:<----End get async answer
+27.07.2016 15:30:52: --->Start get async answer
+27.07.2016 15:30:52:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:52:<----End get async answer
+27.07.2016 15:30:52:Start write Json
+27.07.2016 15:30:52:Get TransactionsReportItems
+27.07.2016 15:30:52: --->Start get async answer
+27.07.2016 15:30:52:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbWt5ZAHL8v7sfLaBRyYku5Z5BYI4zzlOKI4VgS_8kcE18aimGY7383rmPRaIrxZ9g2
+27.07.2016 15:30:54:ERROR JsonConvert for get: Input string '-228.00000' is not a valid integer. Path '[1].transactionSum', line 1, position 449.
+27.07.2016 15:31:25:Start program
+27.07.2016 15:31:26:Initialization program
+27.07.2016 15:31:26:Run application
+27.07.2016 15:31:27:Initialize Component Form1
+27.07.2016 15:31:27:Get OrganizationInfo
+27.07.2016 15:31:27: --->Start get async answer
+27.07.2016 15:31:27:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:28:<----End get async answer
+27.07.2016 15:31:28:Get OrganizationInfo
+27.07.2016 15:31:28: --->Start get async answer
+27.07.2016 15:31:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:28:<----End get async answer
+27.07.2016 15:31:28:Get CorporateNutritionInfo
+27.07.2016 15:31:28:Get OrganizationInfo
+27.07.2016 15:31:28: --->Start get async answer
+27.07.2016 15:31:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:28:<----End get async answer
+27.07.2016 15:31:28: --->Start get async answer
+27.07.2016 15:31:28:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:28:<----End get async answer
+27.07.2016 15:31:33:Get CorporateNutritionInfo
+27.07.2016 15:31:33:Get OrganizationInfo
+27.07.2016 15:31:34: --->Start get async answer
+27.07.2016 15:31:34:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:34:<----End get async answer
+27.07.2016 15:31:34: --->Start get async answer
+27.07.2016 15:31:34:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:34:<----End get async answer
+27.07.2016 15:31:35:Start thread for get data
+27.07.2016 15:31:35:Get CorporateNutritionInfo
+27.07.2016 15:31:35:Get OrganizationInfo
+27.07.2016 15:31:35: --->Start get async answer
+27.07.2016 15:31:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:35:<----End get async answer
+27.07.2016 15:31:35: --->Start get async answer
+27.07.2016 15:31:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:31:36:<----End get async answer
+27.07.2016 15:31:36:Start write Json
+27.07.2016 15:31:36:Get TransactionsReportItems
+27.07.2016 15:31:44: --->Start get async answer
+27.07.2016 15:31:44:This access token for get request: EsM-o9S3vKfOCzOsbCdtlbkL40tq03Dcm0jpqmrMfHTH0hEqsfL9q7Y3NhbAI4AcsNX1o16CTtItOq9pGafuOA2
+27.07.2016 15:34:03:Start program
+27.07.2016 15:34:03:Initialization program
+27.07.2016 15:34:03:Run application
+27.07.2016 15:34:05:Initialize Component Form1
+27.07.2016 15:34:05:Get OrganizationInfo
+27.07.2016 15:34:05: --->Start get async answer
+27.07.2016 15:34:05:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:06:<----End get async answer
+27.07.2016 15:34:06:Get OrganizationInfo
+27.07.2016 15:34:06: --->Start get async answer
+27.07.2016 15:34:06:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:06:<----End get async answer
+27.07.2016 15:34:06:Get CorporateNutritionInfo
+27.07.2016 15:34:06:Get OrganizationInfo
+27.07.2016 15:34:06: --->Start get async answer
+27.07.2016 15:34:06:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:06:<----End get async answer
+27.07.2016 15:34:06: --->Start get async answer
+27.07.2016 15:34:06:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:06:<----End get async answer
+27.07.2016 15:34:08:Get CorporateNutritionInfo
+27.07.2016 15:34:08:Get OrganizationInfo
+27.07.2016 15:34:08: --->Start get async answer
+27.07.2016 15:34:08:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:08:<----End get async answer
+27.07.2016 15:34:08: --->Start get async answer
+27.07.2016 15:34:08:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:09:<----End get async answer
+27.07.2016 15:34:09:Start thread for get data
+27.07.2016 15:34:09:Get CorporateNutritionInfo
+27.07.2016 15:34:09:Get OrganizationInfo
+27.07.2016 15:34:09: --->Start get async answer
+27.07.2016 15:34:09:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:10:<----End get async answer
+27.07.2016 15:34:10: --->Start get async answer
+27.07.2016 15:34:10:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:34:10:<----End get async answer
+27.07.2016 15:34:10:Start write Json
+27.07.2016 15:34:10:Get TransactionsReportItems
+27.07.2016 15:34:18: --->Start get async answer
+27.07.2016 15:34:24:This access token for get request: EsM-o9S3vKfOCzOsbCdtleJ-tt-badyLxheiKchErk9x6a5qswFU5snDvnwTJKE-fMEDRidTFra8I6UOvog6BA2
+27.07.2016 15:36:59:Start program
+27.07.2016 15:36:59:Initialization program
+27.07.2016 15:36:59:Run application
+27.07.2016 15:37:00:Initialize Component Form1
+27.07.2016 15:37:00:Get OrganizationInfo
+27.07.2016 15:37:00: --->Start get async answer
+27.07.2016 15:37:00:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:00:<----End get async answer
+27.07.2016 15:37:00:Get OrganizationInfo
+27.07.2016 15:37:00: --->Start get async answer
+27.07.2016 15:37:00:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:00:<----End get async answer
+27.07.2016 15:37:00:Get CorporateNutritionInfo
+27.07.2016 15:37:00:Get OrganizationInfo
+27.07.2016 15:37:00: --->Start get async answer
+27.07.2016 15:37:00:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:00:<----End get async answer
+27.07.2016 15:37:00: --->Start get async answer
+27.07.2016 15:37:00:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:00:<----End get async answer
+27.07.2016 15:37:02:Get CorporateNutritionInfo
+27.07.2016 15:37:02:Get OrganizationInfo
+27.07.2016 15:37:02: --->Start get async answer
+27.07.2016 15:37:02:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:03:<----End get async answer
+27.07.2016 15:37:03: --->Start get async answer
+27.07.2016 15:37:03:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:03:<----End get async answer
+27.07.2016 15:37:03:Start thread for get data
+27.07.2016 15:37:03:Get CorporateNutritionInfo
+27.07.2016 15:37:03:Get OrganizationInfo
+27.07.2016 15:37:03: --->Start get async answer
+27.07.2016 15:37:03:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:04:<----End get async answer
+27.07.2016 15:37:04: --->Start get async answer
+27.07.2016 15:37:04:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:04:<----End get async answer
+27.07.2016 15:37:04:Start write Json
+27.07.2016 15:37:04:Get TransactionsReportItems
+27.07.2016 15:37:06: --->Start get async answer
+27.07.2016 15:37:06:This access token for get request: EsM-o9S3vKfOCzOsbCdtlWzl6k3Uf56mya0nUE0Qmr9kLgklGUf2D5IxjGDktXUEj8DP7Eye5PnzC0OV9fFLfA2
+27.07.2016 15:37:08:ERROR JsonConvert for get: Input string '228.00000' is not a valid integer. Path '[0].orderSum', line 1, position 106.
+27.07.2016 15:37:29:Start program
+27.07.2016 15:37:29:Initialization program
+27.07.2016 15:37:29:Run application
+27.07.2016 15:37:30:Initialize Component Form1
+27.07.2016 15:37:30:Get OrganizationInfo
+27.07.2016 15:37:30: --->Start get async answer
+27.07.2016 15:37:30:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:30:<----End get async answer
+27.07.2016 15:37:30:Get OrganizationInfo
+27.07.2016 15:37:30: --->Start get async answer
+27.07.2016 15:37:30:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:31:<----End get async answer
+27.07.2016 15:37:31:Get CorporateNutritionInfo
+27.07.2016 15:37:31:Get OrganizationInfo
+27.07.2016 15:37:31: --->Start get async answer
+27.07.2016 15:37:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:31:<----End get async answer
+27.07.2016 15:37:31: --->Start get async answer
+27.07.2016 15:37:31:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:31:<----End get async answer
+27.07.2016 15:37:34:Get CorporateNutritionInfo
+27.07.2016 15:37:34:Get OrganizationInfo
+27.07.2016 15:37:34: --->Start get async answer
+27.07.2016 15:37:34:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:34:<----End get async answer
+27.07.2016 15:37:34: --->Start get async answer
+27.07.2016 15:37:34:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:34:<----End get async answer
+27.07.2016 15:37:34:Start thread for get data
+27.07.2016 15:37:34:Get CorporateNutritionInfo
+27.07.2016 15:37:34:Get OrganizationInfo
+27.07.2016 15:37:34: --->Start get async answer
+27.07.2016 15:37:34:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:35:<----End get async answer
+27.07.2016 15:37:35: --->Start get async answer
+27.07.2016 15:37:35:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:37:35:<----End get async answer
+27.07.2016 15:37:35:Start write Json
+27.07.2016 15:37:35:Get TransactionsReportItems
+27.07.2016 15:37:39: --->Start get async answer
+27.07.2016 15:37:39:This access token for get request: EsM-o9S3vKfOCzOsbCdtlS_siVorcOjvR8Tmefjay8Ok2ZCJIIed3OLhPNXDlztWO1VS_wIOm_2GJQXFEHP_aQ2
+27.07.2016 15:38:57:Start program
+27.07.2016 15:38:57:Initialization program
+27.07.2016 15:38:57:Run application
+27.07.2016 15:38:58:Initialize Component Form1
+27.07.2016 15:38:58:Get OrganizationInfo
+27.07.2016 15:38:58: --->Start get async answer
+27.07.2016 15:38:58:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:38:58:<----End get async answer
+27.07.2016 15:38:58:Get OrganizationInfo
+27.07.2016 15:38:58: --->Start get async answer
+27.07.2016 15:38:58:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:38:58:<----End get async answer
+27.07.2016 15:38:58:Get CorporateNutritionInfo
+27.07.2016 15:38:58:Get OrganizationInfo
+27.07.2016 15:38:58: --->Start get async answer
+27.07.2016 15:38:58:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:38:58:<----End get async answer
+27.07.2016 15:38:59: --->Start get async answer
+27.07.2016 15:38:59:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:38:59:<----End get async answer
+27.07.2016 15:39:01:Get CorporateNutritionInfo
+27.07.2016 15:39:01:Get OrganizationInfo
+27.07.2016 15:39:01: --->Start get async answer
+27.07.2016 15:39:01:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:39:01:<----End get async answer
+27.07.2016 15:39:01: --->Start get async answer
+27.07.2016 15:39:01:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:39:01:<----End get async answer
+27.07.2016 15:39:02:Start thread for get data
+27.07.2016 15:39:02:Get CorporateNutritionInfo
+27.07.2016 15:39:02:Get OrganizationInfo
+27.07.2016 15:39:02: --->Start get async answer
+27.07.2016 15:39:02:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:39:02:<----End get async answer
+27.07.2016 15:39:02: --->Start get async answer
+27.07.2016 15:39:02:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:39:02:<----End get async answer
+27.07.2016 15:39:02:Start write Json
+27.07.2016 15:39:02:Get TransactionsReportItems
+27.07.2016 15:39:04: --->Start get async answer
+27.07.2016 15:39:04:This access token for get request: EsM-o9S3vKfOCzOsbCdtldIOsuZfHB_jWg3mpOjEaAQKP3JtWcYQh65Vt9WKQxR7sBOtrQGL3BlzIlT4q9LkFw2
+27.07.2016 15:39:05:<----End get async answer
+27.07.2016 15:40:44:Start build table for Core.Domain.TransactionsReportItem[]
+27.07.2016 15:40:44:End buil table for Core.Domain.TransactionsReportItem[]
+27.07.2016 15:40:44:End thread for get data
+27.07.2016 15:40:45:Show gridView

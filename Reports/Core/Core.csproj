@@ -58,6 +58,8 @@
     <Compile Include="Domain\ReportParameters.cs" />
     <Compile Include="Domain\Reports.cs" />
     <Compile Include="Domain\Settings.cs" />
+    <Compile Include="Domain\TransactionReportItemParametrs.cs" />
+    <Compile Include="Domain\TransactionsReportItem.cs" />
     <Compile Include="Module\CoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IBizApiClient.cs" />

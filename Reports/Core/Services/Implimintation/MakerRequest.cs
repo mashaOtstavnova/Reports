@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Core.Domain;
 using Microsoft.SqlServer.Server;
@@ -86,18 +87,28 @@ namespace Core.Services.Implimintation
 
             while (fromThis != param.DateTo)
             {
-                corporateNutritionReportItemsList.Clear();
-                //var formatFrom = fromThis.ToString(Format);
-                //var formatTo = toThis.ToString(Format);
-                var arrayRespons =
-                    this.GetCorporateNutritionReportItem(param.OrganizationInfoId, param.CorporateNutritionProgramId, fromThis.ToString(Format),
-                    fromThis.AddDays(1).ToString(Format))
-                        .Result;
-                corporateNutritionReportItemsList.AddRange(arrayRespons);
 
-                var resultArray1 = corporateNutritionReportItemsList.ToArray();
-                var newReports1 = CoreContext.ParseCorparationToReports.Parse(resultArray1, toThis, fromThis);
-                reportsList.AddRange(newReports1);
+                //Log.Inst.WriteToLogDEBUG(string.Format("Start Get CorporateNutritionReportItem for from {0} to {1}", fromThis.ToString(Format),
+                //            fromThis.AddDays(1).ToString(Format)));
+                //new Thread(() =>
+                //{
+                    
+                    corporateNutritionReportItemsList.Clear();
+                    //var formatFrom = fromThis.ToString(Format);
+                    //var formatTo = toThis.ToString(Format);
+                    var arrayRespons =
+                        this.GetCorporateNutritionReportItem(param.OrganizationInfoId, param.CorporateNutritionProgramId,
+                            fromThis.ToString(Format),
+                            fromThis.AddDays(1).ToString(Format))
+                            .Result;
+                    corporateNutritionReportItemsList.AddRange(arrayRespons);
+
+                    var resultArray1 = corporateNutritionReportItemsList.ToArray();
+                    var newReports1 = CoreContext.ParseCorparationToReports.Parse(resultArray1, toThis, fromThis);
+                    reportsList.AddRange(newReports1);
+                //}).Start();
+                //Log.Inst.WriteToLogDEBUG(string.Format("End Get CorporateNutritionReportItem for from {0} to {1}", fromThis.ToString(Format),
+                //          fromThis.AddDays(1).ToString(Format)));
                 fromThis = fromThis.AddDays(1);
                 toThis = fromThis.AddDays(1);
             }
@@ -112,10 +123,24 @@ namespace Core.Services.Implimintation
             return newReports;
         }
 
+        public async Task<Core.Domain.TransactionsReportItem[]> GetTransactionsReportItems(TransactionReportItemParametrs param)
+        {
+            Log.Inst.WriteToLogDEBUG(string.Format("Get TransactionsReportItems"));
+          
+            return
+                await
+                    CoreContext.BizApiClient.GetAsync<TransactionsReportItem[]>(
+                        (string.Format("/organization/{0}/transactions_report", param.OrganizationInfoId)), new
+                        {
+                            date_from = param.DateFrom.ToString(Format),
+                            date_to = param.DateTo.ToString(Format)
+                        }).ConfigureAwait(false);
+        }
+
         private async Task<CorporateNutritionReportItem[]> GetCorporateNutritionReportItem(string organizationId,
             string corporateNutritionInfoId, string fromDate, string toDate)
         {
-            Log.Inst.WriteToLogDEBUG(string.Format("Get CorporateNutritionReportItem"));
+
             /////api/0/organization/{organizationId}/corporate_nutrition_report?corporate_nutrition_id={corporateNutritionProgramId}
             /// &date_from={dateFrom}&date_to={dateTo}&access_token={accessToken}
             var idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result[0].Id;

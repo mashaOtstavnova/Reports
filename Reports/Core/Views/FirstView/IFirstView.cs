@@ -11,5 +11,6 @@ namespace Core.Views.FirstView
         void GetReports();
         void ShowMessag(string msg);
         void Init();
+        void GetTransaction();
     }
 }

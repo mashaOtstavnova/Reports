@@ -11,5 +11,6 @@ namespace Core.Views.MainView
     {
         void PaintTable(DataTable dt);
         void SaveExcel();
+       
     }
 }

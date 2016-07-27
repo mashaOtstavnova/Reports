@@ -21,7 +21,7 @@ namespace Core.Services.Implimintation
 
         public DataTable BuiltTable(object[] obj)
         {
-            Log.Inst.WriteToLogDEBUG(string.Format("Start buil table for {0}", obj.GetType().FullName));
+            Log.Inst.WriteToLogDEBUG(string.Format("Start build table for {0}", obj.GetType().FullName));
             _dateTable = new DataTable();
             _dateTable.TableName = obj.GetType().GetElementType().Name;
            

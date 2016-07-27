@@ -60,7 +60,7 @@ namespace Reports
             }
             catch (Exception ex)
             {
-                throw new Exception();
+                //throw new Exception();
             }
 
         }

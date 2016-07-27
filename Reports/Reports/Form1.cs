@@ -3,6 +3,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core.Domain;
@@ -64,7 +65,28 @@ namespace Reports
                 var result =
                     CoreContext.MakerRequest.GetReportses(reportParametrs);
                 var dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result);
-                dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result);
+                //dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result);
+                return dt;
+            });
+        }
+        private async Task<DataTable> newThreadForTranzaction()
+        {
+            return await Task.Run(() =>
+            {
+
+                var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
+                //var idCor = list.Where(t => t.Name==comboBox2.Text).FirstOrDefault().Id;
+                var reportParametrs = new ReportParameters(_idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
+                    dateTimeTo.Value.Date);
+                var transactionReportItemParametrs = new TransactionReportItemParametrs(_idOrg,  dateTimeFrom.Value.Date, dateTimeTo.Value.Date);
+                //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
+                //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
+                //listBox1.Items.Clear();
+                //listBox1.Items.Add(CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result.Count());
+                var result =
+                    CoreContext.MakerRequest.GetTransactionsReportItems(transactionReportItemParametrs);
+                var dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result.Result);
+                //dt = CoreContext.BuildTableAndSaveExcel.BuiltTable(result);
                 return dt;
             });
         }
@@ -107,22 +129,40 @@ namespace Reports
         private async void button1_Click_1(object sender, EventArgs e)
         {
             
-            CoreContext.ViewService.FirstView.GetReports();
+            //CoreContext.ViewService.FirstView.GetReports();
+            CoreContext.ViewService.FirstView.GetTransaction();
+
         }
 
         public async void GetReports()
         {;
             _progressPanel.Visible = true;
             Application.DoEvents();
-            
+
+            Log.Inst.WriteToLogDEBUG("Start thread for get data");
             var dt1 = await newThread();
+            Log.Inst.WriteToLogDEBUG("End thread for get data");
             var re = new MainView(dt1);
             Log.Inst.WriteToLogDEBUG("Show gridView");
 
             _progressPanel.Visible = false;
             re.ShowDialog();
         }
+        public async void GetTransaction()
+        {
+            ;
+            _progressPanel.Visible = true;
+            Application.DoEvents();
 
+            Log.Inst.WriteToLogDEBUG("Start thread for get data");
+            var dt1 = await newThreadForTranzaction();
+            Log.Inst.WriteToLogDEBUG("End thread for get data");
+            var re = new MainView(dt1);
+            Log.Inst.WriteToLogDEBUG("Show gridView");
+
+            _progressPanel.Visible = false;
+            re.ShowDialog();
+        }
         public void ShowMessag(string msg)
         {
             MessageBox.Show(msg);

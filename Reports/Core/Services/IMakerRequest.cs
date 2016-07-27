@@ -13,5 +13,6 @@ namespace Core.Services
         Core.Domain.Reports[] GetReportses(ReportParameters param);
         Task<CorporateNutritionInfo[]> GetCorporateNutritionInfo(string organizationId);
         Task<OrganizationInfo[]> GetOrganizationInfo();
+        Task<Core.Domain.TransactionsReportItem[]> GetTransactionsReportItems(TransactionReportItemParametrs param);
     }
 }
