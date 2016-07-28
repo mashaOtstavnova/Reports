@@ -1,0 +1,13 @@
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Core.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Core.pdb
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\ExcelLibrary.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Flurl.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Framework.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Framework.pdb
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Flurl.pdb
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Flurl.xml
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\obj\Release\Core.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Core\obj\Release\Core.pdb

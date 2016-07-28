@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -8,12 +9,13 @@ using Reports;
 namespace Core.Services.Implimintation
 {
     /// <summary>
-    /// конструирование dateTable по object
+    ///     конструирование dateTable по object
     /// </summary>
     public class BuildTableAndSaveExcel : IBuildTableAndSaveExcel
     {
-        private  DataTable _dateTable;
         private const string Format = "yyyy-MM-dd";
+        private DataTable _dateTable;
+
         public BuildTableAndSaveExcel()
         {
             _dateTable = new DataTable();
@@ -24,7 +26,7 @@ namespace Core.Services.Implimintation
             Log.Inst.WriteToLogDEBUG(string.Format("Start build table for {0}", obj.GetType().FullName));
             _dateTable = new DataTable();
             _dateTable.TableName = obj.GetType().GetElementType().Name;
-           
+
             for (var i = 0; i < obj.GetType().GetElementType().GetProperties().Count(); i++)
             {
                 var c1 = obj.GetType().GetElementType().GetProperties()[i];
@@ -45,72 +47,20 @@ namespace Core.Services.Implimintation
             return BuilTableForView(_dateTable);
         }
 
-        private DataTable BuilTableForView(DataTable dt)
-        {
-            var resultTable = new DataTable();
-            //DataTable dt1 = new DataTable();
-            //DataTable dt2 = new DataTable();
-            resultTable.Columns.Add("Дата/время");
-            resultTable.Columns.Add("Группа карт");
-            resultTable.Columns.Add("Код карты", dt.Columns["CardNumbers"].DataType);
-            resultTable.Columns.Add("ФИО", typeof(string));
-            resultTable.Columns.Add("Сумма", dt.Columns["TransactionSum"].DataType);
-            resultTable.Columns.Add("Дотация", typeof(decimal));
-            resultTable.Columns.Add("Кредит", typeof(decimal));
-            resultTable.Columns.Add("Организаия", typeof(string));
-            resultTable.Columns.Add("Операция", dt.Columns["TransactionType"].DataType);
-          
-           
-           
-            resultTable.Columns.Add("Дата");
-          
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if (dt.Rows[i]["TransactionType"].Equals("PayFromWallet"))
-                {
-                    var resultRow = resultTable.NewRow();
-                    resultRow["Код карты"] = dt.Rows[i]["CardNumbers"];
-                    resultRow["Группа карт"] = "";
-                    resultRow["ФИО"] = "";
-                    resultRow["Сумма"] = Math.Abs((decimal)dt.Rows[i]["TransactionSum"]);
-                    resultRow["Операция"] = dt.Rows[i]["TransactionType"];
-                    resultRow["Организаия"] = "";
-                    //resultRow["TransactionCreateDate"] = dt.Rows[i]["TransactionCreateDate"];
-                    DateTime tmp = (DateTime)dt.Rows[i]["TransactionCreateDate"];
-                    resultRow["Дата/время"] = tmp.ToString();
-                    resultRow["Дата"] = tmp.ToString(Format);
-                    resultRow["Дотация"] = 250;
-                    var credit = (decimal) resultRow["Дотация"] - Math.Abs((decimal) dt.Rows[i]["TransactionSum"]);
-                    if (credit > 0)
-                    {
-                        resultRow["Кредит"] = 0;
-                    }
-                    else
-                    {
-                         resultRow["Кредит"] = Math.Abs(credit);
-                    }
-                   
-                    resultTable.Rows.Add(resultRow);
-                }
-
-            }
-
-            return resultTable;
-        }
-
         public void SaveExel(DataTable dt, string path)
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Start save in excel file in path {0}", path));
-            Workbook workbook = new Workbook();
+            var workbook = new Workbook();
             _dateTable = dt;
-            Worksheet worksheet = new Worksheet(_dateTable.TableName);
-            for (int i = 0; i < _dateTable.Columns.Count; i++)
+            var worksheet = new Worksheet(_dateTable.TableName);
+            for (var i = 0; i < _dateTable.Columns.Count; i++)
             {
                 // Add column header
                 worksheet.Cells[0, i] = new Cell(_dateTable.Columns[i].ColumnName);
 
                 // Populate row data
-                for (int j = 0; j < _dateTable.Rows.Count; j++) { 
+                for (var j = 0; j < _dateTable.Rows.Count; j++)
+                {
                     //Если нулевые значения, заменяем на пустые строки
                     var valueRow = _dateTable.Rows[j][i];
                     if (valueRow.GetType() == typeof (DateTime))
@@ -125,6 +75,89 @@ namespace Core.Services.Implimintation
             workbook.Save(path);
             Log.Inst.WriteToLogDEBUG(string.Format("End save in excel file in path {0}", path));
             CoreContext.ViewService.FirstView.ShowMessag(string.Format("Файл {0} успешно сохранен.", path));
+        }
+
+        private DataTable BuilTableForView(DataTable dt)
+        {
+            ////DataTable dt1 = new DataTable();
+            ////DataTable dt2 = new DataTable();
+           
+
+            var resultTable = new DataTable("Balance");
+            resultTable.Columns.Add("Дата/время", typeof(DateTime));
+            resultTable.Columns.Add("Дата", typeof(DateTime));
+            resultTable.Columns.Add("Группа карт");
+            resultTable.Columns.Add("Код карты", dt.Columns["CardNumbers"].DataType);
+            resultTable.Columns.Add("ФИО", typeof(string));
+            resultTable.Columns.Add("Сумма чека", dt.Columns["TransactionSum"].DataType);
+            resultTable.Columns.Add("Дотация", typeof(decimal));
+            resultTable.Columns.Add("Кредит", typeof(decimal));
+            resultTable.Columns.Add("Организация", typeof(string));
+            resultTable.Columns.Add("Телефон", dt.Columns["PhoneNumber"].DataType);
+            resultTable.Columns.Add("Операция", dt.Columns["TransactionType"].DataType);
+            var tmp = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key);
+            var listBalans = tmp.Select(i => new Balanc(i.ToString(), 250)).ToList();
+            var list = new List<Tuple<string, DateTime, decimal>>();
+            foreach (var i in tmp)
+            {
+                var t = dt.AsEnumerable().Where(r => r["CardNumbers"].Equals(i)).Where(r => r["TransactionType"].Equals("PayFromWallet"));
+                var t1v = t.ToList().Select(r => r["TransactionCreateDate"]).ToList();
+                foreach (var item in t)
+                {
+                    var resultRow = resultTable.NewRow();
+                    resultRow["Код карты"] = item["CardNumbers"];
+                    var tmpDate = (DateTime)item["TransactionCreateDate"];
+                    resultRow["Дата/время"] = tmpDate.ToString("G");
+                    resultRow["Дата"] = tmpDate.ToString(Format);
+                    resultRow["Сумма чека"] = (decimal)item["TransactionSum"];
+                    resultRow["Телефон"] = item["PhoneNumber"];
+                    resultRow["Группа карт"] = "";
+                    resultRow["ФИО"] = "";
+                    resultRow["Организация"] = "";
+                    resultRow["Дотация"] = 0;
+                    resultRow["Кредит"] = 0;
+                    resultTable.Rows.Add(resultRow);
+
+                }
+            }
+            var g = resultTable.AsEnumerable().GroupBy(r => r["Код карты"]);
+            foreach (var i in g)
+            {
+                var d = i.Cast<DataRow>().OrderByDescending(row => row["Дата/время"]).Reverse();
+                foreach (var item in d)
+                {
+                    var oldBalance = listBalans.Where(r => r.NumberCard.Equals(item["Код карты"])).Select(r => r.Sum).FirstOrDefault();
+                    var sum = Math.Abs((decimal)item["Сумма чека"]);
+                    var balance = (decimal)oldBalance - sum;
+                    if (balance >= 0)
+                    {
+                        item["Дотация"] = sum;
+                        item["Кредит"] = 0;
+                        listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = balance;
+                    }
+                    else
+                    {
+                        item["Дотация"] = oldBalance;
+                        item["Кредит"] = sum - oldBalance;
+                        listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = 0;
+                    }
+                }
+            }
+
+            return resultTable;
+        }
+        
+    }
+
+    public class Balanc
+    {
+        public string NumberCard { get; set; }
+        public decimal Sum { get; set; }
+
+        public Balanc(string numberCard, decimal sum)
+        {
+            NumberCard = numberCard;
+            Sum = sum;
         }
     }
 }

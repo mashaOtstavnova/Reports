@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using DevExpress.Utils;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraVerticalGrid;
@@ -17,8 +19,11 @@ namespace Reports.Controls
             gridControl1.DataSource = dt;
             gridView1.ClearGrouping();
             gridView1.Columns["Дата"].GroupIndex = 0;
-            AddSummaryColumn(new List<string>() {"Кредит", "Сумма", "Дотация"});
-            //настройки фильтра
+            AddSummaryColumn(new List<string>() {"Кредит", "Сумма чека", "Дотация"});
+            
+            gridView1.Columns["Дата/время"].DisplayFormat.FormatType = FormatType.DateTime;
+            gridView1.Columns["Дата/время"].DisplayFormat.FormatString = "G";
+            //настройки фильтра            
             gridView1.OptionsView.ShowFooter = true;
             gridView1.OptionsView.ShowAutoFilterRow = true;
             gridView1.OptionsMenu.ShowAutoFilterRowItem = true;

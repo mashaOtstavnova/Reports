@@ -1,0 +1,4 @@
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\bin\Release\Framework.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\bin\Release\Framework.pdb
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\obj\Release\Framework.dll
+C:\Users\maria\Documents\GitHub\Reports\Reports\Framework\obj\Release\Framework.pdb
