@@ -88,9 +88,13 @@
             // createExcel
             // 
             this.createExcel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.createExcel.Location = new System.Drawing.Point(977, 3);
+            this.createExcel.ImageIndex = 1;
+            this.createExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.createExcel.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftBottom;
+            this.createExcel.ImeMode = System.Windows.Forms.ImeMode.Hangul;
+            this.createExcel.Location = new System.Drawing.Point(985, 3);
             this.createExcel.Name = "createExcel";
-            this.createExcel.Size = new System.Drawing.Size(75, 32);
+            this.createExcel.Size = new System.Drawing.Size(67, 32);
             this.createExcel.TabIndex = 1;
             this.createExcel.Text = "Excel";
             this.createExcel.Click += new System.EventHandler(this.createExcel_Click);

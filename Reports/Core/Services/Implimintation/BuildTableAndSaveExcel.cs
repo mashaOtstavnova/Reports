@@ -13,7 +13,7 @@ namespace Core.Services.Implimintation
     public class BuildTableAndSaveExcel : IBuildTableAndSaveExcel
     {
         private  DataTable _dateTable;
-
+        private const string Format = "yyyy-MM-dd";
         public BuildTableAndSaveExcel()
         {
             _dateTable = new DataTable();
@@ -41,7 +41,61 @@ namespace Core.Services.Implimintation
                 _dateTable.Rows.Add(r);
             }
             Log.Inst.WriteToLogDEBUG(string.Format("End buil table for {0}", obj.GetType().FullName));
-            return _dateTable;
+
+            return BuilTableForView(_dateTable);
+        }
+
+        private DataTable BuilTableForView(DataTable dt)
+        {
+            var resultTable = new DataTable();
+            //DataTable dt1 = new DataTable();
+            //DataTable dt2 = new DataTable();
+            resultTable.Columns.Add("Дата/время");
+            resultTable.Columns.Add("Группа карт");
+            resultTable.Columns.Add("Код карты", dt.Columns["CardNumbers"].DataType);
+            resultTable.Columns.Add("ФИО", typeof(string));
+            resultTable.Columns.Add("Сумма", dt.Columns["TransactionSum"].DataType);
+            resultTable.Columns.Add("Дотация", typeof(decimal));
+            resultTable.Columns.Add("Кредит", typeof(decimal));
+            resultTable.Columns.Add("Организаия", typeof(string));
+            resultTable.Columns.Add("Операция", dt.Columns["TransactionType"].DataType);
+          
+           
+           
+            resultTable.Columns.Add("Дата");
+          
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i]["TransactionType"].Equals("PayFromWallet"))
+                {
+                    var resultRow = resultTable.NewRow();
+                    resultRow["Код карты"] = dt.Rows[i]["CardNumbers"];
+                    resultRow["Группа карт"] = "";
+                    resultRow["ФИО"] = "";
+                    resultRow["Сумма"] = Math.Abs((decimal)dt.Rows[i]["TransactionSum"]);
+                    resultRow["Операция"] = dt.Rows[i]["TransactionType"];
+                    resultRow["Организаия"] = "";
+                    //resultRow["TransactionCreateDate"] = dt.Rows[i]["TransactionCreateDate"];
+                    DateTime tmp = (DateTime)dt.Rows[i]["TransactionCreateDate"];
+                    resultRow["Дата/время"] = tmp.ToString();
+                    resultRow["Дата"] = tmp.ToString(Format);
+                    resultRow["Дотация"] = 250;
+                    var credit = (decimal) resultRow["Дотация"] - Math.Abs((decimal) dt.Rows[i]["TransactionSum"]);
+                    if (credit > 0)
+                    {
+                        resultRow["Кредит"] = 0;
+                    }
+                    else
+                    {
+                         resultRow["Кредит"] = Math.Abs(credit);
+                    }
+                   
+                    resultTable.Rows.Add(resultRow);
+                }
+
+            }
+
+            return resultTable;
         }
 
         public void SaveExel(DataTable dt, string path)

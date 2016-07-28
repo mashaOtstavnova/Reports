@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using Core.Services.Implimintation;
 using Core.Views.MainView;
@@ -43,7 +44,9 @@ namespace Reports
 
         public void PaintTable(DataTable dt)
         {
+            
             _grid = new GridDataTable(dt);
+            
             _grid.Size = splitContainerControl1.Panel2.Size;
             splitContainerControl1.Panel2.Controls.Add(_grid);
         }
