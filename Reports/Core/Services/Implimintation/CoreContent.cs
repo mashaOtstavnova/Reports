@@ -16,6 +16,10 @@ namespace Core.Services.Implimintation
         {
             get { return Service<IBizApiClient>.GetInstance(); }
         }
+        public static IReportParametrsService ReportParametrsService
+        {
+            get { return Service<IReportParametrsService>.GetInstance(); }
+        }
         public static IConfigService ConfigService
         {
             get { return Service<IConfigService>.GetInstance(); }

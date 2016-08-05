@@ -58,6 +58,7 @@
     <Compile Include="Domain\CorporateNutritionInfo.cs" />
     <Compile Include="Domain\CorporateNutritionReportItem.cs" />
     <Compile Include="Domain\OrganizationInfo.cs" />
+    <Compile Include="Domain\ParametrsForTable.cs" />
     <Compile Include="Domain\ReportParameters.cs" />
     <Compile Include="Domain\Reports.cs" />
     <Compile Include="Domain\Settings.cs" />
@@ -78,8 +79,10 @@
     <Compile Include="Services\Implimintation\InitService.cs" />
     <Compile Include="Services\Implimintation\MakerRequest.cs" />
     <Compile Include="Services\Implimintation\ParseCorparationToReports.cs" />
+    <Compile Include="Services\Implimintation\ReportParametrsService.cs" />
     <Compile Include="Services\Implimintation\ViewService.cs" />
     <Compile Include="Services\IParseCorparationToReports.cs" />
+    <Compile Include="Services\IReportParametrsService.cs" />
     <Compile Include="Services\IViewService.cs" />
     <Compile Include="Views\FirstView\IFirstView.cs" />
     <Compile Include="Views\MainView\IMainView.cs" />

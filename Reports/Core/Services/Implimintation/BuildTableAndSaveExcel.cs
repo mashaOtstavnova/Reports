@@ -17,12 +17,16 @@ namespace Core.Services.Implimintation
     {
         private const string Format = "yyyy-MM-dd";
         private DataTable _dateTable;
-        private List<BalancCardNumber> _allBalans; 
+        private ReportParameters _reportParameters;
+        private List<BalancCardNumber> _allBalans;
+        private List<ParametrsForTable> _otherParam;
 
         public BuildTableAndSaveExcel()
         {
             _dateTable = new DataTable();
-            _allBalans = new List<BalancCardNumber>(); 
+            _allBalans = new List<BalancCardNumber>();
+            _reportParameters = CoreContext.ReportParametrsService.GetSettings();
+            _otherParam = new List<ParametrsForTable>();
         }
         /// <summary>
         /// конструирование DataTable по любому списку объектов
@@ -95,57 +99,44 @@ namespace Core.Services.Implimintation
         /// <returns></returns>
         private DataTable BuilTableForView(DataTable dt)
         {
-            var config = CoreContext.ConfigService.GetConfig();
             var resultTable = new DataTable("Balance");
             resultTable.Columns.Add("Дата/время", typeof (DateTime));
             resultTable.Columns.Add("Дата", typeof (DateTime));
-            resultTable.Columns.Add("Группа карт");
             resultTable.Columns.Add("Код карты", dt.Columns["CardNumbers"].DataType);
             resultTable.Columns.Add("ФИО", typeof (string));
+            resultTable.Columns.Add("Категория", typeof (string));
             resultTable.Columns.Add("Сумма чека", dt.Columns["TransactionSum"].DataType);
             resultTable.Columns.Add("Дотация", typeof (decimal));
             resultTable.Columns.Add("Кредит", typeof (decimal));
-            resultTable.Columns.Add("Организация", typeof (string));
             resultTable.Columns.Add("Телефон", dt.Columns["PhoneNumber"].DataType);
-            resultTable.Columns.Add("Операция", dt.Columns["TransactionType"].DataType);
-            //resultTable.Columns.Add("Лимит/организация", typeof(string));
-            
-            var allCard = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key);
-            _allBalans = allCard.Select(i => new BalancCardNumber(i.ToString(), 250)).ToList();
-            
-          
+
+            var allCard = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key.ToString());
+            //_allBalans = allCard.Select(i => new BalancCardNumber(i.ToString(), 250)).ToList();
+            _allBalans = GetCategoriesesBalance(allCard.ToList());
+
+
             foreach (var i in allCard)
             {
+                var oParam = _otherParam.Where(x => x.NumberCard == i).FirstOrDefault();
                 var t =
                     dt.AsEnumerable()
                         .Where(r => r["CardNumbers"].Equals(i))
                         .Where(r => r["TransactionType"].Equals("PayFromWallet"));
-                var t1v = t.ToList().Select(r => r["TransactionCreateDate"]).ToList();foreach (var item in t)
+                foreach (var item in t)
                 {
                     var resultRow = resultTable.NewRow();
                     resultRow["Код карты"] = item["CardNumbers"];
                     var tmpDate = (DateTime) item["TransactionCreateDate"];
                     resultRow["Дата/время"] = tmpDate.ToString("G");
                     resultRow["Дата"] = tmpDate.ToString(Format);
+                    resultRow["Категория"] = oParam.Category;
                     resultRow["Сумма чека"] = (decimal) item["TransactionSum"];
                     resultRow["Телефон"] = item["PhoneNumber"];
-                    resultRow["Группа карт"] = "";
-                    resultRow["ФИО"] = "";
-                    resultRow["Организация"] = "";
+                    resultRow["ФИО"] = oParam.FullName;
                     resultRow["Дотация"] = 0;
                     resultRow["Кредит"] = 0;
-                    //try
-                    //{
-
-                    //    resultRow["Лимит/организация"] = CoreContext.MakerRequest.GetInfoByCard(item["CardNumbers"].ToString(), "7969889b-eaa0-11e5-80d8-d8d38565926f").Result.Categories[2].Name;
-
-                    //}
-                    //catch (Exception ex)
-                    //{
-
-                    //    resultRow["Лимит/организация"] = ex.Message;
-                    //}
-                    resultTable.Rows.Add(resultRow);
+                    //var balancCardNumber = _allBalans.Where(tt=>tt.NumberCard.Equals(item["CardNumbers"])).FirstOrDefault();
+                  resultTable.Rows.Add(resultRow);
                 }
             }
             CalculateBalance(ref resultTable);
@@ -207,6 +198,47 @@ namespace Core.Services.Implimintation
             });
             return listBalans;
         }
+
+        private List<BalancCardNumber> GetCategoriesesBalance(List<string> allCards)
+        {
+            var listBalance = new List<BalancCardNumber>();
+            var balancCatigories = CoreContext.ConfigService.GetConfig().BalanceDictionary;
+            foreach (var card in allCards)
+            {
+                var param = new ParametrsForTable();
+                param.NumberCard = card;
+                var response = CoreContext.MakerRequest.GetInfoByCard(card, _reportParameters.OrganizationInfoId).Result;
+                param.FullName = response.Name +" "+response.Surname;
+                var catigories = response.Categories;
+                var trueCategories = new List<BalancCategories>();
+                foreach (var item in catigories)
+                {
+                    var tmp = balancCatigories.Where(t => t.NameCategories == item.Name).FirstOrDefault();
+                    if (tmp != null)
+                    {
+                        trueCategories.Add(tmp);
+                    }
+                    
+                }
+
+                if (trueCategories.Count != 0)
+                {
+                       var max = trueCategories.Max(categories => categories.Sum);
+                       listBalance.Add(new BalancCardNumber(card,max));
+
+                    param.Category = trueCategories.Where(t => t.Sum == max).FirstOrDefault().NameCategories;
+                    
+                }
+                else
+                {
+                    listBalance.Add(new BalancCardNumber(card, 0));
+                }
+                _otherParam.Add(param);
+             
+            }
+            return listBalance;
+
+        } 
     }
    
 }

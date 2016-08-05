@@ -20,6 +20,7 @@ namespace Core.Module
         public override void RegisterServices(Registrator registrator)
         {
             registrator.RegistrServiceFactory<IBizApiClient>(() => new IikoBizApiClient());
+            registrator.RegistrServiceFactory<IReportParametrsService>(() => new ReportParametrsService());
             registrator.RegistrServiceFactory<IInitService>(() => new InitService());
             registrator.RegistrServiceFactory<IBuildTableAndSaveExcel>(() => new BuildTableAndSaveExcel());
             registrator.RegistrServiceFactory<IParseCorparationToReports>(() => new ParseCorparationToReports());
