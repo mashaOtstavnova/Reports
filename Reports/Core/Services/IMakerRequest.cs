@@ -14,5 +14,6 @@ namespace Core.Services
         Task<CorporateNutritionInfo[]> GetCorporateNutritionInfo(string organizationId);
         Task<OrganizationInfo[]> GetOrganizationInfo();
         Task<Core.Domain.TransactionsReportItem[]> GetTransactionsReportItems(TransactionReportItemParametrs param);
+        Task<CardInfo> GetInfoByCard(string cardNumber, string organizationId);
     }
 }

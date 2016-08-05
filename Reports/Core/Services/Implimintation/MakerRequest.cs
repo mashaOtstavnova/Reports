@@ -155,5 +155,20 @@ namespace Core.Services.Implimintation
                         }).ConfigureAwait(false);
         }
 
+        public async Task<CardInfo> GetInfoByCard(string cardNumber, string organizationId)
+        {
+
+            /////api/0/organization/{organizationId}/corporate_nutrition_report?corporate_nutrition_id={corporateNutritionProgramId}
+            /// &date_from={dateFrom}&date_to={dateTo}&access_token={accessToken}
+            var idOrg = CoreContext.MakerRequest.GetOrganizationInfo().Result[0].Id;
+            return
+                await
+                    CoreContext.BizApiClient.GetAsync<CardInfo>(
+                        (string.Format("customers/get_customer_by_card", idOrg)), new
+                        {
+                            organization = organizationId,
+                            card = cardNumber
+                        }).ConfigureAwait(false);
+        }
     }
 }

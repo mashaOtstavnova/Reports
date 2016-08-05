@@ -1,0 +1,35 @@
+04.08.2016 18:48:49:Initialize Component Form1
+04.08.2016 18:48:49:Get OrganizationInfo
+04.08.2016 18:48:49: --->Start get async answer
+04.08.2016 18:48:50:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:48:51:<----End get async answer
+04.08.2016 18:48:51:Get OrganizationInfo
+04.08.2016 18:48:51: --->Start get async answer
+04.08.2016 18:48:51:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:48:52:<----End get async answer
+04.08.2016 18:48:52:Get CorporateNutritionInfo
+04.08.2016 18:48:52:Get OrganizationInfo
+04.08.2016 18:48:52: --->Start get async answer
+04.08.2016 18:48:52:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:48:53:<----End get async answer
+04.08.2016 18:48:53: --->Start get async answer
+04.08.2016 18:48:53:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:48:54:<----End get async answer
+04.08.2016 18:48:58:Start thread for get data
+04.08.2016 18:48:58:Get CorporateNutritionInfo
+04.08.2016 18:48:58:Get OrganizationInfo
+04.08.2016 18:48:58: --->Start get async answer
+04.08.2016 18:48:58:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:48:59:<----End get async answer
+04.08.2016 18:48:59: --->Start get async answer
+04.08.2016 18:48:59:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:49:01:<----End get async answer
+04.08.2016 18:49:01:Start write Json
+04.08.2016 18:49:01:Get TransactionsReportItems
+04.08.2016 18:49:01: --->Start get async answer
+04.08.2016 18:49:01:This access token for get request: ri1lwpwyS4GSfp92NxyLdbS6L80nFF2AFo1oqT16MEx3igFuJlkgDcFEvgszPAUMzYZl1cbR8etDS6IWstOdFQ2
+04.08.2016 18:49:27:<----End get async answer
+04.08.2016 18:49:27:Start build table for Core.Domain.TransactionsReportItem[]
+04.08.2016 18:49:27:End buil table for Core.Domain.TransactionsReportItem[]
+04.08.2016 18:49:27:End thread for get data
+04.08.2016 18:49:54:Show gridView

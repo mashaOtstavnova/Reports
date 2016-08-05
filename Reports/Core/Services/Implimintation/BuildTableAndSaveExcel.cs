@@ -79,85 +79,103 @@ namespace Core.Services.Implimintation
 
         private DataTable BuilTableForView(DataTable dt)
         {
-            ////DataTable dt1 = new DataTable();
-            ////DataTable dt2 = new DataTable();
-           
-
             var resultTable = new DataTable("Balance");
-            resultTable.Columns.Add("Дата/время", typeof(DateTime));
-            resultTable.Columns.Add("Дата", typeof(DateTime));
+            resultTable.Columns.Add("Дата/время", typeof (DateTime));
+            resultTable.Columns.Add("Дата", typeof (DateTime));
             resultTable.Columns.Add("Группа карт");
             resultTable.Columns.Add("Код карты", dt.Columns["CardNumbers"].DataType);
-            resultTable.Columns.Add("ФИО", typeof(string));
+            resultTable.Columns.Add("ФИО", typeof (string));
             resultTable.Columns.Add("Сумма чека", dt.Columns["TransactionSum"].DataType);
-            resultTable.Columns.Add("Дотация", typeof(decimal));
-            resultTable.Columns.Add("Кредит", typeof(decimal));
-            resultTable.Columns.Add("Организация", typeof(string));
+            resultTable.Columns.Add("Дотация", typeof (decimal));
+            resultTable.Columns.Add("Кредит", typeof (decimal));
+            resultTable.Columns.Add("Организация", typeof (string));
             resultTable.Columns.Add("Телефон", dt.Columns["PhoneNumber"].DataType);
             resultTable.Columns.Add("Операция", dt.Columns["TransactionType"].DataType);
-            var tmp = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key);
-            var listBalans = tmp.Select(i => new Balanc(i.ToString(), 250)).ToList();
-            var list = new List<Tuple<string, DateTime, decimal>>();
-            foreach (var i in tmp)
+            //resultTable.Columns.Add("Лимит/организация", typeof(string));
+            var allCard = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key);
+            var listBalans = allCard.Select(i => new Balanc(i.ToString(), 250)).ToList();
+            foreach (var i in allCard)
             {
-                var t = dt.AsEnumerable().Where(r => r["CardNumbers"].Equals(i)).Where(r => r["TransactionType"].Equals("PayFromWallet"));
+                var t =
+                    dt.AsEnumerable()
+                        .Where(r => r["CardNumbers"].Equals(i))
+                        .Where(r => r["TransactionType"].Equals("PayFromWallet"));
                 var t1v = t.ToList().Select(r => r["TransactionCreateDate"]).ToList();
                 foreach (var item in t)
                 {
                     var resultRow = resultTable.NewRow();
                     resultRow["Код карты"] = item["CardNumbers"];
-                    var tmpDate = (DateTime)item["TransactionCreateDate"];
+                    var tmpDate = (DateTime) item["TransactionCreateDate"];
                     resultRow["Дата/время"] = tmpDate.ToString("G");
                     resultRow["Дата"] = tmpDate.ToString(Format);
-                    resultRow["Сумма чека"] = (decimal)item["TransactionSum"];
+                    resultRow["Сумма чека"] = (decimal) item["TransactionSum"];
                     resultRow["Телефон"] = item["PhoneNumber"];
                     resultRow["Группа карт"] = "";
                     resultRow["ФИО"] = "";
                     resultRow["Организация"] = "";
                     resultRow["Дотация"] = 0;
                     resultRow["Кредит"] = 0;
+                    //try
+                    //{
+
+                    //    resultRow["Лимит/организация"] = CoreContext.MakerRequest.GetInfoByCard(item["CardNumbers"].ToString(), "7969889b-eaa0-11e5-80d8-d8d38565926f").Result.Categories[2].Name;
+
+                    //}
+                    //catch (Exception ex)
+                    //{
+
+                    //    resultRow["Лимит/организация"] = ex.Message;
+                    //}
                     resultTable.Rows.Add(resultRow);
-
                 }
             }
-            var g = resultTable.AsEnumerable().GroupBy(r => r["Код карты"]);
-            foreach (var i in g)
+            var tranzactionGroupByCard = resultTable.AsEnumerable().GroupBy(r => r["Код карты"]);
+            foreach (var i in tranzactionGroupByCard) //идем по картам
             {
-                var d = i.Cast<DataRow>().OrderByDescending(row => row["Дата/время"]).Reverse();
-                foreach (var item in d)
+                var d = i.Cast<DataRow>().OrderBy(row => row["Дата/время"]).Reverse().ToList(); //все операции по этой карте
+                var d1 = d.GroupBy(row => row["Дата"]).Reverse().ToList().Select(k => k.Key); //сгруппируем операции по дням
+                foreach (var j in d1)//идем по дням
                 {
-                    var oldBalance = listBalans.Where(r => r.NumberCard.Equals(item["Код карты"])).Select(r => r.Sum).FirstOrDefault();
-                    var sum = Math.Abs((decimal)item["Сумма чека"]);
-                    var balance = (decimal)oldBalance - sum;
-                    if (balance >= 0)
+                   
+                    var thisDayTranz = d.Where(y => y["Дата"].Equals(j)).ToList();//берем операции за нужный(текущий в цикле) день
+                    var thisDayTranzSort = thisDayTranz.OrderBy(x => ((DateTime)x["Дата/время"]).TimeOfDay).ToList();// и сортируем по возрастанию
+                    foreach (var item in thisDayTranzSort)//идем по операцияем за день
                     {
-                        item["Дотация"] = sum;
-                        item["Кредит"] = 0;
-                        listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = balance;
+                        var oldBalance =
+                            listBalans.Where(r => r.NumberCard.Equals(item["Код карты"]))
+                                .Select(r => r.Sum)
+                                .FirstOrDefault();
+                        var sum = Math.Abs((decimal)item["Сумма чека"]);
+                        var balance = oldBalance - sum;
+                        if (balance >= 0)
+                        {
+                            item["Дотация"] = sum;
+                            item["Кредит"] = 0;
+                            listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = balance;
+                        }
+                        else
+                        {
+                            item["Дотация"] = oldBalance;
+                            item["Кредит"] = sum - oldBalance;
+                            listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = 0;
+                        }
                     }
-                    else
-                    {
-                        item["Дотация"] = oldBalance;
-                        item["Кредит"] = sum - oldBalance;
-                        listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = 0;
-                    }
+                    listBalans = allCard.Select(ii => new Balanc(ii.ToString(), 250)).ToList(); //делаем снова полный лимит
                 }
             }
-
             return resultTable;
         }
-        
     }
 
     public class Balanc
     {
-        public string NumberCard { get; set; }
-        public decimal Sum { get; set; }
-
         public Balanc(string numberCard, decimal sum)
         {
             NumberCard = numberCard;
             Sum = sum;
         }
+
+        public string NumberCard { get; set; }
+        public decimal Sum { get; set; }
     }
 }

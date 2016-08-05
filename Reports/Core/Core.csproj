@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\CardInfo.cs" />
     <Compile Include="Domain\CorporateNutritionInfo.cs" />
     <Compile Include="Domain\CorporateNutritionReportItem.cs" />
     <Compile Include="Domain\OrganizationInfo.cs" />
