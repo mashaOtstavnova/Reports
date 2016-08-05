@@ -16,6 +16,10 @@ namespace Core.Services.Implimintation
         {
             get { return Service<IBizApiClient>.GetInstance(); }
         }
+        public static IConfigService ConfigService
+        {
+            get { return Service<IConfigService>.GetInstance(); }
+        }
         public static IInitService InitService
         {
             get { return Service<IInitService>.GetInstance(); }

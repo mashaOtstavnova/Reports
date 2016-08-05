@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using Core.Domain;
 using ExcelLibrary.SpreadSheet;
+using Framework;
 using Reports;
 
 namespace Core.Services.Implimintation
@@ -15,12 +17,18 @@ namespace Core.Services.Implimintation
     {
         private const string Format = "yyyy-MM-dd";
         private DataTable _dateTable;
+        private List<BalancCardNumber> _allBalans; 
 
         public BuildTableAndSaveExcel()
         {
             _dateTable = new DataTable();
+            _allBalans = new List<BalancCardNumber>(); 
         }
-
+        /// <summary>
+        /// конструирование DataTable по любому списку объектов
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public DataTable BuiltTable(object[] obj)
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Start build table for {0}", obj.GetType().FullName));
@@ -46,7 +54,11 @@ namespace Core.Services.Implimintation
 
             return BuilTableForView(_dateTable);
         }
-
+        /// <summary>
+        /// сохранение DataTable в excel
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="path"></param>
         public void SaveExel(DataTable dt, string path)
         {
             Log.Inst.WriteToLogDEBUG(string.Format("Start save in excel file in path {0}", path));
@@ -76,9 +88,14 @@ namespace Core.Services.Implimintation
             Log.Inst.WriteToLogDEBUG(string.Format("End save in excel file in path {0}", path));
             CoreContext.ViewService.FirstView.ShowMessag(string.Format("Файл {0} успешно сохранен.", path));
         }
-
+        /// <summary>
+        /// конструирование DataTable для представления на экран
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
         private DataTable BuilTableForView(DataTable dt)
         {
+            var config = CoreContext.ConfigService.GetConfig();
             var resultTable = new DataTable("Balance");
             resultTable.Columns.Add("Дата/время", typeof (DateTime));
             resultTable.Columns.Add("Дата", typeof (DateTime));
@@ -92,16 +109,18 @@ namespace Core.Services.Implimintation
             resultTable.Columns.Add("Телефон", dt.Columns["PhoneNumber"].DataType);
             resultTable.Columns.Add("Операция", dt.Columns["TransactionType"].DataType);
             //resultTable.Columns.Add("Лимит/организация", typeof(string));
+            
             var allCard = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key);
-            var listBalans = allCard.Select(i => new Balanc(i.ToString(), 250)).ToList();
+            _allBalans = allCard.Select(i => new BalancCardNumber(i.ToString(), 250)).ToList();
+            
+          
             foreach (var i in allCard)
             {
                 var t =
                     dt.AsEnumerable()
                         .Where(r => r["CardNumbers"].Equals(i))
                         .Where(r => r["TransactionType"].Equals("PayFromWallet"));
-                var t1v = t.ToList().Select(r => r["TransactionCreateDate"]).ToList();
-                foreach (var item in t)
+                var t1v = t.ToList().Select(r => r["TransactionCreateDate"]).ToList();foreach (var item in t)
                 {
                     var resultRow = resultTable.NewRow();
                     resultRow["Код карты"] = item["CardNumbers"];
@@ -129,14 +148,24 @@ namespace Core.Services.Implimintation
                     resultTable.Rows.Add(resultRow);
                 }
             }
-            var tranzactionGroupByCard = resultTable.AsEnumerable().GroupBy(r => r["Код карты"]);
+            CalculateBalance(ref resultTable);
+            return resultTable;
+        }
+        /// <summary>
+        /// расчет дотации и кредита для таблицы представления
+        /// </summary>
+        /// <param name="inputTable"></param>
+        private void CalculateBalance(ref DataTable inputTable)
+        {
+            var listBalans = CopyListBalance(_allBalans);
+            var tranzactionGroupByCard = inputTable.AsEnumerable().GroupBy(r => r["Код карты"]);
             foreach (var i in tranzactionGroupByCard) //идем по картам
             {
                 var d = i.Cast<DataRow>().OrderBy(row => row["Дата/время"]).Reverse().ToList(); //все операции по этой карте
                 var d1 = d.GroupBy(row => row["Дата"]).Reverse().ToList().Select(k => k.Key); //сгруппируем операции по дням
                 foreach (var j in d1)//идем по дням
                 {
-                   
+
                     var thisDayTranz = d.Where(y => y["Дата"].Equals(j)).ToList();//берем операции за нужный(текущий в цикле) день
                     var thisDayTranzSort = thisDayTranz.OrderBy(x => ((DateTime)x["Дата/время"]).TimeOfDay).ToList();// и сортируем по возрастанию
                     foreach (var item in thisDayTranzSort)//идем по операцияем за день
@@ -160,22 +189,24 @@ namespace Core.Services.Implimintation
                             listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = 0;
                         }
                     }
-                    listBalans = allCard.Select(ii => new Balanc(ii.ToString(), 250)).ToList(); //делаем снова полный лимит
+                    listBalans = CopyListBalance(_allBalans); //делаем снова полный лимит
                 }
             }
-            return resultTable;
         }
-    }
-
-    public class Balanc
-    {
-        public Balanc(string numberCard, decimal sum)
+        /// <summary>
+        /// копирование списка дотации по значению
+        /// </summary>
+        /// <param name="oldList"></param>
+        /// <returns></returns>
+        private List<BalancCardNumber> CopyListBalance(List<BalancCardNumber> oldList)
         {
-            NumberCard = numberCard;
-            Sum = sum;
+            var listBalans= new List<BalancCardNumber>();
+            _allBalans.ForEach((item) =>
+            {
+                listBalans.Add(new BalancCardNumber(item.NumberCard, item.Sum));
+            });
+            return listBalans;
         }
-
-        public string NumberCard { get; set; }
-        public decimal Sum { get; set; }
     }
+   
 }

@@ -25,6 +25,7 @@ namespace Core.Module
             registrator.RegistrServiceFactory<IParseCorparationToReports>(() => new ParseCorparationToReports());
             registrator.RegistrServiceFactory<IMakerRequest>(() => new MakerRequest());
             registrator.RegistrServiceFactory<IViewService>(() => new ViewService());
+            registrator.RegistrServiceFactory<IConfigService>(() => new ConfigService());
             //registrator.RegistrServiceFactory<IBetsService>(() => new BetsService());
         }
     }

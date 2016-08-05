@@ -12,5 +12,6 @@ namespace Framework
         {
             self[self.IndexOf(oldValue)] = newValue;
         }
+       
     }
 }

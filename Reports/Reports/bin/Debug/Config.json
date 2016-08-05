@@ -1,0 +1,16 @@
+{
+  "BalanceDictionary": [
+    {
+      "NameCategories": "АкТай",
+      "Sum": 250.0
+    },
+    {
+      "NameCategories": "АкТай кредит",
+      "Sum": 350.0
+    },
+    {
+      "NameCategories": "АкТай лимит 250",
+      "Sum": 450.0
+    }
+  ]
+}
