@@ -37,7 +37,7 @@ namespace Core.Services.Implimintation
 
             var json = JsonConvert.SerializeObject(new ReportParameters()
             {
-                CorporateNutritionProgramId = reportParameters.CorporateNutritionProgramId,
+                //CorporateNutritionProgramId = reportParameters.CorporateNutritionProgramId,
                 OrganizationInfoId = reportParameters.OrganizationInfoId,
                 DateFrom = reportParameters.DateFrom,
                 DateTo = reportParameters.DateTo

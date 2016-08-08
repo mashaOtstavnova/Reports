@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using Core.Domain;
 using ExcelLibrary.SpreadSheet;
-using Framework;
 using Reports;
 
 namespace Core.Services.Implimintation
@@ -16,20 +15,21 @@ namespace Core.Services.Implimintation
     public class BuildTableAndSaveExcel : IBuildTableAndSaveExcel
     {
         private const string Format = "yyyy-MM-dd";
-        private DataTable _dateTable;
-        private ReportParameters _reportParameters;
+        private readonly List<InfoCard> _infoCards;
+        private readonly ReportParameters _reportParameters;
         private List<BalancCardNumber> _allBalans;
-        private List<ParametrsForTable> _otherParam;
+        private DataTable _dateTable;
 
         public BuildTableAndSaveExcel()
         {
             _dateTable = new DataTable();
             _allBalans = new List<BalancCardNumber>();
             _reportParameters = CoreContext.ReportParametrsService.GetSettings();
-            _otherParam = new List<ParametrsForTable>();
+            _infoCards = new List<InfoCard>();
         }
+
         /// <summary>
-        /// конструирование DataTable по любому списку объектов
+        ///     конструирование DataTable по любому списку объектов
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -58,8 +58,9 @@ namespace Core.Services.Implimintation
 
             return BuilTableForView(_dateTable);
         }
+
         /// <summary>
-        /// сохранение DataTable в excel
+        ///     сохранение DataTable в excel
         /// </summary>
         /// <param name="dt"></param>
         /// <param name="path"></param>
@@ -69,36 +70,56 @@ namespace Core.Services.Implimintation
             var workbook = new Workbook();
             _dateTable = dt;
             var worksheet = new Worksheet(_dateTable.TableName);
-            for (var i = 0; i < _dateTable.Columns.Count; i++)
+            try
             {
-                // Add column header
-                worksheet.Cells[0, i] = new Cell(_dateTable.Columns[i].ColumnName);
-
-                // Populate row data
-                for (var j = 0; j < _dateTable.Rows.Count; j++)
+                if (_dateTable.Rows.Count > 0)
+                {  for (var i = 0; i < _dateTable.Columns.Count; i++)
                 {
-                    //Если нулевые значения, заменяем на пустые строки
-                    var valueRow = _dateTable.Rows[j][i];
-                    if (valueRow.GetType() == typeof (DateTime))
+                    // Add column header
+                    worksheet.Cells[0, i] = new Cell(_dateTable.Columns[i].ColumnName);
+                    if (_dateTable.Rows.Count != 0)
                     {
-                        valueRow = valueRow.ToString();
+                        for (var j = 0; j < _dateTable.Rows.Count; j++)
+                        {
+                            //Если нулевые значения, заменяем на пустые строки
+                            var valueRow = _dateTable.Rows[j][i];
+                            if (valueRow.GetType() == typeof (DateTime))
+                            {
+                                valueRow = valueRow.ToString();
+                            }
+                            worksheet.Cells[j + 1, i] = new Cell(valueRow == DBNull.Value ? "" : valueRow);
+                        }
                     }
-                    worksheet.Cells[j + 1, i] = new Cell(valueRow == DBNull.Value ? "" : valueRow);
                 }
+                workbook.Worksheets.Add(worksheet);
+                var p = Path.Combine(Environment.CurrentDirectory, @"exels");
+                workbook.Save(path);
+                CoreContext.ViewService.MainView.ShowMessag(string.Format("Файл {0} успешно сохранен.", path));
+                }
+                else
+                {
+                    Log.Inst.WriteToLogDEBUG(string.Format("Not DataRow for excel"));
+                    CoreContext.ViewService.MainView.ShowMessag(string.Format("Данных нет, нечего сохранять"));
+                }
+              
             }
-            workbook.Worksheets.Add(worksheet);
-            var p = Path.Combine(Environment.CurrentDirectory, @"exels");
-            workbook.Save(path);
+            catch (Exception ex)
+            {
+                Log.Inst.WriteToLogDEBUG(string.Format("Error save Excel {0}", ex.Message));
+            }
+
             Log.Inst.WriteToLogDEBUG(string.Format("End save in excel file in path {0}", path));
-            CoreContext.ViewService.FirstView.ShowMessag(string.Format("Файл {0} успешно сохранен.", path));
+            
         }
+
         /// <summary>
-        /// конструирование DataTable для представления на экран
+        ///     конструирование DataTable для представления на экран
         /// </summary>
         /// <param name="dt"></param>
         /// <returns></returns>
         private DataTable BuilTableForView(DataTable dt)
         {
+            Log.Inst.WriteToLogDEBUG("Start build table for view");
             var resultTable = new DataTable("Balance");
             resultTable.Columns.Add("Дата/время", typeof (DateTime));
             resultTable.Columns.Add("Дата", typeof (DateTime));
@@ -112,90 +133,99 @@ namespace Core.Services.Implimintation
 
             var allCard = dt.AsEnumerable().GroupBy(r => r["CardNumbers"]).ToList().Select(r => r.Key.ToString());
             //_allBalans = allCard.Select(i => new BalancCardNumber(i.ToString(), 250)).ToList();
-            _allBalans = GetCategoriesesBalance(allCard.ToList());
+            _allBalans = GetCategoriesesBalance(allCard.ToList()); //берем для всех карт их лимит
 
-
+            var listBalans = CopyListBalance(_allBalans);
             foreach (var i in allCard)
             {
-                var oParam = _otherParam.Where(x => x.NumberCard == i).FirstOrDefault();
+                var infoCard = _infoCards.Where(x => x.NumberCard == i).FirstOrDefault();
                 var t =
                     dt.AsEnumerable()
                         .Where(r => r["CardNumbers"].Equals(i))
-                        .Where(r => r["TransactionType"].Equals("PayFromWallet"));
-                foreach (var item in t)
+                        .Where(r => r["TransactionType"].Equals("PayFromWallet")); //берем все транзакции по карте
+                var d1 =
+                    t.GroupBy(row => ((DateTime) row["TransactionCreateDate"]).ToString(Format))
+                        .Reverse()
+                        .ToList()
+                        .Select(k => k.Key);
+                //сгруппируем операции по дням
+                foreach (var j in d1) //идем по дням
                 {
-                    var resultRow = resultTable.NewRow();
-                    resultRow["Код карты"] = item["CardNumbers"];
-                    var tmpDate = (DateTime) item["TransactionCreateDate"];
-                    resultRow["Дата/время"] = tmpDate.ToString("G");
-                    resultRow["Дата"] = tmpDate.ToString(Format);
-                    resultRow["Категория"] = oParam.Category;
-                    resultRow["Сумма чека"] = (decimal) item["TransactionSum"];
-                    resultRow["Телефон"] = item["PhoneNumber"];
-                    resultRow["ФИО"] = oParam.FullName;
-                    resultRow["Дотация"] = 0;
-                    resultRow["Кредит"] = 0;
-                    //var balancCardNumber = _allBalans.Where(tt=>tt.NumberCard.Equals(item["CardNumbers"])).FirstOrDefault();
-                  resultTable.Rows.Add(resultRow);
-                }
-            }
-            CalculateBalance(ref resultTable);
-            return resultTable;
-        }
-        /// <summary>
-        /// расчет дотации и кредита для таблицы представления
-        /// </summary>
-        /// <param name="inputTable"></param>
-        private void CalculateBalance(ref DataTable inputTable)
-        {
-            var listBalans = CopyListBalance(_allBalans);
-            var tranzactionGroupByCard = inputTable.AsEnumerable().GroupBy(r => r["Код карты"]);
-            foreach (var i in tranzactionGroupByCard) //идем по картам
-            {
-                var d = i.Cast<DataRow>().OrderBy(row => row["Дата/время"]).Reverse().ToList(); //все операции по этой карте
-                var d1 = d.GroupBy(row => row["Дата"]).Reverse().ToList().Select(k => k.Key); //сгруппируем операции по дням
-                foreach (var j in d1)//идем по дням
-                {
+                    //берем операции за нужный(текущий в цикле) день
+                    var thisDayTranz =
+                        t.Where(y => (((DateTime) y["TransactionCreateDate"]).ToString(Format)).Equals(j)).ToList();
+                    // и сортируем по возрастанию/
+                    var thisDayTranzSort =
+                        thisDayTranz.OrderBy(x => ((DateTime) x["TransactionCreateDate"]).TimeOfDay).ToList();
 
-                    var thisDayTranz = d.Where(y => y["Дата"].Equals(j)).ToList();//берем операции за нужный(текущий в цикле) день
-                    var thisDayTranzSort = thisDayTranz.OrderBy(x => ((DateTime)x["Дата/время"]).TimeOfDay).ToList();// и сортируем по возрастанию
-                    foreach (var item in thisDayTranzSort)//идем по операцияем за день
+                    foreach (var item in thisDayTranzSort) //идем по операцияем за день
                     {
+                        var numberCard = item["CardNumbers"];
+                        var resultRow = resultTable.NewRow();
                         var oldBalance =
-                            listBalans.Where(r => r.NumberCard.Equals(item["Код карты"]))
+                            listBalans.Where(r => r.NumberCard.Equals(numberCard))
                                 .Select(r => r.Sum)
                                 .FirstOrDefault();
-                        var sum = Math.Abs((decimal)item["Сумма чека"]);
+                        // расчет дотации и кредита для таблицы представления
+                        var sum = Math.Abs((decimal) item["TransactionSum"]);
                         var balance = oldBalance - sum;
                         if (balance >= 0)
                         {
-                            item["Дотация"] = sum;
-                            item["Кредит"] = 0;
-                            listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = balance;
+                            resultRow["Дотация"] = sum;
+                            resultRow["Кредит"] = 0;
+                            listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(numberCard)).Sum = balance;
                         }
                         else
                         {
-                            item["Дотация"] = oldBalance;
-                            item["Кредит"] = sum - oldBalance;
-                            listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(item["Код карты"])).Sum = 0;
+                            resultRow["Дотация"] = oldBalance;
+                            resultRow["Кредит"] = sum - oldBalance;
+                            listBalans.FirstOrDefault(t2 => t2.NumberCard.Equals(numberCard)).Sum = 0;
                         }
+                        resultRow["Код карты"] = numberCard;
+                        var tmpDate = (DateTime) item["TransactionCreateDate"];
+                        resultRow["Дата/время"] = tmpDate.ToString("G");
+                        resultRow["Дата"] = tmpDate.ToString(Format);
+                        resultRow["Категория"] = infoCard.Category;
+                        resultRow["Сумма чека"] = Math.Abs((decimal) item["TransactionSum"]);
+                        resultRow["Телефон"] = item["PhoneNumber"];
+                        var tmp = infoCard.FullName;
+                        resultRow["ФИО"] = RemoveSpaces(RemoveTab(infoCard.FullName));
+                        resultTable.Rows.Add(resultRow);
                     }
                     listBalans = CopyListBalance(_allBalans); //делаем снова полный лимит
                 }
             }
+            Log.Inst.WriteToLogDEBUG("End build table for view");
+            return resultTable;
         }
+
+        private string RemoveTab(string txt)
+        {
+            var text = txt.Replace("\t", " ");
+
+            if (text.Contains("\t"))
+                RemoveTab(text);
+            return text;
+        }
+
+        private string RemoveSpaces(string txt)
+        {
+            var text = txt.Replace("  ", " ");
+
+            if (text.Contains("  "))
+                RemoveSpaces(text);
+            return text;
+        }
+
         /// <summary>
-        /// копирование списка дотации по значению
+        ///     копирование списка дотации по значению
         /// </summary>
         /// <param name="oldList"></param>
         /// <returns></returns>
         private List<BalancCardNumber> CopyListBalance(List<BalancCardNumber> oldList)
         {
-            var listBalans= new List<BalancCardNumber>();
-            _allBalans.ForEach((item) =>
-            {
-                listBalans.Add(new BalancCardNumber(item.NumberCard, item.Sum));
-            });
+            var listBalans = new List<BalancCardNumber>();
+            _allBalans.ForEach(item => { listBalans.Add(new BalancCardNumber(item.NumberCard, item.Sum)); });
             return listBalans;
         }
 
@@ -205,40 +235,30 @@ namespace Core.Services.Implimintation
             var balancCatigories = CoreContext.ConfigService.GetConfig().BalanceDictionary;
             foreach (var card in allCards)
             {
-                var param = new ParametrsForTable();
+                var param = new InfoCard();
                 param.NumberCard = card;
                 var response = CoreContext.MakerRequest.GetInfoByCard(card, _reportParameters.OrganizationInfoId).Result;
-                param.FullName = response.Name +" "+response.Surname;
+                param.FullName = response.Name + " " + response.Surname;
                 var catigories = response.Categories;
-                var trueCategories = new List<BalancCategories>();
-                foreach (var item in catigories)
-                {
-                    var tmp = balancCatigories.Where(t => t.NameCategories == item.Name).FirstOrDefault();
-                    if (tmp != null)
-                    {
-                        trueCategories.Add(tmp);
-                    }
-                    
-                }
+                //берем категории которые прописанны в конфиге
+                var trueCategories =
+                    catigories.Select(item => balancCatigories.FirstOrDefault(t => t.NameCategories == item.Name))
+                        .Where(tmp => tmp != null)
+                        .ToList();
 
                 if (trueCategories.Count != 0)
                 {
-                       var max = trueCategories.Max(categories => categories.Sum);
-                       listBalance.Add(new BalancCardNumber(card,max));
-
+                    var max = trueCategories.Max(categories => categories.Sum);
+                    listBalance.Add(new BalancCardNumber(card, max));
                     param.Category = trueCategories.Where(t => t.Sum == max).FirstOrDefault().NameCategories;
-                    
                 }
                 else
                 {
                     listBalance.Add(new BalancCardNumber(card, 0));
                 }
-                _otherParam.Add(param);
-             
+                _infoCards.Add(param);
             }
             return listBalance;
-
-        } 
+        }
     }
-   
 }

@@ -33,7 +33,7 @@ namespace Reports
             var settings = new Settings("vankorAPI", "JUe5J4cuWu", "https://iiko.biz:9900/api/0/", 60000);
             CoreContext.InitService.Init(settings);
             Log.Inst.WriteToLogDEBUG(string.Format("Run application"));
-            Application.Run(new Form1());
+            Application.Run(new MainView());
         }
     }
 }

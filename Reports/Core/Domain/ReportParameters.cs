@@ -16,19 +16,22 @@ namespace Core.Domain
     public class ReportParameters
     {
         public string OrganizationInfoId;
-        public string CorporateNutritionProgramId;
+        //public string CorporateNutritionProgramId;
         public DateTime DateFrom;
         public DateTime DateTo;
 
         public ReportParameters()
         {
-            
+            OrganizationInfoId = "7969889b-eaa0-11e5-80d8-d8d38565926f";
+            DateFrom = DateTime.Today.AddDays(-2);
+            DateTo = DateTime.Today;
+
         }
-        public ReportParameters(string organizationInfoId, string corporateNutritionProgramId,
-            DateTime dateFrom, DateTime dateTo)
+        public ReportParameters(string organizationInfoId,
+            DateTime dateFrom, DateTime dateTo)/*, string corporateNutritionProgramId,*/
         {
             OrganizationInfoId = organizationInfoId;
-            CorporateNutritionProgramId = corporateNutritionProgramId;
+            //CorporateNutritionProgramId = corporateNutritionProgramId;
             if (dateFrom < dateTo)
             {
                  DateFrom = dateFrom;

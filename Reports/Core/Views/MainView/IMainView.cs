@@ -9,8 +9,10 @@ namespace Core.Views.MainView
 {
     public interface IMainView
     {
-        void PaintTable(DataTable dt);
+        void PaintTable();
         void SaveExcel();
-       
+        void ShowMessag(string msg);
+        void Init();
+        void GetTransaction();
     }
 }

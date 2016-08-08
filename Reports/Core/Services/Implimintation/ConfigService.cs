@@ -21,12 +21,14 @@ namespace Core.Services.Implimintation
                 var json = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.json"));
                 var configThis = JsonConvert.DeserializeObject<Config>(json);
                 config.BalanceDictionary = configThis.BalanceDictionary;
+                config.Version = configThis.Version;
             }
             else
             {
                 var json = JsonConvert.SerializeObject(new Config()
                 {
                     BalanceDictionary = config.BalanceDictionary,
+                    Version = config.Version,
                    
                 }, Formatting.Indented);
 

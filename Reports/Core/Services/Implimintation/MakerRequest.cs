@@ -42,59 +42,17 @@ namespace Core.Services.Implimintation
         public Domain.Reports[] GetReportses(ReportParameters param)
         {
             Log.Inst.WriteToLogDEBUG("Get Reportses");
-            //var fromDate = from.Date.ToString();//число с которого нужно считать
-            //var toDate = to.Date.ToString();// по какое
             var corporateNutritionReportItemsList = new List<CorporateNutritionReportItem>(); //список отчетов
             var reportsList = new List<Domain.Reports>();
             var fromThis = param.DateFrom;
-
-            //var arrayRespons = new CorporateNutritionReportItem[2]
-            //    {
-            //        new CorporateNutritionReportItem
-            //        {
-            //            BalanceOnPeriodEnd = (decimal) 10.1,
-            //            BalanceOnPeriodStart = (decimal) 60.1,
-            //            BalanceRefillSum = (decimal) 5.5,
-            //            BalanceResetSum = (decimal) 5.4,
-            //            EmployeeNumber = "10",
-            //            GuestCardTrack = "11",
-            //            GuestCategoryNames = "GuestCategoryNames",
-            //            GuestId = "GuestId",
-            //            GuestName = "GuestName",
-            //            GuestPhone = "GuestPhone",
-            //            PaidOrdersCount = (decimal) 4.4,
-            //            PayFromWalletSum = (decimal) 1.4
-            //        },
-            //        new CorporateNutritionReportItem
-            //        {
-            //            BalanceOnPeriodEnd = (decimal) 10.1,
-            //            BalanceOnPeriodStart = (decimal) 60.1,
-            //            BalanceRefillSum = (decimal) 5.5,
-            //            BalanceResetSum = (decimal) 5.4,
-            //            EmployeeNumber = "10",
-            //            GuestCardTrack = "11",
-            //            GuestCategoryNames = "GuestCategoryNames1",
-            //            GuestId = "GuestId1",
-            //            GuestName = "GuestName1",
-            //            GuestPhone = "GuestPhone1",
-            //            PaidOrdersCount = (decimal) 4.4,
-            //            PayFromWalletSum = (decimal) 1.4
-            //        }
-            //    };
             var toThis = fromThis.AddDays(1);
 
             while (fromThis != param.DateTo)
             {
-                //Log.Inst.WriteToLogDEBUG(string.Format("Start Get CorporateNutritionReportItem for from {0} to {1}", fromThis.ToString(Format),
-                //            fromThis.AddDays(1).ToString(Format)));
-                //new Thread(() =>
-                //{
-
                 corporateNutritionReportItemsList.Clear();
-                //var formatFrom = fromThis.ToString(Format);
-                //var formatTo = toThis.ToString(Format);
+                //ДЛЯ КОРРЕКТНОЙ РАБОТЫ ДОБАВИТЬ АЙДИШНИК CorporateNutrition ВМЕСТО  ""
                 var arrayRespons =
-                    GetCorporateNutritionReportItem(param.OrganizationInfoId, param.CorporateNutritionProgramId,
+                    GetCorporateNutritionReportItem(param.OrganizationInfoId, "",
                         fromThis.ToString(Format),
                         fromThis.AddDays(1).ToString(Format))
                         .Result;
@@ -103,20 +61,16 @@ namespace Core.Services.Implimintation
                 var resultArray1 = corporateNutritionReportItemsList.ToArray();
                 var newReports1 = CoreContext.ParseCorparationToReports.Parse(resultArray1, toThis, fromThis);
                 reportsList.AddRange(newReports1);
-                //}).Start();
-                //Log.Inst.WriteToLogDEBUG(string.Format("End Get CorporateNutritionReportItem for from {0} to {1}", fromThis.ToString(Format),
-                //          fromThis.AddDays(1).ToString(Format)));
+            
                 fromThis = fromThis.AddDays(1);
                 toThis = fromThis.AddDays(1);
             }
             var arrayRespons1 =
-                GetCorporateNutritionReportItem(param.OrganizationInfoId, param.CorporateNutritionProgramId,
+                GetCorporateNutritionReportItem(param.OrganizationInfoId, "",
                     fromThis.ToString(Format),
                     fromThis.AddDays(1).ToString(Format))
                     .Result;
             corporateNutritionReportItemsList.AddRange(arrayRespons1);
-            //var resultArray = corporateNutritionReportItemsList.ToArray();
-            //var result = GetCorporateNutritionReportItem(organizationId, corporateNutritionInfoId, fromDate, toDate);
             var newReports = reportsList.ToArray();
             return newReports;
         }

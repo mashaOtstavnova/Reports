@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
-    public class ParametrsForTable
+    public class InfoCard
     {
         public string NumberCard { get; set; }
         public string FullName { get; set; }
         public string Category { get; set; }
+
     }
 }

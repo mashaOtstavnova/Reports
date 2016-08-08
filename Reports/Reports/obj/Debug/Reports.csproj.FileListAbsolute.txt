@@ -328,3 +328,4 @@ C:\Users\maria\Desktop\Reports\Reports\obj\Debug\Reports.MainView.resources
 C:\Users\maria\Desktop\Reports\Reports\obj\Debug\Reports.Properties.Resources.resources
 C:\Users\maria\Desktop\Reports\Reports\obj\Debug\Reports.csproj.GenerateResource.Cache
 C:\Users\maria\Desktop\Reports\Reports\obj\Debug\Reports.exe.licenses
+C:\Users\maria\Documents\GitHub\Reports\Reports\Reports\obj\Debug\Reports.Controls.Header.resources

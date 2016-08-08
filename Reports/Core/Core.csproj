@@ -54,11 +54,12 @@
   <ItemGroup>
     <Compile Include="Domain\Balance.cs" />
     <Compile Include="Domain\CardInfo.cs" />
+    <Compile Include="Domain\ColumnTableView.cs" />
     <Compile Include="Domain\Config.cs" />
     <Compile Include="Domain\CorporateNutritionInfo.cs" />
     <Compile Include="Domain\CorporateNutritionReportItem.cs" />
     <Compile Include="Domain\OrganizationInfo.cs" />
-    <Compile Include="Domain\ParametrsForTable.cs" />
+    <Compile Include="Domain\InfoCard.cs" />
     <Compile Include="Domain\ReportParameters.cs" />
     <Compile Include="Domain\Reports.cs" />
     <Compile Include="Domain\Settings.cs" />

@@ -3,28 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.LookAndFeel;
 
 namespace Reports
 {
     public class SecondView
     {
-        private List<string> _listReports;
-
-        public List<string> ListReports
+        private string _style;
+        public string Style
         {
             get
             {
-                return _listReports;
+                return _style;
             }
             set
             {
-                _listReports = value;
+                UserLookAndFeel.Default.SetSkinStyle(value);
+                _style = value;
             }
         }
 
         public SecondView()
         {
-            ListReports = new List<string>() { "Отчет 1", "Отчет 2" };
+            _style = "Dark Side";
+            Style = _style;
         }
     }
 }

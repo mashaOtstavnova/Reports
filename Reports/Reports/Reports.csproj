@@ -67,6 +67,12 @@
     <Compile Include="Controls\GridDataTable.Designer.cs">
       <DependentUpon>GridDataTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ProgressPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="SecondView.cs" />
     <EmbeddedResource Include="Controls\GridDataTable.resx">
       <DependentUpon>GridDataTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ProgressPanel.resx">
       <DependentUpon>ProgressPanel.cs</DependentUpon>

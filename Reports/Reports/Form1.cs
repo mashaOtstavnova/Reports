@@ -33,7 +33,7 @@ namespace Reports
             _firstView = new FirstView();
             InitializeComponent();
             CoreContext.ViewService.FirstView.Init();
-           
+
         }
 
         private void textBox3_Layout(object sender, LayoutEventArgs e)
@@ -48,7 +48,7 @@ namespace Reports
             textBox3.Text = _apiAccessToken.Value;
         }
 
-     
+
         private async Task<DataTable> newThread()
         {
             return await Task.Run(() =>
@@ -56,7 +56,7 @@ namespace Reports
 
                 var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
                 //var idCor = list.Where(t => t.Name==comboBox2.Text).FirstOrDefault().Id;
-                var reportParametrs = new ReportParameters(_idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
+                var reportParametrs = new ReportParameters(_idOrg, dateTimeFrom.Value.Date,
                     dateTimeTo.Value.Date);
                 //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
                 //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
@@ -76,9 +76,9 @@ namespace Reports
 
                 var list = CoreContext.MakerRequest.GetCorporateNutritionInfo(_idOrg).Result;
                 //var idCor = list.Where(t => t.Name==comboBox2.Text).FirstOrDefault().Id;
-                var reportParametrs = new ReportParameters(_idOrg, "c5cb34d5-eacd-11e5-80d8-d8d38565926f", dateTimeFrom.Value.Date,
+                var reportParametrs = new ReportParameters(_idOrg, dateTimeFrom.Value.Date,
                     dateTimeTo.Value.Date);
-                var transactionReportItemParametrs = new TransactionReportItemParametrs(_idOrg,  dateTimeFrom.Value.Date, dateTimeTo.Value.Date);
+                var transactionReportItemParametrs = new TransactionReportItemParametrs(_idOrg, dateTimeFrom.Value.Date, dateTimeTo.Value.Date);
                 //textBox2.Text = string.Format("Name: {0} Id {1}", corp, idCor);
                 //var t = CoreContext.BizApiClient.GetCorporateNutritionReportItem(idOrg, idCor).Result;
                 //listBox1.Items.Clear();
@@ -123,26 +123,27 @@ namespace Reports
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             _firstView.Style = comboBox3.Text;
-           
+
         }
 
         private async void button1_Click_1(object sender, EventArgs e)
         {
-            
+
             //CoreContext.ViewService.FirstView.GetReports();
             CoreContext.ViewService.FirstView.GetTransaction();
 
         }
 
         public async void GetReports()
-        {;
+        {
+            ;
             _progressPanel.Visible = true;
             Application.DoEvents();
 
             Log.Inst.WriteToLogDEBUG("Start thread for get data");
             var dt1 = await newThread();
             Log.Inst.WriteToLogDEBUG("End thread for get data");
-            var re = new MainView(dt1);
+            var re = new MainView();
             Log.Inst.WriteToLogDEBUG("Show gridView");
 
             _progressPanel.Visible = false;
@@ -157,7 +158,7 @@ namespace Reports
             Log.Inst.WriteToLogDEBUG("Start thread for get data");
             var dt1 = await newThreadForTranzaction();
             Log.Inst.WriteToLogDEBUG("End thread for get data");
-            var re = new MainView(dt1);
+            var re = new MainView();
             Log.Inst.WriteToLogDEBUG("Show gridView");
 
             _progressPanel.Visible = false;
@@ -180,7 +181,7 @@ namespace Reports
             dateTimeTo.MaxDate = today;
             dateTimeFrom.Value = yesterday;
             dateTimeTo.Value = today;
-           
+
         }
 
         private void dateTimeTo_ValueChanged(object sender, EventArgs e)
